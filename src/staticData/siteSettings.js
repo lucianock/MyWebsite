@@ -14,7 +14,7 @@ import {
 } from "react-icons/fa";
 
 export const siteSettings = {
-  logo: "R",
+  logo: "L",
   headerMenus: [
     {
       id: 1,

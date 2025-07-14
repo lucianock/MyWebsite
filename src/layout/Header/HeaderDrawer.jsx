@@ -63,12 +63,12 @@ const HeaderDrawer = ({ isOpen, toggleDrawer }) => {
                 alt="Rakibul - Personal Portfolio"
               />
             </div>
-            <h3>I'm Rakibul</h3>
+            <h3>I'm Luciano</h3>
             <div className="ah-headline clip">
               <div className="ah-words-wrapper">
                 <Typewriter
                   options={{
-                    strings: ["I am a UX/UI Designer", "I Develop Mobile Apps"],
+                    strings: ["Full Stack Developer", "I Help Businesses Grow By Developing Websites, Web Apps & Software That Drive Success|"],
                     autoStart: true,
                     loop: true,
                     delay: 20,

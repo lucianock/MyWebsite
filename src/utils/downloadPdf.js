@@ -1,10 +1,10 @@
 export const downloadPdf = () => {
-    const pdfPath = '/blank.pdf';
+    const pdfPath = '/LucianoCamposKriegl_CV.pdf';
 
     // Create a hidden anchor element
     const a = document.createElement('a');
     a.href = pdfPath;
-    a.download = 'cv.pdf';
+    a.download = 'LucianoCamposKriegl_CV.pdf';
 
     document.body.appendChild(a);
     a.click();

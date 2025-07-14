@@ -2809,8 +2809,6 @@ body.dark .hero-banner .content-inner .typewritter {
 .hero-banner .content-inner .hero-img {
   max-width: 300px;
   padding-top: 30px;
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1);
   margin: 0 auto;
 }
 @media (min-width: 992px) {
@@ -2914,6 +2912,33 @@ body.dark .sticky-social-media li a:hover {
   color: #d79d4b;
 }
 
+.whatsapp-animate {
+  animation: whatsapp-shake 2s infinite ease-in-out;
+}
+
+@keyframes whatsapp-shake {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-4px);
+  }
+  20% {
+    transform: translateX(4px);
+  }
+  30% {
+    transform: translateX(-4px);
+  }
+  40% {
+    transform: translateX(4px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .about {
   padding-top: 60px;
 }
