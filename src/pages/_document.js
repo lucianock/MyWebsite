@@ -27,7 +27,7 @@ function MyDocument({ locale, ...props }) {
           rel="stylesheet"
         />
       </Head>
-      <body className={bodyClass}>
+      <body className="dark">
         <Main />
         <NextScript />
       </body>
