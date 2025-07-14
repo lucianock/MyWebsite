@@ -1,0 +1,52 @@
+.page-banner {
+	background-color: $bg_light;
+	body.dark & {
+		background-color: $bg_dark;
+	}
+
+	> * {
+		position: relative;
+	}
+	.banner-content {
+		position: relative;
+		padding: 130px 0 80px;
+		z-index: 9;
+
+
+		@media (min-width: 576px) {
+			padding: 160px 0 95px;
+
+		}
+		@media (min-width: 992px) {
+			padding: 210px 0 140px;
+		}
+		@media (min-width: 1200px) {
+			padding: 140px 0;
+		}
+		@media (min-width: 1400px) {
+			padding: 180px 0;
+		}
+
+		h1 {
+			font-family: $font_heading;
+			font-size: 32px;
+			font-weight: 700;
+			line-height: 42px;
+			margin-bottom: 0.5rem;
+			opacity: 0.9;
+
+			@media (min-width: 768px) {
+				font-size: 38px;
+			}
+
+			@media (min-width: 992px) {
+				font-size: 52px;
+				margin-bottom: 1.5rem;
+			}
+			@media (min-width: 1200px) {
+				font-size: 72px;
+				line-height: 96px;
+			}
+		}
+	}
+}

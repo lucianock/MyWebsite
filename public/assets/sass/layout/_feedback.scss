@@ -1,0 +1,170 @@
+.feedback {
+  .feedbackNav {
+    max-width: 230px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 576px) {
+      max-width: 320px;
+    }
+    @media (min-width: 1200px) {
+      max-width: 510px;
+    }
+
+    .swiper-slide {
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg)
+        scale(0.8) !important;
+
+      img {
+        opacity: 0.4;
+        border-radius: 10px;
+        width: 100%;
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        transition: height 0.3s ease-in-out;
+
+        @media (min-width: 768px) {
+          border-radius: 15px;
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+      &-active {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+        transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg)
+          scale(1) !important;
+        img {
+          opacity: 1;
+          -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+          -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+          width: 100%;
+          /* height: 100%; */
+          /* object-fit: cover; */
+          transform: scale(1);
+
+          @media (min-width: 768px) {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+          }
+        }
+      }
+    }
+    .swiper-slide-shadow-coverflow {
+      opacity: 0 !important;
+    }
+  }
+
+  .feedbackCarousel {
+    margin: 0 auto -8px;
+    max-width: 700px;
+    @media (min-width: 1200px) {
+      max-width: 810px;
+    }
+    .item {
+      text-align: center;
+      .details {
+        // background: url(../images/svg/quote2.svg) no-repeat top center;
+        max-width: 480px;
+        margin: 30px auto 0 auto;
+        @media (min-width: 768px) {
+          margin: 35px auto 0 auto;
+        }
+        @media (min-width: 992px) {
+          margin: 40px auto 0 auto;
+          max-width: 520px;
+        }
+        @media (min-width: 1200px) {
+          margin: 45px auto 0 auto;
+          max-width: 750px;
+        }
+        @media (min-width: 1536px) {
+          margin: 55px auto 0 auto;
+        }
+        // body.dark & {
+        //   background: url(../images/svg/quote.svg) no-repeat top center;
+        // }
+      }
+      .speech {
+        font-size: 14px;
+        font-style: italic;
+        font-weight: 300;
+
+        @media (min-width: 576px) {
+          font-size: 15px;
+        }
+
+        @media (min-width: 768px) {
+          font-size: 1.1rem;
+          line-height: 1.85em;
+        }
+        @media (min-width: 1200px) {
+          font-size: 1.25rem;
+        }
+        @media (min-width: 1536px) {
+          font-size: 1.35rem;
+        }
+      }
+      .feedback-footer {
+        margin-top: 25px;
+        @media (min-width: 768px) {
+          margin-top: 35px;
+        }
+        @media (min-width: 1200px) {
+          margin-top: 45px;
+        }
+      }
+      .name {
+        font-size: 14px;
+        font-weight: 600;
+        opacity: 0.9;
+        @media (min-width: 576px) {
+          font-size: 15px;
+        }
+        @media (min-width: 768px) {
+          margin-bottom: 5px;
+          font-size: 1.1rem;
+        }
+        @media (min-width: 1200px) {
+          font-size: 1.25rem;
+        }
+      }
+      .designation {
+        display: inline-block;
+        font-size: 12px;
+        opacity: 0.9;
+        position: relative;
+        @media (min-width: 768px) {
+          font-size: 14px;
+        }
+        @media (min-width: 1200px) {
+          font-size: 1rem;
+        }
+
+        &::before,
+        &::after {
+          content: "\2015";
+          position: relative;
+          margin: 0 10px;
+          color: $gray;
+
+          body.dark & {
+            color: $golden_poppy;
+          }
+        }
+      }
+    }
+  }
+}

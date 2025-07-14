@@ -1,0 +1,50 @@
+/*--------------------------------------------------------------
+# Footer-block
+--------------------------------------------------------------*/
+.site-footer {
+	-webkit-transition: ease all 0.25s;
+	transition: ease all 0.25s;
+	background-color: $soft_black;
+	padding: 20px 0;
+	body.dark & {
+		background-color: $golden_poppy;
+	}
+
+	@media (min-width: 992px) {
+		padding: 30px 0;
+	}
+	@media (min-width: 1200px) {
+		margin-left: 110px;
+		padding: 35px 0;
+	}
+	p {
+		color: $white;
+		font-weight: 400;
+		font-size: 12px;
+		body.dark & {
+			color: $black;
+		}
+		@media (min-width: 992px) {
+			font-size: 1rem;
+		}
+	}
+	.social-media {
+		@media (min-width: 992px) {
+			margin-top: 1rem;
+		}
+		li + li {
+			margin-left: 0.5rem;
+		}
+		a {
+			color: $white;
+			font-size: 12px;
+			body.dark & {
+				color: $soft_black;
+			}
+			@media (min-width: 992px) {
+				font-size: 1rem;
+			}
+
+		}
+	}
+}

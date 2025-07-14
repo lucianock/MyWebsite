@@ -1,0 +1,63 @@
+// Initial color with name
+$black              : #000000; // Black
+$night_rider        : #18191a; // Night Rider
+$soft_black         : #262728; // Soft Black
+$soft_nero          : #2a2a2a; // Soft Nero
+$nero_black         : #292929; // Soft Nero
+$eclipse            : #3e4041; // Eclipse
+$dim_gray           : #646363; // Dim Gray
+$gray               : #b7b7b7; // Dark gray
+$darkgray           : #83838e; // Dark gray
+$silver             : #c3c3c3; // Silver
+$soft_white         : #eaeaea; // Soft white
+$white              : #ffffff; // White
+$snow               : #fafafa; // Snow
+$white_smoke        : #f7f7f7; // White Smoke
+$corn_field         : #fff9c0; // Corn Field
+$golden_poppy       : #d79d4b; // Golden Poppy
+
+//Text color
+$color_text_main: #636363; // body text main color
+
+//border color
+$color__border-one: #434446; // Widget. Feature background Stock
+
+// Banner BG Color:
+$bg_dark: #1e1e1f;
+$bg_light: #f4f4f4;
+
+// Font Family
+$font_heading: 'Playfair Display', serif;
+$font_body: 'Montserrat', sans-serif;
+
+
+// font sizes
+$base__font-size: 16px;
+$heading__one: 2.441em;
+$heading__two: 1.953em;
+$heading__three: 1.563em;
+$heading__four: 1.25em;
+$heading__five: 1em;
+$heading__six: 0.8em;
+
+
+// Line Height
+$font__line-height-body: 1.45em;
+$font__line-height-heading: 1.3em;
+$font__line-height-paragraph: 1.75em;
+
+
+$base__line-grid: 24px;
+
+
+// for on off Browser prefix
+$webkit: true !default;
+$moz: false !default;
+$ms: false !default;
+$o: false !default;
+
+$webkit-on: true !default;
+$moz-on: true !default;
+$ms-on: true !default;
+$o-on: true !default;
+

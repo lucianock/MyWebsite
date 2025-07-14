@@ -1,0 +1,64 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project Name  :     Devboy – Personal Portfolio Resume Nextjs Template
+Version       :     1.0.0
+Last Update   :     06 February 2024
+Author	      :	    ThemesTransmit
+Author URI	  : 	https://themeforest.net/user/themestransmit
+Description   : 	Devboy – Personal Portfolio Resume Nextjs Template for professional and personal website.
+Support	      :	    themestransmit@gmail.com
+------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1.  Template/Site Variables
+2.  Template Typography Settings
+3.  Forms and input elements base styles
+4.  Global Elements/ UI styles
+5.  Site Header Styles
+6.  Template/Section Layouts and Styles
+7.	Site Footer Styles
+8.	Dark Mode Styles
+------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[1. Template/Site Variables]
+------------------------------------------------------------------*/
+@import "variables-site/variables-site";
+
+/*------------------------------------------------------------------
+[2. Template Typography Settings]
+------------------------------------------------------------------*/
+@import "typography/typography";
+
+/*------------------------------------------------------------------
+[3. Forms and input elements base styles]
+------------------------------------------------------------------*/
+@import "forms/forms";
+
+/*------------------------------------------------------------------
+[4. Global Elements/ UI styles]
+------------------------------------------------------------------*/
+@import "elements/elements";
+
+/*------------------------------------------------------------------
+[5. Site Header Styles]
+------------------------------------------------------------------*/
+@import "header/header";
+
+/*------------------------------------------------------------------
+[6. Template/Section Layouts and Styles]
+------------------------------------------------------------------*/
+@import "layout/layout";
+
+/*------------------------------------------------------------------
+[7.	Site Footer Styles]
+------------------------------------------------------------------*/
+@import "footer/footer";
+
+/*------------------------------------------------------------------
+[8.	Dark Mode Styles]
+------------------------------------------------------------------*/
+@import "dark/dark";

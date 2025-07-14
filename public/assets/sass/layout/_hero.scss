@@ -1,0 +1,281 @@
+.main {
+  padding-left: 110px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  overflow: hidden;
+
+  @media (max-width: 1199px) {
+    padding-left: 0;
+  }
+}
+.hero-banner {
+  position: relative;
+  overflow: hidden;
+  background-color: $bg_light;
+  &[data-bg-image] {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.75);
+    }
+    .content-inner {
+      text-align: center;
+    }
+  }
+  @media (min-width: 1200px) {
+    height: 100vh;
+    max-height: 960px;
+  }
+  .container {
+    height: 100%;
+    position: relative;
+  }
+  .content-inner {
+    position: relative;
+    z-index: 9;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100%;
+    padding-top: 140px;
+    text-align: center;
+    @media (min-width: 576px) {
+      padding: 180px 0 0;
+    }
+    @media (min-width: 768px) {
+      padding: 200px 0 0;
+    }
+    @media (min-width: 992px) {
+      text-align: left;
+      padding: 270px 0 180px;
+    }
+    @media (min-width: 1200px) {
+      padding: 0;
+    }
+    .hero-subtitle {
+      -webkit-text-stroke: 1px rgb(60, 60, 60);
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      font-weight: 900;
+      margin-bottom: 4px;
+      font-size: 30px;
+      font-family: $font_heading;
+
+      @media (min-width: 480px) {
+        font-size: 36px;
+      }
+      @media (min-width: 768px) {
+        font-size: 45px;
+        -webkit-text-stroke: 1.5px rgb(60, 60, 60);
+      }
+      @media (min-width: 1200px) {
+        font-size: 52px;
+      }
+      @media (min-width: 1400px) {
+        font-size: 60px;
+      }
+      @media (min-width: 1720px) {
+        font-size: 72px;
+      }
+      &::-moz-selection {
+        -webkit-text-stroke: 1px rgb(255, 255, 255);
+      }
+      &::selection {
+        -webkit-text-stroke: 1px rgb(255, 255, 255);
+      }
+      body.dark & {
+        -webkit-text-stroke: 0.5px rgba(255, 255, 255, 1);
+      }
+    }
+    .hero-title {
+      font-size: 48px;
+      color: $nero_black;
+      font-weight: 700;
+      line-height: 1.25em;
+      font-family: $font_heading;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      margin-bottom: 15px;
+      span {
+        position: relative;
+        z-index: 1;
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: 8px;
+          left: 0;
+          width: 100%;
+          height: 8px;
+          background-color: $gray;
+          border-radius: 10px;
+          z-index: -1;
+          @media (min-width: 576px) {
+            bottom: 10px;
+          }
+          @media (min-width: 768px) {
+            bottom: 12px;
+            height: 12px;
+          }
+          @media (min-width: 1200px) {
+            bottom: 14px;
+          }
+          @media (min-width: 1400px) {
+            bottom: 18px;
+          }
+        }
+      }
+      @media (min-width: 576px) {
+        font-size: 56px;
+        line-height: 70px;
+      }
+      @media (min-width: 768px) {
+        font-size: 66px;
+        line-height: 1.25em;
+      }
+      @media (min-width: 1200px) {
+        font-size: 80px;
+      }
+      @media (min-width: 1400px) {
+        font-size: 90px;
+      }
+      @media (min-width: 1536px) {
+        font-size: 96px;
+      }
+    }
+    .typewritter {
+      font-size: 16px;
+      color: $nero_black;
+      line-height: 1;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      font-weight: 500;
+      @media (min-width: 576px) {
+        line-height: 1.5em;
+        margin-top: 5px;
+        font-size: 20px;
+      }
+      @media (min-width: 1200px) {
+        font-size: 18px;
+      }
+      @media (min-width: 1400px) {
+        font-size: 20px;
+      }
+      @media (min-width: 1536px) {
+        font-size: 22px;
+      }
+      body.dark & {
+        color: $white;
+      }
+    }
+
+    .hero-img {
+      max-width: 300px;
+      padding-top: 30px;
+      -webkit-filter: grayscale(1);
+      filter: grayscale(1);
+      margin: 0 auto;
+
+      @media (min-width: 992px) {
+        max-width: 520px;
+        position: absolute;
+        right: -70px;
+        bottom: 0;
+        z-index: -1;
+      }
+      @media (min-width: 1200px) {
+        max-width: 560px;
+        right: 70px;
+      }
+      @media (min-width: 1560px) {
+        right: 0;
+        max-width: 790px;
+      }
+      img {
+        width: 100%;
+      }
+      .dark {
+        display: none;
+        body.dark & {
+          display: block;
+        }
+      }
+      .light {
+        body.dark & {
+          display: none;
+        }
+      }
+    }
+
+    .buttons {
+      display: none;
+      @media (min-width: 992px) {
+        margin-top: 3rem;
+        display: block;
+      }
+      @media (min-width: 1200px) {
+        margin-top: 3.5rem;
+      }
+      @media (min-width: 1536px) {
+        margin-top: 4.5rem;
+      }
+    }
+  }
+}
+
+.sticky-social-media {
+  position: absolute;
+  height: 100%;
+  right: 60px;
+  top: 0;
+  display: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 9;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+  @media (min-width: 1200px) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  li {
+    display: inline-block;
+    a {
+      font-weight: 700;
+      padding: 0.85rem;
+      font-size: 15px;
+      color: $nero_black;
+      @media (min-width: 1400px) {
+        font-size: 16px;
+      }
+      &:hover {
+        color: $black;
+      }
+      body.dark & {
+        color: $white;
+        &:hover {
+          color: $golden_poppy;
+        }
+      }
+    }
+  }
+}

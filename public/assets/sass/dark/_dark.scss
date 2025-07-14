@@ -1,0 +1,25 @@
+body.dark {
+    .section-title {
+        &::before {
+            background-color: $soft_black;
+        }
+    }
+    .hero-banner {
+        background-color: $bg_dark;
+        &[data-bg-image]:before {
+            background-color: rgba(38, 39, 40, 0.75);
+        }
+        .content-inner {
+            .hero-title{
+                color: $white;
+                > span::before {
+                    background-color: $golden_poppy;
+                }
+            }
+            p {
+                color: $white;
+            }
+        }
+    }
+    
+}

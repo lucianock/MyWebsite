@@ -1,0 +1,37 @@
+.breadcrumb {
+  margin-bottom: 0;
+  .breadcrumb-item {
+    color: $nero_black;
+    font-size: 0.75rem;
+    font-weight: 500;
+    body.dark & {
+      color: $white;
+    }
+    @media (min-width: 992px) {
+      font-size: 1rem;
+    }
+    @media (min-width: 1200px) {
+      font-size: 1.125rem;
+    }
+    &::before {
+      color: $nero_black;
+      font-size: 17px;
+      display: none;
+      body.dark & {
+        color: $white;
+      }
+    }
+    a {
+      color: $nero_black;
+      body.dark & {
+        color: $white;
+        &:hover {
+          color: $golden_poppy;
+        }
+      }
+      &:hover {
+        color: $nero_black;
+      }
+    }
+  }
+}

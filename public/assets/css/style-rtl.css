@@ -1,0 +1,448 @@
+@charset "UTF-8";
+/*------------------------------------------------------------------
+[Devboy RTL Stylesheet]
+
+Project Name  :     Devboy – Personal Portfolio Resume HTML Template
+Version       :     1.0.0
+Last Update   :     12 February 2024
+Author	      :	    ThemeArray
+Author URI	  : 	https://themeforest.net/user/themearray
+Description   : 	Devboy – Personal Portfolio Resume HTML Template for professional and personal website.
+Support	      :	    themearray@gmail.com
+------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Table of contents]
+
+1.  Template/Site Variables
+------------------------------------------------------------------*/
+html[dir="rtl"] body,
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6 {
+  font-family: "Cairo", sans-serif;
+}
+
+html[dir="rtl"] .theme-btn {
+  font-family: "Cairo", sans-serif;
+}
+
+html[dir="rtl"] .theme-btn::before {
+  left: inherit;
+  right: 10px;
+}
+
+html[dir="rtl"] .theme-btn:hover::before {
+  right: 0;
+}
+
+html[dir="rtl"] .theme-btn span {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin-left: 0;
+  margin-right: 0.5rem;
+  top: -2px;
+}
+
+html[dir="rtl"] .theme-btn svg {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+html[dir="rtl"] .section-title .title {
+  font-family: "Cairo", sans-serif;
+  padding: 0 0 0 4%;
+  font-weight: 700;
+}
+
+html[dir="rtl"] .section-title::after {
+  left: 0;
+  right: inherit;
+}
+
+html[dir="rtl"] .page-banner .banner-content h1 {
+  font-family: "Cairo", sans-serif;
+}
+
+html[dir="rtl"] [data-title]::before {
+  font-family: "Cairo", sans-serif;
+  font-weight: 700;
+}
+
+html[dir="rtl"] .topbutton {
+  left: 20px;
+  right: inherit;
+}
+
+html[dir="rtl"] .btn-style2::before {
+  right: 0;
+}
+
+html[dir="rtl"] .about .details .name {
+  font-family: "Cairo", sans-serif;
+}
+
+html[dir="rtl"] .about .details .designation {
+  font-family: "Cairo", sans-serif;
+}
+
+html[dir="rtl"] .about .details .designation .line {
+  left: 0;
+  right: 15px;
+}
+
+html[dir="rtl"] .about .details .info svg {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+html[dir="rtl"] .about .about-thumbnail-area::before {
+  right: 0;
+}
+
+html[dir="rtl"] .about .funfacts .funfacts-item p {
+  font-size: 0.8rem;
+}
+
+html[dir="rtl"] .about[data-title]::before,
+html[dir="rtl"] .resume[data-title]::before,
+html[dir="rtl"] .portfolio[data-title]::before,
+html[dir="rtl"] .blog-post[data-title]::before {
+  right: inherit;
+  left: 120px;
+}
+
+html[dir="rtl"] .skill[data-title]::before,
+html[dir="rtl"] .service[data-title]::before,
+html[dir="rtl"] .feedback[data-title]::before,
+html[dir="rtl"] .contact[data-title]::before {
+  left: inherit;
+  right: 0;
+}
+
+html[dir="rtl"] .breadcrumb-item + .breadcrumb-item::before {
+  float: right;
+  padding-right: 0;
+  padding-left: 0.5rem;
+}
+
+html[dir="rtl"] header {
+  right: 0;
+}
+
+html[dir="rtl"] header .menu ul li a {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+html[dir="rtl"] header .contact-btn a span {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+}
+
+html[dir="rtl"] header .contact-btn a span::after {
+  float: right;
+  left: -10px;
+}
+
+html[dir="rtl"] .mobile-menu .menu li span {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+html[dir="rtl"] .mobile-menu .menu li a {
+  opacity: 1;
+}
+
+html[dir="rtl"] .sticky-social-media {
+  left: 60px;
+  right: inherit;
+}
+
+html[dir="rtl"] .style-switcher {
+  left: -230px;
+  right: inherit;
+}
+
+html[dir="rtl"] .style-switcher .toggle-btn {
+  right: -46px;
+}
+
+html[dir="rtl"] .style-switcher .variant + .variant {
+  margin-left: 0;
+  margin-right: 5px;
+}
+
+html[dir="rtl"] .style-switcher.active {
+  left: 0;
+}
+
+html[dir="rtl"] .hero-banner .content-inner .hero-subtitle,
+html[dir="rtl"] .hero-banner .content-inner .hero-title {
+  font-family: "Cairo", sans-serif;
+}
+
+html[dir="rtl"] .hero-banner .content-inner .hero-img {
+  right: inherit;
+  left: 0;
+}
+
+html[dir="rtl"] .hero-banner .content-inner p {
+  margin-top: 2.5rem;
+  font-family: "Cairo", sans-serif;
+}
+
+html[dir="rtl"] .service .serviceCarousel .swiper-pagination {
+  margin-left: auto;
+  margin-right: inherit;
+  left: inherit;
+  right: 0;
+}
+
+html[dir="rtl"] .resume .timeline-box .timeline .timeline-item .title {
+  font-weight: 700;
+}
+
+html[dir="rtl"] .resume .timeline-box .icon-box .box-title {
+  font-weight: 700;
+}
+
+@media (min-width: 1200px) {
+  html[dir="rtl"] .resume .timeline-box .icon-box {
+    margin: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  html[dir="rtl"] .resume .timeline-box.even .timeline {
+    margin-left: 35px;
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 1400px) {
+  html[dir="rtl"] .resume .timeline-box.even .timeline {
+    margin-right: 30px;
+    margin-left: 40px;
+  }
+}
+
+@media (min-width: 1720px) {
+  html[dir="rtl"] .resume .timeline-box.even .timeline {
+    margin-left: 80px;
+  }
+}
+
+@media (min-width: 992px) {
+  html[dir="rtl"] .resume .timeline-box.even .timeline::before {
+    left: -30px;
+    right: inherit;
+  }
+}
+
+@media (min-width: 1200px) {
+  html[dir="rtl"] .resume .timeline-box.even .timeline::before {
+    left: -65px;
+  }
+}
+
+@media (min-width: 1720px) {
+  html[dir="rtl"] .resume .timeline-box.even .timeline::before {
+    left: -80px;
+  }
+}
+
+@media (min-width: 992px) {
+  html[dir="rtl"] .resume .timeline-box.odd .timeline {
+    margin-left: 20px;
+    margin-right: 35px;
+  }
+}
+
+@media (min-width: 1400px) {
+  html[dir="rtl"] .resume .timeline-box.odd .timeline {
+    margin-left: 30px;
+    margin-right: 40px;
+  }
+}
+
+@media (min-width: 1720px) {
+  html[dir="rtl"] .resume .timeline-box.odd .timeline {
+    margin-right: 80px;
+  }
+}
+
+@media (min-width: 992px) {
+  html[dir="rtl"] .resume .timeline-box.odd .timeline::before {
+    left: inherit;
+    right: -30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html[dir="rtl"] .resume .timeline-box.odd .timeline::before {
+    right: -65px;
+  }
+}
+
+@media (min-width: 1720px) {
+  html[dir="rtl"] .resume .timeline-box.odd .timeline::before {
+    right: -80px;
+  }
+}
+
+html[dir="rtl"] .skill .circle .center-text p {
+  font-weight: 600;
+}
+
+html[dir="rtl"] .card .card-footer h5 {
+  font-weight: 700;
+}
+
+html[dir="rtl"] .card .card-footer .media-holder {
+  margin-right: 0;
+  margin-left: 0.9rem;
+}
+
+html[dir="rtl"] .card .card-footer h6::after {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+html[dir="rtl"] .blog-post .blog-post-item .post-details .blog-title {
+  font-weight: 700;
+}
+
+html[dir="rtl"] .blog-post .blog-post-item .post-details .blog-title a {
+  background-position: 100% 95%;
+}
+
+html[dir="rtl"] .blog-details .blog-post-header .blog-post-title {
+  font-weight: 700;
+}
+
+html[dir="rtl"] .blog-details .list li {
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+
+html[dir="rtl"] .blog-details .list li::before {
+  left: inherit;
+  right: 0;
+}
+
+html[dir="rtl"] .comment-area ul li .author-img {
+  margin-right: 0;
+  margin-left: 1.2rem;
+}
+
+html[dir="rtl"] .comment-area ul ul {
+  padding-left: 0;
+  padding-right: 60px;
+}
+
+html[dir="rtl"] .comment-box input {
+  text-align: right;
+}
+
+html[dir="rtl"] .comment-box textarea {
+  text-align: right;
+}
+
+html[dir="rtl"] .contact form input ~ label {
+  right: 0;
+  left: inherit;
+  padding-left: inherit;
+  padding-right: 0;
+}
+
+html[dir="rtl"] .contact form textarea ~ label {
+  right: 0;
+  left: inherit;
+  padding-left: inherit;
+  padding-right: 0;
+}
+
+html[dir="rtl"] .contact .contact-info .info-item .title {
+  font-weight: 700;
+}
+
+html[dir="rtl"] .pricing-plan-item h2 span {
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+html[dir="rtl"] .pricing-plan-item .pricing-body li span {
+  margin-right: 0;
+  margin-left: 20px;
+}
+
+html[dir="rtl"] .ui-datepicker .ui-datepicker-title {
+  left: 0.5rem;
+  right: inherit;
+}
+
+html[dir="rtl"] .ui-datepicker .ui-datepicker-title select {
+  background-position: 15% 50%;
+}
+
+html[dir="rtl"] .ReactModalPortal {
+  direction: ltr;
+}
+
+@media only screen and (min-width: 1025px) {
+  html[dir="rtl"] .hero-banner .content-inner {
+    text-align: right;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  html[dir="rtl"] .main {
+    padding-left: 0;
+    padding-right: 110px;
+  }
+  html[dir="rtl"] .about .details .info li img {
+    margin-left: 1rem;
+    margin-right: inherit;
+  }
+  html[dir="rtl"] footer {
+    margin-right: 110px;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  html[dir="rtl"] .portfolio .filter-button {
+    text-align: right;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  html[dir="rtl"] .blog-post .blog-post-item .post-details {
+    padding-left: 0;
+    padding-right: 50px;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  html[dir="rtl"] .comment-area ul li .author-img {
+    margin-right: 0;
+    margin-left: 1.6rem;
+  }
+  html[dir="rtl"] .pricing-plan-item h2 span {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+  html[dir="rtl"] .accordion .accordion-header > div::after {
+    right: inherit;
+    left: 20px;
+  }
+  html[dir="rtl"] .ui-datepicker .ui-datepicker-title {
+    left: 2rem;
+  }
+}
+/*# sourceMappingURL=style-rtl.css.map */

@@ -1,0 +1,19 @@
+.container,
+.container-fluid {
+  padding-left: 16px;
+  padding-right: 16px;
+  @media only screen and (max-width: 575px) {
+    max-width: 480px;
+  }
+}
+
+@import "animation";
+@import "animated-line";
+@import "breadcrumb";
+@import "card";
+@import "pricing";
+@import "accordion";
+@import "tab";
+@import "table";
+@import "calendar";
+@import "modal";

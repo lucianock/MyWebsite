@@ -1,0 +1,95 @@
+.animated-bg-line {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	height: 100%;
+	border-left: 1px solid rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+	@media only screen and (min-width: 1200px) and (max-width: 1719px) {
+		left: 60%;
+	}
+	body.dark & {
+		border-left: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+	&::before {
+		top: -27px;
+		width: 1px;
+		left: 0;
+		content: "";
+		height: 25px;
+		position: absolute;
+		animation: scroll1 30s ease-out infinite;
+		background-color: $soft_black;
+
+		body.dark & {
+			background-color: $golden_poppy;
+		}
+	}
+	.line-item {
+		position: relative;
+		border-right: 1px solid rgba(0, 0, 0, 0.1);
+
+		body.dark & {
+			border-left: 1px solid rgba(255, 255, 255, 0.1);
+			&:last-child {
+				border-right: 1px solid rgba(255, 255, 255, 0.1);
+			}
+		}
+
+		&::before {
+			bottom: -27px;
+			width: 1px;
+			right: -1px;
+			content: "";
+			height: 25px;
+			position: absolute;
+			background-color: $soft_black;
+
+			body.dark & {
+				background-color: $golden_poppy;
+			}
+		}
+		&:nth-child(1)::before {
+			-webkit-animation: scroll2 30s ease-out infinite;
+			-moz-animation: scroll2 30s ease-out infinite;
+			-o-animation: scroll2 30s ease-out infinite;
+			animation: scroll2 30s ease-out infinite;
+		}
+		&:nth-child(2)::before {
+			-webkit-animation: scroll1 30s ease-out infinite 4s;
+			-moz-animation: scroll1 30s ease-out infinite 4s;
+			-o-animation: scroll1 30s ease-out infinite 4s;
+			animation: scroll1 30s ease-out infinite 4s;
+		}
+		&:nth-child(3)::before {
+			-webkit-animation: scroll2 30s ease-out infinite 3s;
+			-moz-animation: scroll2 30s ease-out infinite 3s;
+			-o-animation: scroll2 30s ease-out infinite 3s;
+			animation: scroll2 30s ease-out infinite 3s;
+		}
+		&:nth-child(4)::before {
+			-webkit-animation: scroll1 30s ease-out infinite 2s;
+			-moz-animation: scroll1 30s ease-out infinite 2s;
+			-o-animation: scroll1 30s ease-out infinite 2s;
+			animation: scroll1 30s ease-out infinite 2s;
+		}
+		&:nth-child(5)::before {
+			-webkit-animation: scroll1 30s ease-out infinite 6s;
+			-moz-animation: scroll1 30s ease-out infinite 6s;
+			-o-animation: scroll1 30s ease-out infinite 6s;
+			animation: scroll1 30s ease-out infinite 6s;
+		}
+	}
+
+	@media (max-width: 992px) {
+		width: 150%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}

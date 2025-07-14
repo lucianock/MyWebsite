@@ -1,0 +1,52 @@
+.nav-tabs {
+  border: 0;
+  .nav-item {
+    flex: 1 1 auto;
+  }
+  .nav-link {
+    background-color: $bg_light;
+    padding: 9px 8px;
+    color: $eclipse;
+    font-weight: 600;
+    font-size: 12px;
+    border: 0;
+    width: 100%;
+    body.dark & {
+      color: $gray;
+      background-color: $soft_black;
+    }
+    html[dir='rtl'] & {
+      font-weight: 700;
+      font-size: 14px;
+      @media (min-width: 768px) {
+      }
+    }
+    @media (min-width: 576px) {
+      font-size: 14px;
+      padding: 14px 8px;
+    }
+    @media (min-width: 992px) {
+      font-size: 14px;
+    }
+    @media (min-width: 1200px) {
+      padding: 20px 30px;
+    }
+    &.active {
+      color: $black;
+      background-color: rgba($color: $black, $alpha: 0.1);
+      body.dark & {
+        color: $golden_poppy;
+        background-color: rgba($color: $white, $alpha: 0.04);
+      }
+    }
+  }
+}
+.tab {
+  .tab-content {
+    margin-top: 2rem;
+
+    p {
+      opacity: 0.9;
+    }
+  }
+}

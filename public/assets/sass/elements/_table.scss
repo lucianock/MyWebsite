@@ -1,0 +1,30 @@
+.table-responsive {
+  .table-bordered {
+    border-color: $soft_white;
+
+    body.dark & {
+      border-color: $soft_black;
+    }
+  }
+  .table-rounded {
+    border-radius: 15px;
+  }
+  td,
+  th {
+    padding: 0.9rem 0.6rem;
+    font-size: 0.9rem;
+    color: $nero_black;
+    body.dark & {
+      color: $white;
+      background: #18191a;
+    }
+    @media (min-width: 768px) {
+      padding: 1.2rem 1.8rem;
+      font-size: 1rem;
+    }
+  }
+  td {
+    opacity: 0.9;
+    white-space: nowrap;
+  }
+}

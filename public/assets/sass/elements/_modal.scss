@@ -1,0 +1,19 @@
+.ReactModal__Overlay {
+    background: rgba(0, 0, 0, 0.85) !important;
+
+    .ReactModal__Content  {
+        overflow: visible !important;
+        .mfp-close {
+            background-color: $black;
+            font-size: 30px;
+            color: $white;
+            border: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            opacity: 1;
+            top: -40px;
+            right: -40px;
+        }
+    }
+}

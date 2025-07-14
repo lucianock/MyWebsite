@@ -1,0 +1,242 @@
+.portfolio {
+	.filter-button {
+		text-align: center;
+		margin-bottom: 60px;
+
+		@media (min-width: 768px) {
+			margin-bottom: 80px;
+			text-align: left;
+		}
+
+		@media (min-width: 1536px) {
+			margin-top: -10px;
+		}
+
+		li {
+			display: inline-block;
+			padding: 4px 10px;
+			color: $nero_black;
+			font-size: 13px;
+			font-weight: 600;
+			cursor: pointer;
+			text-align: center;
+			-webkit-transition: all 0.3s;
+			transition: all 0.3s;
+			border-radius: 5px;
+
+			body.dark & {
+				color: $white;
+			}
+
+			@media (min-width: 576px) {
+				padding: 8px 15px;
+				font-size: 14px;
+			}
+
+			&.active {
+				background-color: $nero_black;
+				color: $white;
+
+				body.dark & {
+					background-color: $soft_black;
+					color: $golden_poppy;
+				}
+			}
+		}
+	}
+
+	.portfolio-inner {
+		margin-top: -40px;
+		margin-left: -6px;
+		margin-right: -6px;
+
+		@media (min-width: 576px) {
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+
+		@media (min-width: 768px) {
+			margin-top: -60px;
+		}
+
+		@media (min-width: 992px) {
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+
+		@media (min-width: 1200px) {
+			margin-left: -20px;
+			margin-right: -20px;
+			margin-top: -50px;
+		}
+
+		@media (min-width: 1720px) {
+			margin-left: -30px;
+			margin-right: -30px;
+			margin-top: -80px;
+		}
+
+		.portfolio-item {
+			margin-top: 12px;
+			padding-left: 6px;
+			padding-right: 6px;
+
+			@media (min-width: 576px) {
+				padding-left: 10px;
+				padding-right: 10px;
+				margin-top: 20px;
+			}
+
+			@media (min-width: 992px) {
+				padding-left: 15px;
+				padding-right: 15px;
+				margin-top: 30px;
+			}
+
+			@media (min-width: 1200px) {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+
+			@media (min-width: 1400px) {
+				margin-top: 35px;
+			}
+
+			@media (min-width: 1720px) {
+				padding-left: 30px;
+				padding-right: 30px;
+				margin-top: 60px;
+			}
+		}
+
+		.item {
+			position: relative;
+			border-radius: 7px;
+			overflow: hidden;
+
+			@media (min-width: 1200px) {
+				border-radius: 15px;
+			}
+
+
+			.item-label {
+				position: absolute;
+				left: -70px;
+				top: 0;
+				height: 100%;
+				background-color: $bg_light;
+				font-size: 18px;
+				font-weight: 600;
+				text-align: center;
+				padding: 15px;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				width: 50px;
+				-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+				z-index: 9;
+
+				@media (min-width: 576px) {
+					padding: 25px;
+					width: 65px;
+				}
+
+				body.dark & {
+					background-color: $soft_black;
+				}
+
+				p {
+					color: $black;
+					white-space: nowrap;
+					-webkit-transform: rotate(-90deg);
+					transform: rotate(-90deg);
+
+					body.dark & {
+						color: $white;
+					}
+
+					@media (min-width: 768px) {
+						font-size: 1rem;
+					}
+
+					@media (min-width: 1200px) {
+						font-size: 18px;
+					}
+
+					@media (min-width: 1536px) {
+						font-size: 20px;
+					}
+				}
+			}
+
+			img {
+				width: 100%;
+			}
+
+			&:hover {
+				.item-label {
+					left: 0;
+				}
+			}
+
+			.type {
+				position: absolute;
+				top: 12px;
+				right: 12px;
+				color: $black;
+				font-size: 22px;
+				opacity: 0.8;
+				z-index: 1;
+				-webkit-transform-origin: center;
+				transform-origin: center;
+
+				@media (min-width: 576px) {
+					top: 20px;
+					right: 20px;
+					font-size: 2rem;
+				}
+			}
+
+			&:hover {
+				.type {
+					-webkit-animation: pulse .3s linear;
+					animation: pulse .3s linear;
+				}
+			}
+		}
+
+		.item-slider {
+			.swiper-pagination {
+				bottom: 20px;
+				text-align: right;
+				padding-right: 20px;
+				&-bullet {
+					width: 8px;
+					height: 8px;
+					background-color: rgba($white, 0.8);
+					margin: 0 5px;
+					border-radius: 50%;
+					-webkit-transition: all 0.25s;
+					transition: all 0.25s;
+					opacity: 1;
+					&-active {
+						width: 15px;
+						border-radius: 10px;
+						background-color: rgba($black, 0.6);
+
+						body.dark & {
+							background-color: $golden_poppy;
+						}
+					}
+				}
+			}
+		}
+	}
+}

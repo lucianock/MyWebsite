@@ -1,0 +1,116 @@
+.accordion {
+  .accordion-item {
+    border: 0;
+    margin-bottom: 1rem;
+    background-color: transparent;
+  }
+
+  .accordion_open .accordion__header-icon {
+    transform: rotate(135deg);
+  }
+
+  .accordion__header-icon {
+    margin-left: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  .accordion-header::after {
+    background: none !important;
+  }
+
+  .accordion__header-icon {
+    transform: rotate(0deg);
+    transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    width: 25px;
+  }
+
+  @media (max-width: 359px) {
+    .accordion__header-icon {
+      width: 20px;
+    }
+  }
+
+  .accordion__content {
+    overflow: hidden;
+    transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  }
+
+  .accordion-header {
+    border-radius: 10px;
+    background-color: $bg_light;
+    body.dark & {
+      background-color: $soft_black;
+    }
+    > div {
+      padding: 16px 40px 16px 18px;
+      font-weight: 500;
+      font-size: 14px;
+      opacity: 0.9;
+      cursor: pointer;
+      position: relative;
+      color: $nero_black;
+      body.dark & {
+        color: $white;
+      }
+      html[dir="rtl"] & {
+        padding: 16px 18px 16px 40px;
+        font-weight: 700;
+        @media (min-width: 768px) {
+          font-size: 16px;
+        }
+      }
+      @media (min-width: 768px) {
+        padding: 20px 25px;
+        font-weight: 600;
+        // font-size: 1rem;
+      }
+      &::after {
+        color: $golden_poppy;
+        font-size: 20px;
+        content: "";
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        width: 10px;
+        height: 10px;
+        transform: translateY(-50%);
+        transition: 0.3s;
+        // background: url(../images/svg/plus.svg) no-repeat center;
+        filter: grayscale(1) invert(1);
+
+        body.dark & {
+          filter: grayscale(0) invert(0);
+        }
+
+        @media (min-width: 576px) {
+          right: 20px;
+        }
+        @media (min-width: 1200px) {
+          width: 20px;
+          height: 20px;
+        }
+        html[dir="rtl"] & {
+          left: 20px;
+          right: inherit;
+        }
+      }
+      &[aria-expanded="true"]::after {
+        content: "";
+        position: absolute;
+        // background: url(../images/svg/minus.svg) no-repeat center;
+        filter: grayscale(1) invert(1);
+
+        body.dark & {
+          filter: grayscale(0) invert(0);
+        }
+      }
+    }
+  }
+}
+body.dark .accordion-body {
+  color: #ffffff;
+}

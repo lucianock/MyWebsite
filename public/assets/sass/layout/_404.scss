@@ -1,0 +1,63 @@
+.page404 {
+    text-align: center;
+    padding: 75px 0;
+
+    @media (min-width: 576px) {
+        padding: 152px 0;
+    }
+
+    .content {
+        display: inline-block;
+        padding: 50px 1rem;
+        border-radius: 15px;
+        background-color: $bg_light;
+
+        body.dark & {
+            background-color: $soft_black;
+        }
+
+        @media (min-width: 576px) {
+            padding: 70px 75px;
+        }
+        @media (min-width: 768px) {
+            padding: 80px 100px;
+        }
+
+        h1 {
+            font-size: 80px;
+            color: $nero_black;
+            opacity: 0.9;
+            font-weight: bolder;
+            line-height: 1;
+            body.dark & {
+                color: $white;
+            }
+
+            @media (min-width: 576px) {
+                font-size: 140px;
+            }
+            @media (min-width: 768px) {
+                font-size: 200px;
+            }
+        }
+        h2 {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            line-height: 2.2;
+            font-weight: 600;
+            @media (min-width: 576px) {
+                font-size: 1.5rem;
+            }
+            @media (min-width: 768px) {
+                font-size: 1.6rem;
+            }
+        }
+        p {
+            margin-bottom: 2.3rem;
+            font-size: 0.8rem;
+            @media (min-width: 576px) {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}

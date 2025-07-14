@@ -1,0 +1,76 @@
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+  &:focus {
+    outline: none;
+  }
+}
+input[type="time"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-outer-spin-button,
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+}
+.sidebar-block {
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+  }
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  box-shadow: 0 0 100px 1000px rgba($white, 1) inset !important;
+  -webkit-box-shadow: 0 0 0px 1000px rgba($white, 1) inset !important;
+  -webkit-text-fill-color: $color_text_main !important;
+
+  body.dark & {
+    box-shadow: 0 0 100px 1000px rgba($night_rider, 1) inset !important;
+    -webkit-box-shadow: 0 0 0px 1000px rgba($night_rider, 1) inset !important;
+    -webkit-text-fill-color: $white !important;
+  }
+}
+
+input:-webkit-autofill:focus {
+  box-shadow: 0 0 0px 1000px rgba($black, 1) inset;
+  -webkit-box-shadow: 0 0 0px 1000px rgba($black, 1) inset;
+  -webkit-text-fill-color: $color_text_main !important;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+textarea {
+  display: block;
+  width: 100%;
+}
+input,
+select,
+textarea {
+  border: none;
+  vertical-align: baseline;
+  font-size: 100%;
+}

@@ -1,0 +1,28 @@
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+	&:focus {
+		outline: none;
+	}	
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+.btn {
+	&.color-white {
+	     &:hover {
+	        color: $snow;
+	    }
+	}
+}
+.btn.focus, .btn:focus {
+	box-shadow: 0 0 0 0.2rem rgba(0,0,0,0);
+}

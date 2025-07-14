@@ -1,0 +1,125 @@
+html {
+	font-size: 100%;
+}
+
+body {
+    background-color: $white;
+    font-family: $font_body;
+    font-size: $base__font-size;
+    font-weight: normal;
+    line-height: $font__line-height-body;
+    color: #7a7a7a;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-display: swap;
+
+    &.dark {
+        background-color: $night_rider;
+    }
+}
+a, a:focus {
+    color: $nero_black;
+    outline: none;
+    text-decoration: none;
+}
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a:hover {
+    text-decoration: none;
+}
+::-moz-selection {
+    background-color: $soft_black;
+    color: $white;
+
+    body.dark & {
+        background-color: $golden_poppy;
+    }
+}
+::selection {
+    background-color: $soft_black;
+    color: $white;
+
+    body.dark & {
+        background-color: $golden_poppy;
+    }
+}
+select {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    outline: none;
+}
+.preloader {
+    background-color: $snow;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+
+    body.dark & {
+        background-color: $soft_black;
+    }
+
+    .text   {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        font-size: 1.5rem;
+        font-weight: 600;
+
+        @media only screen and (min-width: 576px) {
+            font-size: 2rem;
+        }
+
+        span {
+            display: inline-block;
+            -webkit-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+            -webkit-animation: loading 2s infinite;
+                    animation: loading 2s infinite;
+
+            &:nth-child(1) {
+                -webkit-animation-delay: .1s;
+                        animation-delay: .1s;
+            }
+            &:nth-child(2) {
+                -webkit-animation-delay: .2s;
+                        animation-delay: .2s;
+            }
+            &:nth-child(3) {
+                -webkit-animation-delay: .3s;
+                        animation-delay: .3s;
+            }
+            &:nth-child(4) {
+                -webkit-animation-delay: .4s;
+                        animation-delay: .4s;
+            }
+            &:nth-child(5) {
+                -webkit-animation-delay: .5s;
+                        animation-delay: .5s;
+            }
+            &:nth-child(6) {
+                -webkit-animation-delay: .6s;
+                        animation-delay: .6s;
+            }
+        }
+    }
+}
+@import "headings";
+
+@import "section-title";
+
+@import "copy";
+
+@import "button";

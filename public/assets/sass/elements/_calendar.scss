@@ -1,0 +1,304 @@
+.ui-datepicker-header {
+  .ui-corner-all {
+    display: none;
+  }
+}
+.ui-datepicker {
+  .ui-datepicker-title {
+    position: absolute;
+    right: 0.5rem;
+    top: 1rem;
+    @media only screen and (min-width: 576px) {
+      right: 2rem;
+    }
+    select {
+      color: $nero_black;
+      padding: 0.5rem 0.5rem;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      width: 100px;
+      border-radius: 4px;
+      // background: transparent url("../images/angle-b-white.png") no-repeat 85%
+      //   50%;
+      background-size: 8% !important;
+      font-weight: 400;
+      font-size: 0.8rem;
+      cursor: pointer;
+      body.dark & {
+        color: $white;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        // background: transparent url("../images/angle-bottom.png") no-repeat 85%
+        //   50%;
+      }
+      @media only screen and (min-width: 576px) {
+        width: 140px;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+      }
+      option {
+        color: $black;
+      }
+    }
+    .ui-datepicker-year {
+      display: none;
+    }
+    @media only screen and (min-width: 768px) {
+      top: 3rem;
+    }
+  }
+}
+
+.calendar-wrapp {
+  background-color: $bg_light;
+  padding: 1rem 0;
+  border-radius: 10px;
+  position: relative;
+  max-width: 550px;
+
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .month-select {
+    color: #292929;
+    padding: 0.5rem 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    width: 100px;
+    border-radius: 4px;
+    // background: transparent url("../images/angle-b-white.png") no-repeat 85% 50%;
+    background-size: 8% !important;
+    font-weight: 400;
+    font-size: 0.8rem;
+    cursor: pointer;
+
+    @media only screen and (min-width: 576px) {
+      width: 140px;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+
+    option {
+      color: #000000;
+    }
+
+    body.dark & {
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      // background: transparent url("../images/angle-bottom.png") no-repeat 85%
+      //   50%;
+    }
+  }
+
+  // .month-select-rtl {
+  //   background: transparent url("../images/angle-b-white.png") no-repeat 15% 50%;
+  // }
+
+  body.dark & {
+    background-color: $soft_black;
+  }
+
+  .small-calendar {
+    margin-top: 2.5rem;
+    font-size: 0.9rem;
+    width: 100%;
+
+    .calendar-list .days-name {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .calendar-list .days-list {
+      display: grid;
+      grid-template: repeat(5, 1fr) / repeat(7, 1fr);
+      text-align: center;
+    }
+
+    .calendar-list .days-name .date-cell {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .calendar-list .days-list .date-cell {
+      color: #292929;
+      text-align: center;
+      line-height: 2;
+      font-size: 15px;
+      padding: 8px 8px;
+      border: none;
+      font-weight: 400;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 3rem 2rem;
+  }
+  .today-date {
+    color: $nero_black;
+    opacity: 0.9;
+    position: relative;
+    top: 10px;
+    font-size: 12px;
+    padding-left: 1rem;
+    font-weight: 600;
+
+    @media (min-width: 410px) {
+      font-size: 14px;
+    }
+    @media (min-width: 576px) {
+      font-size: 16px;
+    }
+    body.dark & {
+      color: $white;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    font-size: 0.9rem;
+    width: 100%;
+    margin-top: 2.5rem;
+  }
+}
+
+body.dark .calendar-wrapp .small-calendar .calendar-list .days-name .date-cell {
+  color: #ffffff;
+}
+
+.calendar-wrapp .small-calendar .calendar-list .days-list .date-cell {
+  display: block;
+  border-radius: 4px;
+}
+
+.calendar-wrapp .small-calendar .calendar-list .days-list .date-cell:hover {
+  color: #d79d4b;
+  cursor: pointer;
+}
+
+body.dark .calendar-wrapp .small-calendar .calendar-list .days-list .date-cell {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* todo to active */
+.calendar-wrapp
+  .small-calendar
+  .calendar-list
+  .days-list
+  .selected-date
+  .date-cell {
+  color: #ffffff;
+  background-color: #292929;
+  font-weight: 600;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+/* todo to active */
+body.dark
+  .calendar-wrapp
+  .small-calendar
+  .calendar-list
+  .days-list
+  .selected-date
+  .date-cell {
+  color: #292929;
+  font-weight: 700;
+  background-color: #d79d4b;
+}
+
+@media only screen and (min-width: 576px) {
+  /* todo to active */
+  .calendar-wrapp
+    .small-calendar
+    .calendar-list
+    .days-list
+    .selected-date
+    .date-cell {
+    height: 45px;
+    width: 45px;
+  }
+}
+
+/* todo to active */
+.calendar-wrapp .small-calendar .calendar-list .days-list .selected-date:hover {
+  color: #ffffff;
+}
+
+.ui-datepicker-month,
+.ui-datepicker-year,
+.ui-datepicker-calendar {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.ui-datepicker-calendar {
+  th,
+  .ui-state-default {
+    color: $nero_black;
+    text-align: center;
+    line-height: 2;
+    font-size: 13px;
+    padding: 8px 8px;
+    border: none;
+    font-weight: 400;
+    transition: all 0.3s;
+    margin: 0 auto;
+
+    body.dark & {
+      color: $white;
+    }
+
+    @media only screen and (min-width: 576px) {
+      font-size: 15px;
+      padding: 12px 10px;
+      height: 55px;
+      width: 55px;
+    }
+  }
+  th {
+    color: $nero_black;
+    opacity: 0.9;
+    font-weight: 500;
+
+    body.dark & {
+      color: $white;
+    }
+  }
+  .ui-state-default {
+    display: block;
+    border-radius: 4px;
+  }
+  a:hover {
+    color: $golden_poppy;
+  }
+  .ui-state-active {
+    color: $white;
+    background-color: $nero_black;
+    font-weight: 600;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+
+    body.dark & {
+      color: $nero_black;
+      font-weight: 700;
+      background-color: $golden_poppy;
+    }
+
+    @media only screen and (min-width: 576px) {
+      height: 55px;
+      width: 55px;
+    }
+    &:hover {
+      color: $white;
+    }
+  }
+}
