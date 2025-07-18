@@ -38,7 +38,7 @@ const StyleSwitcher = () => {
               width={150}
               height={150}
               className="img-fluid"
-              alt="Rakibul Dark Variant"
+              alt="Luciano Dark Variant"
             />
           </div>
           <div className="variant" onClick={() => setMode("light")}>
@@ -47,7 +47,7 @@ const StyleSwitcher = () => {
               width={150}
               height={150}
               className="img-fluid"
-              alt="Rakibul Dark Variant"
+              alt="Luciano Dark Variant"
             />
           </div>
         </div>
@@ -66,7 +66,7 @@ const StyleSwitcher = () => {
               width={150}
               height={150}
               className="img-fluid"
-              alt="Rakibul LTR"
+              alt="Luciano LTR"
             />
           </div>
           <div
@@ -81,7 +81,7 @@ const StyleSwitcher = () => {
               width={150}
               height={150}
               className="img-fluid"
-              alt="Rakibul RTL"
+              alt="Luciano RTL"
             />
           </div>
         </div>

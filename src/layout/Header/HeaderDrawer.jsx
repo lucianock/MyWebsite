@@ -60,7 +60,7 @@ const HeaderDrawer = ({ isOpen, toggleDrawer }) => {
                 className="img-fluid w-100"
                 width={75}
                 height={75}
-                alt="Rakibul - Personal Portfolio"
+                alt="Luciano - Personal Portfolio"
               />
             </div>
             <h3>I'm Luciano</h3>

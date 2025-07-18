@@ -21,14 +21,14 @@ const AboutMe = () => {
                 className="about-thumb dark img-fluid"
                 width={325}
                 height={380}
-                alt="Rakibul - Personal Portfolio"
+                alt="Luciano - Personal Portfolio"
               />
               <Image
                 src={aboutMe?.aboutImage}
                 className="about-thumb light img-fluid"
                 width={325}
                 height={380}
-                alt="Rakibul - Personal Portfolio"
+                alt="Luciano - Personal Portfolio"
               />
             </div>
           </div>
