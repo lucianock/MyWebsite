@@ -1,21 +1,27 @@
+import { useEffect, useState } from "react";
+
 const useLocalData = () => {
-  const [locale, setLocale] = useState({
-    rtl: "",
-    mode: "",
-  });
+  const [locale, setLocale] = useState("en");
 
   useEffect(() => {
-    // Access the locale data once the DOM is ready
-    const localeMeta = document.querySelector("meta[name=locale]");
+    try {
+      const localeMeta = document.querySelector("meta[name=locale]");
+      if (localeMeta) {
+        setLocale(localeMeta.content);
+      }
+    } catch (error) {
+      console.warn('Error reading locale meta:', error);
+    }
+  }, []);
 
-    if (localeMeta) {
-      const dir = localeMeta.getAttribute("content") === "ar" ? "rtl" : "ltr";
-      const bodyClass =
-        localeMeta.getAttribute("content") === "ar" ? "dark" : "light";
-      setLocale({
-        rtl: dir,
-        mode: bodyClass,
-      });
+  useEffect(() => {
+    try {
+      const localeMeta = document.querySelector("meta[name=locale]");
+      if (localeMeta) {
+        setLocale(localeMeta.content);
+      }
+    } catch (error) {
+      console.warn('Error reading locale meta:', error);
     }
   }, [document.querySelector("meta[name=locale]")]);
 

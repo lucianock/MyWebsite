@@ -3016,11 +3016,11 @@ body.dark .about .about-thumbnail-area .about-thumb.dark {
   width: 100%;
 }
 .about .details {
-  max-width: 530px;
+  max-width: 580px;
 }
 @media (min-width: 768px) {
   .about .details {
-    max-width: 615px;
+    max-width: 680px;
   }
 }
 .about .details .name {
@@ -3139,6 +3139,11 @@ body.dark .about .details .bio {
   font-size: 14px;
   font-weight: 500;
   opacity: 0.9;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 body.dark .about .details .info li {
   color: #ffffff;
@@ -3148,6 +3153,7 @@ body.dark .about .details .info li {
   .about .details .info li {
     font-size: 15px;
     font-weight: 600;
+    white-space: normal;
   }
 }
 @media (min-width: 1200px) {

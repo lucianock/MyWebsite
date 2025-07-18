@@ -26,7 +26,7 @@ const Resume = () => {
             <div className="timeline-box odd">
               <div className="icon-box text-center">
                 <EducationIcon viewBox="0 0 37 37" />
-                <div className="box-title">EDUCATION</div>
+                <div className="box-title">EDUCACIÓN</div>
               </div>
               <div className="timeline">
                 <div className="timeline-divider"></div>
@@ -41,7 +41,7 @@ const Resume = () => {
             <div className="timeline-box even">
               <div className="icon-box text-center order-lg-last">
                 <ExperimentIcon viewBox="0 0 31 35" />
-                <div className="box-title">EXPERIMENT</div>
+                <div className="box-title">PROYECTOS</div>
               </div>
               <div className="timeline order-lg-first">
                 <div className="timeline-divider"></div>

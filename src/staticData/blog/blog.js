@@ -50,14 +50,14 @@ export const singleBlogHero = {
 export const allBlogs = [
   {
     id: 1,
-    title: "Get ready for hollywood’s big night with Google",
+    title: "Get ready for hollywood's big night with Google",
     tags: "FASHION",
     date: "18 DEC, 2020",
     description:
       "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy... ",
     image: {
-      // thumbnail: blog1Thumnail?.src,
-      // mainImage: blog1Main?.src,
+      thumbnail: "/assets/images/placeholder.jpg",
+      mainImage: "/assets/images/placeholder.jpg",
     },
     link: "#",
     slug: "get-ready-for-hollywoods-big-night-with-google",
@@ -71,8 +71,8 @@ export const allBlogs = [
     description:
       "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy...",
     image: {
-      // thumbnail: blog2Thumnail?.src,
-      // mainImage: blog2Main?.src,
+      thumbnail: "/assets/images/placeholder.jpg",
+      mainImage: "/assets/images/placeholder.jpg",
     },
     link: "#",
     slug: "bring-iconic-japanese-characters-to-life-with",
@@ -86,8 +86,8 @@ export const allBlogs = [
     description:
       "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy...",
     image: {
-      // thumbnail: blog3Thumnail?.src,
-      // mainImage: blog3Main?.src,
+      thumbnail: "/assets/images/placeholder.jpg",
+      mainImage: "/assets/images/placeholder.jpg",
     },
     link: "#",
     slug: "trash-to-treasure-how-google-thinks-about-deconstruction",
@@ -101,8 +101,8 @@ export const allBlogs = [
     description:
       "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy...",
     image: {
-      // thumbnail: blog4Thumnail?.src,
-      // mainImage: blog4Main?.src,
+      thumbnail: "/assets/images/placeholder.jpg",
+      mainImage: "/assets/images/placeholder.jpg",
     },
     link: "#",
     slug: "a-matter-of-impact-april-updates-from-google-org",
@@ -116,8 +116,8 @@ export const allBlogs = [
     description:
       "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy...",
     image: {
-      // thumbnail: blog5Thumnail?.src,
-      // mainImage: blog5Main?.src,
+      thumbnail: "/assets/images/placeholder.jpg",
+      mainImage: "/assets/images/placeholder.jpg",
     },
     link: "#",
     slug: "new-resources-on-the-gender-gap-in-computer-science",
@@ -131,8 +131,8 @@ export const allBlogs = [
     description:
       "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy...",
     image: {
-      // thumbnail: blog6Thumnail?.src,
-      // mainImage: blog6Main?.src,
+      thumbnail: "/assets/images/placeholder.jpg",
+      mainImage: "/assets/images/placeholder.jpg",
     },
     link: "#",
     slug: "the-best-cities-to-travel-alone-in-the-usa",

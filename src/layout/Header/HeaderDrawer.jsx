@@ -3,13 +3,41 @@ import { siteSettings } from "@/staticData/siteSettings";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Drawer from "react-modern-drawer";
-import Typewriter from "typewriter-effect";
-// import heroImage from "../../../public/assets/images/hero/hero-img-xs.webp";
 
 const HeaderDrawer = ({ isOpen, toggleDrawer }) => {
   const isMobile = useMediaQuery("(max-width: 1199px)");
+  const [currentText, setCurrentText] = useState(0);
+
+  const texts = [
+    "Full Stack Developer",
+    "I Help Businesses Grow By Developing Websites, Web Apps & Software That Drive Success|"
+  ];
+
+  useEffect(() => {
+    // Detectar si hay problemas con el DOM (Google Translate)
+    const checkDOMIntegrity = () => {
+      try {
+        const testElement = document.createElement('div');
+        document.body.appendChild(testElement);
+        document.body.removeChild(testElement);
+        return true;
+      } catch (error) {
+        console.warn('DOM manipulation error detected:', error);
+        return false;
+      }
+    };
+
+    // Solo activar rotación si el DOM está estable
+    if (checkDOMIntegrity()) {
+      const interval = setInterval(() => {
+        setCurrentText((prev) => (prev + 1) % texts.length);
+      }, 3000);
+
+      return () => clearInterval(interval);
+    }
+  }, [texts.length]);
 
   const router = useRouter();
 
@@ -55,25 +83,12 @@ const HeaderDrawer = ({ isOpen, toggleDrawer }) => {
         <div className="mobile-menu">
           <div className="menu-header">
             <div className="hero-img">
-              <Image
-                // src={heroImage?.src}
-                className="img-fluid w-100"
-                width={75}
-                height={75}
-                alt="Luciano - Personal Portfolio"
-              />
+              {/* Imagen removida para evitar errores */}
             </div>
             <h3>I'm Luciano</h3>
             <div className="ah-headline clip">
               <div className="ah-words-wrapper">
-                <Typewriter
-                  options={{
-                    strings: ["Full Stack Developer", "I Help Businesses Grow By Developing Websites, Web Apps & Software That Drive Success|"],
-                    autoStart: true,
-                    loop: true,
-                    delay: 20,
-                  }}
-                />
+                <span>{texts[currentText]}</span>
               </div>
             </div>
             <div onClick={toggleDrawer} className="close-menu"></div>

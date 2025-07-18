@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 const NextHead = ({
-  title = "Luciano Portfolio - Personal Portfolio Template",
+  title = "Luciano Portfolio",
 }) => {
   return (
     <Head>

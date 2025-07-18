@@ -6,7 +6,18 @@ export const downloadPdf = () => {
     a.href = pdfPath;
     a.download = 'LucianoCamposKriegl_CV.pdf';
 
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
+    // Add element to body
+    if (document.body) {
+        document.body.appendChild(a);
+        a.click();
+        
+        // Safely remove the element with error handling
+        try {
+            if (document.body && document.body.contains(a)) {
+                document.body.removeChild(a);
+            }
+        } catch (error) {
+            console.warn('Error removing download element:', error);
+        }
+    }
 }

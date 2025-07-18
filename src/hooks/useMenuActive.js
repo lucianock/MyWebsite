@@ -1,55 +1,52 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-const useMenuActive = (ref, selector) => {
-  const [activeMenuItem, setActiveMenuItem] = useState("#home");
+const useMenuActive = (selector) => {
+  const [activeMenu, setActiveMenu] = useState("");
 
   useEffect(() => {
-    const handleScroll = () => {
-      const rightContainer = ref?.current;
-      if (!rightContainer) return;
-
-      const scrollPosition = window.scrollY;
-
-      // Determine the active menu item based on scroll position
+    try {
       const menuItems = document.querySelectorAll(selector);
+      const sections = document.querySelectorAll("section[id]");
 
-      let activeMenu = null;
-      menuItems.forEach((menuItem) => {
-        const targetSection = document.querySelector(
-          menuItem.getAttribute("data-section")
-        );
+      const handleScroll = () => {
+        let current = "";
+        sections.forEach((section) => {
+          try {
+            const targetSection = document.querySelector(
+              `a[href*=${section.getAttribute("id")}]`
+            );
+            if (targetSection) {
+              const sectionTop = section.offsetTop;
+              const sectionHeight = section.clientHeight;
+              if (scrollY >= sectionTop - 200) {
+                current = targetSection.getAttribute("href").slice(1);
+              }
+            }
+          } catch (error) {
+            console.warn('Error in menu scroll handler:', error);
+          }
+        });
 
-        if (!targetSection) return;
+        menuItems.forEach((item) => {
+          try {
+            item.classList.remove("active");
+            if (item.getAttribute("href")?.slice(1) === current) {
+              item.classList.add("active");
+            }
+          } catch (error) {
+            console.warn('Error updating menu item:', error);
+          }
+        });
+      };
 
-        const targetSectionOffset = targetSection.offsetTop;
-        const targetSectionHeight = targetSection.offsetHeight;
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    } catch (error) {
+      console.warn('Error setting up menu active hook:', error);
+    }
+  }, [selector]);
 
-        // Adjust the conditions to consider both start and end points of the section
-        if (
-          scrollPosition >= targetSectionOffset &&
-          scrollPosition < targetSectionOffset + targetSectionHeight
-        ) {
-          activeMenu = menuItem.getAttribute("data-section");
-        } else if (
-          // Add a condition for the bottom of the section
-          scrollPosition >= targetSectionOffset - window.innerHeight / 2 &&
-          scrollPosition < targetSectionOffset
-        ) {
-          activeMenu = menuItem.getAttribute("data-section");
-        }
-      });
-
-      setActiveMenuItem(activeMenu);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  return activeMenuItem;
+  return activeMenu;
 };
 
 export default useMenuActive;
