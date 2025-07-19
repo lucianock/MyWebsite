@@ -19,7 +19,7 @@ export default function Home() {
       {/* <Services />
       <Portfolio /> */}
       {/* <Feedback /> */}
-      <Blog />
+      {/* <Blog /> */}
       <ContactMe />
     </Layout>
   );

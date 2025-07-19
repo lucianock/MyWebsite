@@ -108,13 +108,13 @@ export const funItems = [
     endCount: 32,
     title: "PROYECTOS REALIZADOS",
   },
-  /* {
+  {
     id: 2,
     Svg: <HappyCustomersIcon />,
     startCount: 1,
-    endCount: 598,
-    title: "HAPPY CUSTOMERS",
-  }, */
+    endCount: 117,
+    title: "CONTRIBUCIONES",
+  },
   {
     id: 3,
     Svg: <WorkingHours />,
@@ -134,31 +134,31 @@ export const funItems = [
 export const expFirstCol = [
   {
     id: 1,
-    range: "2020 - 2024",
+    //range: "2020 - 2024",
     title: "TÉCNICO SUPERIOR EN DESARROLLO DE SOFTWARE",
     description: "Instituto Urquiza - Formación completa en desarrollo de software y programación.",
   },
   {
     id: 2,
-    range: "2024 - 2025",
+    //range: "2024 - 2025",
     title: "LARAVEL MVC",
     description: "EducacionIT - Curso especializado en Laravel MVC para desarrollo web avanzado.",
   },
   {
     id: 3,
-    range: "2024 - 2025",
+    //range: "2024 - 2025",
     title: "ARQUITECTURA PHP AVANZADA",
     description: "EducacionIT - Formación en patrones de diseño y arquitectura avanzada en PHP.",
   },
   {
     id: 4,
-    range: "2024 - 2025",
+    //range: "2024 - 2025",
     title: "JAVASCRIPT AVANZADO",
     description: "EducacionIT - Especialización en JavaScript moderno y frameworks.",
   },
   {
     id: 5,
-    range: "2024 - 2025",
+    //range: "2024 - 2025",
     title: "PATRONES DE DISEÑO",
     description: "EducacionIT - Formación en patrones de diseño y mejores prácticas de desarrollo.",
   },
@@ -173,19 +173,19 @@ export const expFirstCol = [
 export const expSecondCol = [
   {
     id: 1,
-    range: "2020 - 2022",
+    //range: "2020 - 2022",
     title: "BLACKPATH",
-    description: "Desarrollado con Laravel y Vite que permite escanear dominios para detectar vulnerabilidades. Integra herramientas como Nmap, WhatWeb y Gobuster, presentando los resultados en una interfaz sencilla y amigable, pensada para usuarios sin conocimientos técnicos avanzados. Permite exportar reportes claros y organizados, facilitando la identificación rápida de riesgos de seguridad.",
+    description: "Aplicación web desarrollada con Laravel que permite escanear dominios para detectar vulnerabilidades. Integra herramientas como Nmap, WhatWeb y Gobuster, presentando los resultados en una interfaz sencilla y amigable, pensada para usuarios sin conocimientos técnicos avanzados. Permite exportar reportes claros y organizados, facilitando la identificación rápida de riesgos de seguridad.",
   },
   {
     id: 2,
-    range: "2020 - 2022",
+    //range: "2020 - 2022",
     title: "SECUDASH",
     description: "Dashboard de ciberseguridad desarrollado con Laravel y Vite para gestionar accesos, credenciales y publicaciones relevantes. Integración con Bitwarden autohospedado, scraping de LinkedIn por palabras clave y visualización segmentada según roles. Arquitectura escalable, segura y orientada a automatización de tareas.",
   },
   {
     id: 3,
-    range: "Julio - Diciembre 2024",
+    //range: "Julio - Diciembre 2024",
     title: "NEXTJOB",
     description: "Portal de búsqueda y publicación de empleos construido con Laravel y Tailwind CSS. Permite a empresas publicar ofertas y usuarios buscar y filtrar posiciones. Incluye gestión de usuarios con roles, panel de administración y interfaz responsive.",
   },
@@ -272,30 +272,30 @@ export const contactInfo = [
   {
     id: 1,
     Icon: <PhoneNumber />,
-    title: "PHONE NUMBER",
-    data1: "888 - 9999 - 6666",
-    data2: "555 - 2222 - 3333",
+    title: "NÚMERO DE TELÉFONO",
+    data1: "+54 341 658 9951",
+    data2: "",
   },
   {
     id: 2,
     Icon: <EmailIcon />,
-    title: "EMAIL ADDRESS",
-    data1: "demo123@gmail.com",
-    data2: "Ex123@gmail.com",
+    title: "DIRECCIÓN DE EMAIL",
+    data1: "lucianocampos.k@gmail.com",
+    data2: "",
   },
   {
     id: 3,
     Icon: <LocationIcon />,
-    title: "MY LOCATION",
-    data1: "London, Captown,",
-    data2: "United Kingdom",
+    title: "MI UBICACIÓN",
+    data1: "Rosario, Argentina",
+    data2: "",
   },
   {
     id: 4,
     Icon: <WebsiteIcon />,
-    title: "WEBSITE",
-    data1: "www.demo123.com",
-    data2: "www.demo124.net",
+    title: "SITIO WEB",
+    data1: "www.luciano.com",
+    data2: "",
   },
 ];
 
