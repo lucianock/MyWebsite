@@ -13,12 +13,26 @@ const StyleSwitcher = () => {
 
   useEffect(() => {
     let dir = rtl == true ? "rtl" : "ltr";
-    document.querySelector("html").setAttribute("dir", dir);
+    try {
+      const htmlElement = document.querySelector("html");
+      if (htmlElement) {
+        htmlElement.setAttribute("dir", dir);
+      }
+    } catch (error) {
+      console.warn('Error setting HTML dir attribute:', error);
+    }
   }, [rtl]);
 
   useEffect(() => {
     let modeClass = mode == "dark" ? "dark" : "light";
-    document.querySelector("body").setAttribute("class", modeClass);
+    try {
+      const bodyElement = document.querySelector("body");
+      if (bodyElement) {
+        bodyElement.setAttribute("class", modeClass);
+      }
+    } catch (error) {
+      console.warn('Error setting body class:', error);
+    }
   }, [mode]);
 
   return (
@@ -38,7 +52,7 @@ const StyleSwitcher = () => {
               width={150}
               height={150}
               className="img-fluid"
-              alt="Rakibul Dark Variant"
+              alt="Luciano Dark Variant"
             />
           </div>
           <div className="variant" onClick={() => setMode("light")}>
@@ -47,7 +61,7 @@ const StyleSwitcher = () => {
               width={150}
               height={150}
               className="img-fluid"
-              alt="Rakibul Dark Variant"
+              alt="Luciano Dark Variant"
             />
           </div>
         </div>
@@ -66,7 +80,7 @@ const StyleSwitcher = () => {
               width={150}
               height={150}
               className="img-fluid"
-              alt="Rakibul LTR"
+              alt="Luciano LTR"
             />
           </div>
           <div
@@ -81,7 +95,7 @@ const StyleSwitcher = () => {
               width={150}
               height={150}
               className="img-fluid"
-              alt="Rakibul RTL"
+              alt="Luciano RTL"
             />
           </div>
         </div>

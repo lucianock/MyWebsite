@@ -16,19 +16,17 @@ const AboutMe = () => {
         <div className="row align-items-end">
           <div className="col-lg-6">
             <div className="about-thumbnail-area">
-              <Image
+              <img
                 src={aboutMe?.aboutImageDark}
                 className="about-thumb dark img-fluid"
-                width={325}
-                height={380}
-                alt="Rakibul - Personal Portfolio"
+                alt="Luciano - Personal Portfolio"
+                style={{ objectFit: 'cover' }}
               />
-              <Image
+              <img
                 src={aboutMe?.aboutImage}
                 className="about-thumb light img-fluid"
-                width={325}
-                height={380}
-                alt="Rakibul - Personal Portfolio"
+                alt="Luciano - Personal Portfolio"
+                style={{ objectFit: 'cover' }}
               />
             </div>
           </div>

@@ -15,7 +15,7 @@ const Footer = () => {
             }`}
           >
             <p className="">
-              Copyright &copy; {new Date().getFullYear()} All Right Reserved
+              &copy; {new Date().getFullYear()}– Luciano C. K.
             </p>
           </div>
           <div className="col-lg-6">

@@ -7,10 +7,7 @@ import useMenuActive from "@/hooks/useMenuActive";
 const MainHeader = ({ rightContainerRef = null }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const activeMenuItem = useMenuActive(
-    rightContainerRef,
-    ".list-unstyled li a"
-  );
+  const activeMenuItem = useMenuActive(".list-unstyled li a");
 
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);

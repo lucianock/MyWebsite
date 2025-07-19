@@ -14,7 +14,7 @@ import {
 } from "react-icons/fa";
 
 export const siteSettings = {
-  logo: "R",
+  logo: "L",
   headerMenus: [
     {
       id: 1,
@@ -40,7 +40,7 @@ export const siteSettings = {
       Icon: <ResumeIcon />,
       notVisibleRoutes: ["/blog", "/elements"],
     },
-    {
+    /* {
       id: 4,
       title: "SERVICES",
       selector: "#service",
@@ -79,14 +79,14 @@ export const siteSettings = {
       url: "/elements",
       Icon: <ElementsIcon />,
       notVisibleRoutes: ["/"],
-    },
+    }, */
   ],
   headerBottom: {
     title: "CONTACT ME",
     url: "#contact",
   },
   footerItems: [
-    {
+    /* {
       id: 1,
       Icon: <FaTwitter />,
       url: "https://twitter.com/",
@@ -109,7 +109,7 @@ export const siteSettings = {
       Icon: <FaLinkedinIn />,
       url: "https://www.linkedin.com/",
       tooltip: "Connect with us on Linkedin",
-    },
+    }, */
   ],
   themeData: {
     mode: "light",

@@ -65,9 +65,9 @@
 	}
 
 	.details {
-		max-width: 530px;
+		max-width: 580px;
 		@media (min-width: 768px) {
-			max-width: 615px;
+			max-width: 680px;
 		}
 		.name {
 			color: $nero_black;
@@ -163,6 +163,11 @@
 				font-size: 14px;
 				font-weight: 500;
 				opacity: 0.9;
+				word-break: break-all;
+				overflow-wrap: break-word;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
 
 				body.dark & {
 					color: $white;
@@ -172,6 +177,7 @@
 				@media (min-width: 768px) {
 					font-size: 15px;
 					font-weight: 600;
+					white-space: normal;
 				}
 				@media (min-width: 1200px) {
 					font-size: 16px;

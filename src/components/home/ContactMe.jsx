@@ -49,7 +49,7 @@ const ContactMe = () => {
       <div className="container">
         <div className="section-title">
           <h2 className="title">
-            <span>Contact</span> Me
+            <span>Contáctame</span>
           </h2>
         </div>
 
@@ -59,8 +59,8 @@ const ContactMe = () => {
               <form onSubmit={handleSubmit}>
                 <div className="form-group form-floating">
                   <Input
-                    placeholder="Full Name"
-                    label="Full Name"
+                    placeholder="Nombre Completo"
+                    label="Nombre Completo"
                     handleChange={handleChange}
                     name="fullName"
                     value={fullName}
@@ -69,8 +69,8 @@ const ContactMe = () => {
                 <div className="form-group form-floating">
                   <Input
                     type="email"
-                    placeholder="Email Address"
-                    label="Email Address"
+                    placeholder="Dirección de Email"
+                    label="Dirección de Email"
                     handleChange={handleChange}
                     name="email"
                     value={email}
@@ -78,8 +78,8 @@ const ContactMe = () => {
                 </div>
                 <div className="form-group form-floating">
                   <Input
-                    placeholder="Your Subject"
-                    label="Your Subject"
+                    placeholder="Asunto"
+                    label="Asunto"
                     handleChange={handleChange}
                     name="subject"
                     value={subject}
@@ -87,7 +87,7 @@ const ContactMe = () => {
                 </div>
                 <div className="form-group form-floating">
                   <Textarea
-                    label="Your Message"
+                    label="Tu Mensaje"
                     handleChange={handleChange}
                     name="message"
                     value={message}
@@ -101,7 +101,7 @@ const ContactMe = () => {
                     style={{ display: 'none' }}
                     ref={submitButtonRef}
                   >
-                    SUBMIT NOW
+                    ENVIAR MENSAJE
                   </button>
                   {/* Custom submit button */}
                   <button
@@ -109,7 +109,7 @@ const ContactMe = () => {
                     className="theme-btn border-0"
                     onClick={handleCustomSubmit}
                   >
-                    SUBMIT NOW <BsArrowRight className="ms-2" size={25} />
+                    ENVIAR MENSAJE <BsArrowRight className="ms-2" size={25} />
                   </button>
                 </div>
               </form>

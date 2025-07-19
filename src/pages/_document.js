@@ -1,20 +1,9 @@
-import { siteSettings } from "@/staticData/siteSettings";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
-function MyDocument({ locale, ...props }) {
-  const dir =
-    locale === "ar"
-      ? siteSettings?.themeData?.dir
-      : siteSettings?.themeData?.dir;
-  const bodyClass =
-    locale === "ar"
-      ? siteSettings?.themeData?.mode
-      : siteSettings?.themeData?.mode;
-
+function MyDocument() {
   return (
-    <Html lang="en" dir={dir}>
+    <Html lang="en">
       <Head>
-        <meta name="locale" content={locale} />
         {/* Google Font */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -27,21 +16,12 @@ function MyDocument({ locale, ...props }) {
           rel="stylesheet"
         />
       </Head>
-      <body className={bodyClass}>
+      <body className="dark">
         <Main />
         <NextScript />
       </body>
     </Html>
   );
 }
-
-MyDocument.getInitialProps = async (ctx) => {
-  const initialProps = await Document.getInitialProps(ctx);
-  return {
-    ...initialProps,
-    locale: ctx?.locale || "es",
-    bodyClass: ctx?.locale || "es",
-  };
-};
 
 export default MyDocument;

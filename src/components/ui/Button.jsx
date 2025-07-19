@@ -1,7 +1,7 @@
 import { BsArrowRight } from "react-icons/bs";
 
 const Button = ({
-  text = "DOWNLOAD CV",
+  text = "DESCARGAR CV",
   btnClassName = "theme-btn",
   arrow = false,
   onClick,

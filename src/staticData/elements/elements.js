@@ -193,7 +193,7 @@ export const plans = [
     price: 75,
     type: "STATIC",
     // image: plan1Image?.src,
-    bgImage: plan1BgImage?.src,
+    // bgImage: plan1BgImage?.src,
     benefits: [
       "1 Page with elementor",
       "Responsive Design",
