@@ -14,7 +14,7 @@ import {
 } from "react-icons/fa";
 
 export const siteSettings = {
-  logo: "L",
+  logo: "L", // Logo de Luciano
   headerMenus: [
     {
       id: 1,

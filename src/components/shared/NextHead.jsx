@@ -11,7 +11,7 @@ const NextHead = ({
         name="description"
         content="A modern design and high-speed performance Nextjs template that can be used for Personal Portfolio Landing."
       />
-      <link rel="icon" href="/favicon-dark.png" />
+      <link rel="icon" href="/favicon.ico" />
     </Head>
   );
 };
