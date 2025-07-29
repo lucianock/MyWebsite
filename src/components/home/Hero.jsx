@@ -6,6 +6,7 @@ import Typewriter from "typewriter-effect";
 import Button from "../ui/Button";
 import { useEffect, useState } from "react";
 import { useTranslation } from "@/hooks/useTranslation";
+import { trackWhatsAppClick } from "@/components/shared/AnalyticsEvents";
 
 const Hero = () => {
   const [isTypewriterSafe, setIsTypewriterSafe] = useState(true);
@@ -51,6 +52,10 @@ const Hero = () => {
   
   const whatsappUrl = `https://wa.me/543416589951?text=${encodeURIComponent(whatsappMessage)}`;
 
+  const handleWhatsAppClick = () => {
+    trackWhatsAppClick('hero');
+  };
+
   return (
     <div className="hero-banner" id="home">
       <div className="container">
@@ -86,6 +91,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ textDecoration: 'none' }}
+                onClick={handleWhatsAppClick}
               >
                 <button className="whatsapp-button whatsapp-animate" style={{
                   display: 'flex',

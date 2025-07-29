@@ -1,13 +1,17 @@
 import React, { useContext } from 'react';
 import ThemeContext from '@/context/ThemeContext';
 import { useTranslation } from '@/hooks/useTranslation';
+import { trackLanguageChange } from '@/components/shared/AnalyticsEvents';
 
 const LanguageToggle = () => {
   const { language, setLanguage } = useContext(ThemeContext);
   const { t } = useTranslation();
 
   const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'es' : 'en');
+    const newLanguage = language === 'en' ? 'es' : 'en';
+    setLanguage(newLanguage);
+    // Trackear el cambio de idioma
+    trackLanguageChange(language, newLanguage);
   };
 
   return (

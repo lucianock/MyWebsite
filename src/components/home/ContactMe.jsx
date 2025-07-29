@@ -5,6 +5,7 @@ import { contactInfo } from '@/staticData/home/home';
 import { BsArrowRight } from 'react-icons/bs';
 import ContactInfoItem from './ContactInfoItem';
 import { useTranslation } from '@/hooks/useTranslation';
+import { trackContactForm } from '@/components/shared/AnalyticsEvents';
 
 const ContactMe = () => {
   const [formValues, setFormValues] = useState({
@@ -33,6 +34,9 @@ const ContactMe = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('formValues', formValues);
+
+    // Trackear el envío del formulario
+    trackContactForm(formValues);
 
     // reset after form submit
     reset();

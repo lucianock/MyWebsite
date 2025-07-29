@@ -2,6 +2,7 @@ import Footer from "@/layout/Footer";
 import MainHeader from "@/layout/Header/MainHeader";
 import NextHead from "@/components/shared/NextHead";
 import LanguageToggle from "@/components/shared/LanguageToggle";
+import GoogleAnalytics from "@/components/shared/GoogleAnalytics";
 import { useRef } from "react";
 
 const Layout = ({ className = "", children }) => {
@@ -10,6 +11,7 @@ const Layout = ({ className = "", children }) => {
   return (
     <>
       <NextHead />
+      <GoogleAnalytics />
       <LanguageToggle />
       <main>
         <MainHeader rightContainerRef={rightContainerRef} />
