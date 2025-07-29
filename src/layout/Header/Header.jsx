@@ -36,12 +36,13 @@ const Header = ({ activeMenuItem }) => {
       'HOME': 'home',
       'ABOUT ME': 'aboutMe',
       'RESUME': 'resume',
-      'SERVICES': 'services',
+      'SKILLS': 'skills',
       'PORTFOLIO': 'portfolio',
-      'FEEDBACK': 'feedback',
       'BLOGS': 'blogs',
-      'ELEMENTS': 'elements',
-      'CONTACT ME': 'contactMe'
+      'CONTACT ME': 'contactMe',
+      'SERVICES': 'services',
+      'FEEDBACK': 'feedback',
+      'ELEMENTS': 'elements'
     };
     return keyMap[title] || title.toLowerCase().replace(/\s+/g, '');
   };

@@ -16,33 +16,33 @@ import {
 } from "react-icons/fa";
 
 export const blogHero = {
-  heading: "Blog Post",
+  heading: "blog.hero.heading",
   breadcrumbs: [
     {
-      title: "HOME",
+      title: "nav.home",
       url: "/",
     },
   ],
   lastBreadcrum: {
-    title: "BLOG POST",
+    title: "blog.hero.lastBreadcrumb",
     url: "/",
   },
 };
 
 export const singleBlogHero = {
-  heading: "Single Post",
+  heading: "blog.singleHero.heading",
   breadcrumbs: [
     {
-      title: "HOME",
+      title: "nav.home",
       url: "/",
     },
     {
-      title: "BLOG",
+      title: "nav.blogs",
       url: "/blog",
     },
   ],
   lastBreadcrum: {
-    title: "BLOG POST",
+    title: "blog.singleHero.lastBreadcrumb",
     url: "/",
   },
 };
@@ -50,93 +50,87 @@ export const singleBlogHero = {
 export const allBlogs = [
   {
     id: 1,
-    title: "Get ready for hollywood's big night with Google",
-    tags: "FASHION",
-    date: "18 DEC, 2020",
-    description:
-      "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy... ",
+    title: "blog.publishingSoftware",
+    tags: "blog.technology",
+    date: "15 DEC, 2024",
+    description: "blog.publishingSoftwareDesc",
     image: {
       thumbnail: "/assets/images/placeholder.jpg",
       mainImage: "/assets/images/placeholder.jpg",
     },
     link: "#",
-    slug: "get-ready-for-hollywoods-big-night-with-google",
-    allTags: ["travel", "fashion", "cv", "resume"],
+    slug: "building-scalable-apis-with-laravel-best-practices",
+    allTags: ["laravel", "api", "php", "development"],
   },
   {
     id: 2,
-    title: "Bring iconic japanese characters to life with",
-    tags: "TECHNOLOGY",
-    date: "18 DEC, 2020",
-    description:
-      "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy...",
+    title: "blog.wordpressWebsite",
+    tags: "blog.development",
+    date: "10 DEC, 2024",
+    description: "blog.wordpressWebsiteDesc",
     image: {
       thumbnail: "/assets/images/placeholder.jpg",
       mainImage: "/assets/images/placeholder.jpg",
     },
     link: "#",
-    slug: "bring-iconic-japanese-characters-to-life-with",
-    allTags: ["travel", "fashion", "cv", "resume"],
+    slug: "modern-web-development-from-php-to-full-stack-javascript",
+    allTags: ["javascript", "react", "nodejs", "web-development"],
   },
   {
     id: 3,
-    title: "Trash to treasure: How google thinks about deconstruction",
-    tags: "TRASH",
-    date: "18 DEC, 2020",
-    description:
-      "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy...",
+    title: "blog.publishingSoftware",
+    tags: "blog.technology",
+    date: "05 DEC, 2024",
+    description: "blog.publishingSoftwareDesc",
     image: {
       thumbnail: "/assets/images/placeholder.jpg",
       mainImage: "/assets/images/placeholder.jpg",
     },
     link: "#",
-    slug: "trash-to-treasure-how-google-thinks-about-deconstruction",
-    allTags: ["travel", "fashion", "cv", "resume"],
+    slug: "building-scalable-apis-with-laravel-best-practices-2",
+    allTags: ["laravel", "api", "php", "development"],
   },
   {
     id: 4,
-    title: "A matter of impact: April updates from google.org",
-    tags: "FASHION",
-    date: "18 DEC, 2020",
-    description:
-      "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy...",
+    title: "blog.wordpressWebsite",
+    tags: "blog.development",
+    date: "01 DEC, 2024",
+    description: "blog.wordpressWebsiteDesc",
     image: {
       thumbnail: "/assets/images/placeholder.jpg",
       mainImage: "/assets/images/placeholder.jpg",
     },
     link: "#",
-    slug: "a-matter-of-impact-april-updates-from-google-org",
-    allTags: ["travel", "fashion", "cv", "resume"],
+    slug: "modern-web-development-from-php-to-full-stack-javascript-2",
+    allTags: ["javascript", "react", "nodejs", "web-development"],
   },
   {
     id: 5,
-    title: "New resources on the gender gap in computer science",
-    tags: "FASHION",
-    date: "18 DEC, 2020",
-    description:
-      "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy...",
+    title: "blog.publishingSoftware",
+    tags: "blog.technology",
+    date: "25 NOV, 2024",
+    description: "blog.publishingSoftwareDesc",
     image: {
       thumbnail: "/assets/images/placeholder.jpg",
       mainImage: "/assets/images/placeholder.jpg",
     },
     link: "#",
-    slug: "new-resources-on-the-gender-gap-in-computer-science",
-    allTags: ["travel", "fashion", "cv", "resume"],
+    slug: "building-scalable-apis-with-laravel-best-practices-3",
+    allTags: ["laravel", "api", "php", "development"],
   },
   {
     id: 6,
-    title: "The best cities to travel alone in the USA",
-    tags: "FASHION",
-    date: "18 DEC, 2020",
-    description:
-      "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy...",
+    title: "blog.wordpressWebsite",
+    tags: "blog.development",
+    date: "20 NOV, 2024",
+    description: "blog.wordpressWebsiteDesc",
     image: {
       thumbnail: "/assets/images/placeholder.jpg",
       mainImage: "/assets/images/placeholder.jpg",
     },
     link: "#",
-    slug: "the-best-cities-to-travel-alone-in-the-usa",
-    allTags: ["travel", "fashion", "cv", "resume"],
+    slug: "modern-web-development-from-php-to-full-stack-javascript-3",
+    allTags: ["javascript", "react", "nodejs", "web-development"],
   },
 ];
 

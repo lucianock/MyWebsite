@@ -2,9 +2,11 @@ import { allBlogs } from "@/staticData/blog/blog";
 import Button from "../ui/Button";
 import SingleBlog from "./SingleBlog";
 import { useState } from "react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const BlogPosts = () => {
   const [blogCount, setBlogCount] = useState(4);
+  const { t } = useTranslation();
 
   const handleButtonClick = () => {
     setBlogCount((prev) => prev + 2);

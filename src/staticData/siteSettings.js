@@ -6,6 +6,8 @@ import HomeIcon from "@/components/icons/siteIcons/HomeIcon";
 import PortfolioIcon from "@/components/icons/siteIcons/PortfolioIcon";
 import ResumeIcon from "@/components/icons/siteIcons/ResumeIcon";
 import ServicesIcon from "@/components/icons/siteIcons/ServicesIcon";
+import SkillsIcon from "@/components/icons/siteIcons/SkillsIcon";
+import ContactIcon from "@/components/icons/siteIcons/ContactIcon";
 import {
   FaFacebookF,
   FaLinkedinIn,
@@ -34,18 +36,18 @@ export const siteSettings = {
     },
     {
       id: 3,
+      title: "SKILLS",
+      selector: "#skill",
+      url: "/skill",
+      Icon: <SkillsIcon />,
+      notVisibleRoutes: ["/blog", "/elements"],
+    },
+    {
+      id: 4,
       title: "RESUME",
       selector: "#resume",
       url: "/resume",
       Icon: <ResumeIcon />,
-      notVisibleRoutes: ["/blog", "/elements"],
-    },
-    /* {
-      id: 4,
-      title: "SERVICES",
-      selector: "#service",
-      url: "/service",
-      Icon: <ServicesIcon />,
       notVisibleRoutes: ["/blog", "/elements"],
     },
     {
@@ -58,6 +60,30 @@ export const siteSettings = {
     },
     {
       id: 6,
+      title: "BLOGS",
+      selector: "#blog",
+      url: "/blog",
+      Icon: <BlogsIcon />,
+      notVisibleRoutes: [],
+    },
+    /* {
+      id: 7,
+      title: "CONTACT ME",
+      selector: "#contact",
+      url: "/contact",
+      Icon: <ContactIcon />,
+      notVisibleRoutes: ["/blog", "/elements"],
+    }, */
+    /* {
+      id: 8,
+      title: "SERVICES",
+      selector: "#service",
+      url: "/service",
+      Icon: <ServicesIcon />,
+      notVisibleRoutes: ["/blog", "/elements"],
+    },
+    {
+      id: 9,
       title: "FEEDBACK",
       selector: "#feedback",
       url: "/feedback",
@@ -65,15 +91,7 @@ export const siteSettings = {
       notVisibleRoutes: ["/blog", "/elements"],
     },
     {
-      id: 7,
-      title: "BLOGS",
-      selector: "#blog",
-      url: "/blog",
-      Icon: <BlogsIcon />,
-      notVisibleRoutes: [],
-    },
-    {
-      id: 8,
+      id: 10,
       title: "Elements",
       selector: "#elements",
       url: "/elements",

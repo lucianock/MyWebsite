@@ -16,10 +16,10 @@ export default function Home() {
       <AboutMe />
       <Skills />
       <Resume />
-      {/* <Services />
-      <Portfolio /> */}
+      <Portfolio />
+      <Blog />
+      {/* <Services /> */}
       {/* <Feedback /> */}
-      {/* <Blog /> */}
       <ContactMe />
     </Layout>
   );

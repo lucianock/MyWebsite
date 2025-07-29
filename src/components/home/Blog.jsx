@@ -2,9 +2,11 @@ import Button from "../ui/Button";
 import { useRouter } from "next/router";
 import { allBlogs } from "@/staticData/blog/blog";
 import SingleBlog from "../blog/SingleBlog";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const Blog = () => {
   const router = useRouter();
+  const { t } = useTranslation();
 
   const handleButtonClick = (link) => {
     router.push(link);
@@ -15,7 +17,7 @@ const Blog = () => {
       <div className="container">
         <div className="section-title">
           <h2 className="title">
-            <span>Blog</span> Post
+            <span>{t('sections.blogs')}</span> Post
           </h2>
         </div>
 

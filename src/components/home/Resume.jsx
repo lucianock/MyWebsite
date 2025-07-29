@@ -46,7 +46,7 @@ const Resume = () => {
             <div className="timeline-box even">
               <div className="icon-box text-center order-lg-last">
                 <ExperimentIcon viewBox="0 0 31 35" />
-                <div className="box-title">{t('sections.projects')}</div>
+                <div className="box-title">{t('sections.experience')}</div>
               </div>
               <div className="timeline order-lg-first">
                 <div className="timeline-divider"></div>

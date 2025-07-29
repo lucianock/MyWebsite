@@ -4,12 +4,13 @@ export const en = {
     home: "HOME",
     aboutMe: "ABOUT ME",
     resume: "RESUME",
-    services: "SERVICES",
+    skills: "SKILLS",
     portfolio: "PORTFOLIO",
-    feedback: "FEEDBACK",
     blogs: "BLOGS",
-    elements: "ELEMENTS",
-    contactMe: "CONTACT ME"
+    contactMe: "CONTACT ME",
+    services: "SERVICES",
+    feedback: "FEEDBACK",
+    elements: "ELEMENTS"
   },
 
   // Section Titles
@@ -22,7 +23,9 @@ export const en = {
     contact: "Contact",
     services: "Services",
     education: "EDUCATION",
-    projects: "PROJECTS"
+    experience: "EXPERIENCE",
+    portfolio: "PORTFOLIO",
+    blogs: "BLOGS"
   },
 
   // Hero Section
@@ -73,7 +76,9 @@ export const en = {
     secudash: "SECUDASH",
     secudashDesc: "Cybersecurity dashboard developed with Laravel and Vite to manage access, credentials and relevant publications. Integration with self-hosted Bitwarden, LinkedIn scraping by keywords and segmented visualization according to roles. Scalable, secure architecture oriented to task automation.",
     nextjob: "NEXTJOB",
-    nextjobDesc: "Job search and posting portal built with Laravel and Tailwind CSS. Allows companies to post offers and users to search and filter positions. Includes user management with roles, admin panel and responsive interface."
+    nextjobDesc: "Job search and posting portal built with Laravel and Tailwind CSS. Allows companies to post offers and users to search and filter positions. Includes user management with roles, admin panel and responsive interface.",
+    idealsur: "Idealsur.com – Remote (CABA)",
+    idealsurDesc: "Development of CRMs oriented to the pharmaceutical industry, mainly with PHP, JavaScript and MySQL. Participation in the entire cycle: requirements analysis, design, development, testing and support. Integration of external APIs and generation of custom reports for clients. Server configuration and support, deployments from local to production environment, and database management. Technical collaboration in agile environments, code review and promotion of best practices."
   },
 
   // Services
@@ -117,8 +122,43 @@ export const en = {
 
   // Blog
   blog: {
-    technology: "TECHNOLOGY",
-    trash: "GENERAL"
+    technology: "Technology",
+    development: "Development",
+    trash: "Development",
+    publishingSoftware: "Building Scalable APIs with Laravel: Best Practices",
+    publishingSoftwareDesc: "Learn how to design and implement robust REST APIs using Laravel. This comprehensive guide covers authentication, validation, error handling, testing, and deployment strategies for production-ready APIs that can handle high traffic and complex business logic.",
+    wordpressWebsite: "Modern Web Development: From PHP to Full-Stack JavaScript",
+    wordpressWebsiteDesc: "Explore the evolution of web development from traditional PHP applications to modern JavaScript frameworks. Discover how to build responsive, performant web applications using React, Node.js, and modern development tools and practices.",
+    // Blog page translations
+    hero: {
+      heading: "Blog Post",
+      lastBreadcrumb: "BLOG POST"
+    },
+    singleHero: {
+      heading: "Single Post",
+      lastBreadcrumb: "BLOG POST"
+    },
+    // Blog individual content
+    category: "CATEGORY",
+    tags: "Tags",
+    share: "Share",
+    comments: "02 COMMENT",
+    leaveComment: "LEAVE A COMMENT",
+    reply: "REPLY",
+    // Blog content paragraphs
+    paragraph1: "When building scalable APIs with Laravel, it's essential to follow industry best practices from the ground up. This includes implementing proper authentication mechanisms, comprehensive validation, and robust error handling that provides meaningful feedback to API consumers.",
+    paragraph2: "The architecture should be designed with scalability in mind, utilizing Laravel's built-in features like queues, caching, and database optimization. Proper testing strategies ensure reliability, while deployment considerations focus on performance and security.",
+    paragraph3: "Modern web development has evolved significantly from traditional PHP applications to sophisticated JavaScript frameworks. This transition represents a fundamental shift in how we approach building web applications, focusing on user experience, performance, and maintainability.",
+    paragraph4: "The integration of React, Node.js, and modern development tools has revolutionized the development process, enabling developers to create more responsive and interactive applications while maintaining code quality and scalability.",
+    // Blog content list items
+    listItem1: "Authentication and authorization systems",
+    listItem2: "API validation and error handling",
+    listItem3: "Testing strategies and deployment",
+    listItem4: "Performance optimization techniques",
+    listItem5: "Security best practices",
+    listItem6: "Scalability considerations",
+    // Blog quote
+    quote: "Good API design is not just about functionality—it's about creating an intuitive, secure, and scalable interface that developers love to work with."
   },
 
   // Form labels
@@ -135,5 +175,19 @@ export const en = {
     hello: "Hello",
     iAm: "I am",
     chat: "Chat"
+  },
+
+  // Portfolio Section
+  portfolio: {
+    nextjob: "NextJob - Job Portal",
+    nextjobDesc: "A comprehensive job search and posting platform built with Laravel and Tailwind CSS. Features include user authentication, role-based access control, advanced search filters, and a responsive admin dashboard. Companies can post job offers while users can search, filter, and apply to positions.",
+    blackpath: "BlackPath - Security Dashboard",
+    blackpathDesc: "Advanced cybersecurity dashboard developed with Laravel and Vite. Integrates with self-hosted Bitwarden for credential management, LinkedIn scraping for threat intelligence, and provides segmented visualization based on user roles. Implements secure architecture with real-time monitoring.",
+    secudash: "SecuDash - Security Management",
+    secudashDesc: "Enterprise-grade security management system with automated threat detection, real-time monitoring, and comprehensive reporting tools. Features include vulnerability scanning, incident response workflows, and compliance reporting. Built with scalable microservices architecture.",
+    pythonMaster: "Python Master Course",
+    pythonMasterDesc: "Comprehensive Python programming course covering advanced concepts, design patterns, and industry best practices. Includes hands-on projects, real-world applications, and covers topics from basic syntax to advanced frameworks like Django and FastAPI.",
+    designPatterns: "Design Patterns Course",
+    designPatternsDesc: "Advanced software architecture course focusing on design patterns, SOLID principles, and architectural best practices. Covers creational, structural, and behavioral patterns with practical implementation examples and real-world case studies."
   }
 };

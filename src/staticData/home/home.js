@@ -162,33 +162,39 @@ export const expFirstCol = [
     title: "education.designPatterns",
     description: "education.designPatternsDesc",
   },
-  {
+  /* {
     id: 6,
     range: "2024 - 2025",
     title: "education.pythonMaster",
     description: "education.pythonMasterDesc",
-  },
+  }, */
 ];
 
 export const expSecondCol = [
   {
     id: 1,
-    //range: "2020 - 2022",
+    range: "Febrero 2022 – Actualidad",
+    title: "experience.idealsur",
+    description: "experience.idealsurDesc",
+  },
+  /* {
+    id: 2,
+    range: "Julio - Diciembre 2024",
+    title: "experience.nextjob",
+    description: "experience.nextjobDesc",
+  },
+  {
+    id: 3,
+    range: "2020 - 2022",
     title: "experience.blackpath",
     description: "experience.blackpathDesc",
   },
   {
-    id: 2,
-    //range: "2020 - 2022",
+    id: 4,
+    range: "2020 - 2022",
     title: "experience.secudash",
     description: "experience.secudashDesc",
-  },
-  {
-    id: 3,
-    //range: "Julio - Diciembre 2024",
-    title: "experience.nextjob",
-    description: "experience.nextjobDesc",
-  },
+  }, */
 ];
 
 export const services = [
@@ -239,22 +245,20 @@ export const services = [
 export const blogs = [
   {
     id: 1,
-    title: "Publishing software like aldus including versions",
+    title: "blog.publishingSoftware",
     tags: "blog.technology",
     date: "18 DEC, 2020",
-    description:
-      "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy...",
+    description: "blog.publishingSoftwareDesc",
     // image: blog1Image?.src,
     link: "#",
     slug: "publishing-software-like-aldus-including-versions",
   },
   {
     id: 2,
-    title: "Learn how to create a business website using WordPress",
+    title: "blog.wordpressWebsite",
     tags: "blog.trash",
     date: "18 DEC, 2020",
-    description:
-      "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy...",
+    description: "blog.wordpressWebsiteDesc",
     // image: blog2Image?.src,
     link: "#",
     slug: "learn-how-to-create-a-business-website-using-wordPress",
@@ -536,4 +540,57 @@ export const feebackUsers = [
     // image: feedback4Image?.src,
     alt: "Feedback Item Thumbnail",
   },
+];
+
+export const portfolio = [
+  {
+    id: 1,
+    title: "portfolio.nextjob",
+    description: "portfolio.nextjobDesc",
+    category: "Web Development",
+    technologies: ["Laravel", "Tailwind CSS", "PHP", "MySQL"],
+    image: "/assets/images/portfolio/nextjob.jpg",
+    link: "#",
+    github: "#"
+  },
+  {
+    id: 2,
+    title: "portfolio.blackpath",
+    description: "portfolio.blackpathDesc",
+    category: "Security",
+    technologies: ["Laravel", "Vite", "Bitwarden", "LinkedIn API"],
+    image: "/assets/images/portfolio/blackpath.jpg",
+    link: "#",
+    github: "#"
+  },
+  {
+    id: 3,
+    title: "portfolio.secudash",
+    description: "portfolio.secudashDesc",
+    category: "Security",
+    technologies: ["Laravel", "Real-time", "Monitoring", "Automation"],
+    image: "/assets/images/portfolio/secudash.jpg",
+    link: "#",
+    github: "#"
+  },
+  {
+    id: 4,
+    title: "portfolio.pythonMaster",
+    description: "portfolio.pythonMasterDesc",
+    category: "Education",
+    technologies: ["Python", "Design Patterns", "Best Practices"],
+    image: "/assets/images/portfolio/python-course.jpg",
+    link: "#",
+    github: "#"
+  },
+  {
+    id: 5,
+    title: "portfolio.designPatterns",
+    description: "portfolio.designPatternsDesc",
+    category: "Education",
+    technologies: ["SOLID", "Design Patterns", "Architecture"],
+    image: "/assets/images/portfolio/design-patterns.jpg",
+    link: "#",
+    github: "#"
+  }
 ];

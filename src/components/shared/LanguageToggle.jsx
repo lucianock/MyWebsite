@@ -24,7 +24,7 @@ const LanguageToggle = () => {
         top: '20px',
         right: '20px',
         zIndex: 1000,
-        background: 'rgba(0, 0, 0, 0.8)',
+        background: 'rgba(0, 0, 0, 0.85)',
         border: '2px solid var(--primary-color)',
         borderRadius: '25px',
         padding: '10px 20px',
@@ -50,7 +50,7 @@ const LanguageToggle = () => {
         e.target.style.boxShadow = '0 6px 20px rgba(215, 157, 75, 0.4)';
       }}
       onMouseLeave={(e) => {
-        e.target.style.background = 'rgba(0, 0, 0, 0.8)';
+        e.target.style.background = 'rgba(0, 0, 0, 0.85)';
         e.target.style.color = 'var(--primary-color)';
         e.target.style.transform = 'scale(1)';
         e.target.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.3)';
