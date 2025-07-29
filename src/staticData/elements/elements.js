@@ -27,15 +27,15 @@ import {
 } from "react-icons/fa";
 
 export const elementHero = {
-  heading: "Components",
+  heading: "elements.heading",
   breadcrumbs: [
     {
-      title: "HOME",
+      title: "nav.home",
       url: "/",
     },
   ],
   lastBreadcrum: {
-    title: "COMPONENTS",
+    title: "elements.title",
     url: "/",
   },
 };

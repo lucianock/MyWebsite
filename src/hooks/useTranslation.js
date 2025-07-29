@@ -12,6 +12,12 @@ export const useTranslation = () => {
   const { language } = useContext(ThemeContext);
   
   const t = (key) => {
+    // Handle undefined or null keys
+    if (!key) {
+      console.warn('Translation key is undefined or null');
+      return '';
+    }
+    
     const keys = key.split('.');
     let value = translations[language];
     

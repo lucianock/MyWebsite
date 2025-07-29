@@ -4,13 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import Typewriter from "typewriter-effect";
 import Button from "../ui/Button";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useTranslation } from "@/hooks/useTranslation";
 import { trackWhatsAppClick } from "@/components/shared/AnalyticsEvents";
+import ThemeContext from "@/context/ThemeContext";
 
 const Hero = () => {
   const [isTypewriterSafe, setIsTypewriterSafe] = useState(true);
   const { t } = useTranslation();
+  const { language } = useContext(ThemeContext);
 
   useEffect(() => {
     // Verificar si es seguro usar Typewriter
@@ -46,7 +48,7 @@ const Hero = () => {
   ];
 
   // Mensaje de WhatsApp según el idioma
-  const whatsappMessage = t('language') === 'en' 
+  const whatsappMessage = language === 'en' 
     ? "Hello Luciano, I saw your profile and I'm interested in talking with you."
     : "Hola Luciano, vi tu perfil y estoy interesado en hablar contigo.";
   

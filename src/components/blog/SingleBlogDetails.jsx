@@ -36,6 +36,24 @@ const SingleBlogDetails = ({ slug }) => {
 
   const colors = getTagColors(singlePost?.tags);
 
+  // If no singlePost is found, show a loading or error state
+  if (!singlePost || Object.keys(singlePost).length === 0) {
+    return (
+      <div className="blog-details">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-8">
+              <div className="text-center py-5">
+                <h3>Blog post not found</h3>
+                <p>The requested blog post could not be found.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="blog-details">
       <div className="container">
@@ -92,7 +110,7 @@ const SingleBlogDetails = ({ slug }) => {
                   zIndex: 3,
                   backdropFilter: 'blur(10px)'
                 }}>
-                  {t(singlePost?.tags)}
+                  {singlePost?.tags ? t(singlePost.tags) : 'Technology'}
                 </div>
               </div>
             </div>
@@ -103,13 +121,13 @@ const SingleBlogDetails = ({ slug }) => {
                   &nbsp;-&nbsp;
                   <span className="category">
                     {t('blog.category')} : &nbsp;
-                    <Link href="#">{t(singlePost?.tags)}</Link>
+                    <Link href="#">{singlePost?.tags ? t(singlePost.tags) : 'Technology'}</Link>
                   </span>
                 </div>
-                <h2 className="blog-post-title">{t(singlePost?.title)}</h2>
+                <h2 className="blog-post-title">{singlePost?.title ? t(singlePost.title) : 'Blog Post'}</h2>
               </div>
               <div className="inner-desc">
-                <p>{t(singlePost?.description)}</p>
+                <p>{singlePost?.description ? t(singlePost.description) : 'Blog post description'}</p>
                 <ul className="list">
                   <li>{t('blog.listItem1')}</li>
                   <li>{t('blog.listItem2')}</li>

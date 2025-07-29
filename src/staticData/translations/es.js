@@ -177,6 +177,12 @@ export const es = {
     chat: "Chatear"
   },
 
+  // Elements
+  elements: {
+    heading: "Componentes",
+    title: "COMPONENTES"
+  },
+
   // Portfolio Section
   portfolio: {
     nextjob: "NextJob - Portal de Empleos",
