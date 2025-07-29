@@ -4,10 +4,12 @@ import { CircularProgressbarWithChildren } from "react-circular-progressbar";
 import VisibilitySensor from "react-visibility-sensor";
 import "react-circular-progressbar/dist/styles.css";
 import useThemeContext from "@/hooks/useThemeContext";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const Skills = () => {
   const [change, setChange] = useState(false);
   const { mode } = useThemeContext();
+  const { t } = useTranslation();
 
   const handleVisibilityChange = () => {
     setChange(true);
@@ -22,7 +24,7 @@ const Skills = () => {
       <div className="container">
         <div className="section-title">
           <h2 className="title">
-            My <span>Skill</span>
+            {t('sections.mySkills')}
           </h2>
         </div>
 
@@ -65,7 +67,7 @@ const Skills = () => {
                         >
                           <div>
                             <span>{item?.value}</span>
-                            <p>{item?.title}</p>
+                            <p>{t(item?.title)}</p>
                           </div>
                         </CircularProgressbarWithChildren>
                       );

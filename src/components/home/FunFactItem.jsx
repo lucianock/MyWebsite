@@ -1,10 +1,12 @@
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import { useEffect, useState } from "react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const FunFactItem = ({ Svg, startCount, endCount, title }) => {
   const [_change, setChange] = useState(false);
   const [counterStarted, setCounterStarted] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     setChange(false);
@@ -31,7 +33,7 @@ const FunFactItem = ({ Svg, startCount, endCount, title }) => {
             </VisibilitySensor>
           )}
         </CountUp>
-        <p>{title}</p>
+        <p>{t(title)}</p>
       </div>
     </div>
   );

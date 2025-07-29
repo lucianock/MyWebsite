@@ -1,9 +1,11 @@
 import { siteSettings } from "@/staticData/siteSettings";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const Header = ({ activeMenuItem }) => {
   const router = useRouter();
+  const { t } = useTranslation();
 
   let pathSegments = "";
   let firstSegment = "";
@@ -28,6 +30,22 @@ const Header = ({ activeMenuItem }) => {
   const isHomepage =
     router?.asPath === "/" || router?.asPath.startsWith("/#") ? true : false;
 
+  // Función para obtener la clave de traducción correcta
+  const getTranslationKey = (title) => {
+    const keyMap = {
+      'HOME': 'home',
+      'ABOUT ME': 'aboutMe',
+      'RESUME': 'resume',
+      'SERVICES': 'services',
+      'PORTFOLIO': 'portfolio',
+      'FEEDBACK': 'feedback',
+      'BLOGS': 'blogs',
+      'ELEMENTS': 'elements',
+      'CONTACT ME': 'contactMe'
+    };
+    return keyMap[title] || title.toLowerCase().replace(/\s+/g, '');
+  };
+
   return (
     <header className="site-header navbar-collapse-toggle" id="navbar">
       <div className="nav-brand">
@@ -47,7 +65,7 @@ const Header = ({ activeMenuItem }) => {
                 data-section={menu.selector}
               >
                 {menu?.Icon}
-                {menu?.title}
+                {t(`nav.${getTranslationKey(menu.title)}`)}
               </Link>
             </li>
           ))}
@@ -59,7 +77,7 @@ const Header = ({ activeMenuItem }) => {
           href={isHomepage ? siteSettings?.headerBottom?.url : "/#contact"}
           className="stretched-link"
         >
-          {siteSettings?.headerBottom?.title}
+          {t('nav.contactMe')}
         </Link>
       </div>
     </header>

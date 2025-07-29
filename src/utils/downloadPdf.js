@@ -1,10 +1,16 @@
-export const downloadPdf = () => {
-    const pdfPath = '/LucianoCamposKriegl_CV.pdf';
+export const downloadPdf = (language = 'en') => {
+    const pdfPath = language === 'es' 
+        ? '/LucianoCamposKriegl_CV_ES.pdf'
+        : '/LucianoCamposKriegl_CV_EN.pdf';
+
+    const fileName = language === 'es' 
+        ? 'LucianoCamposKriegl_CV_ES.pdf'
+        : 'LucianoCamposKriegl_CV_EN.pdf';
 
     // Create a hidden anchor element
     const a = document.createElement('a');
     a.href = pdfPath;
-    a.download = 'LucianoCamposKriegl_CV.pdf';
+    a.download = fileName;
 
     // Add element to body
     if (document.body) {

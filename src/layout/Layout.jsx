@@ -1,6 +1,7 @@
 import Footer from "@/layout/Footer";
 import MainHeader from "@/layout/Header/MainHeader";
 import NextHead from "@/components/shared/NextHead";
+import LanguageToggle from "@/components/shared/LanguageToggle";
 import { useRef } from "react";
 
 const Layout = ({ className = "", children }) => {
@@ -9,6 +10,7 @@ const Layout = ({ className = "", children }) => {
   return (
     <>
       <NextHead />
+      <LanguageToggle />
       <main>
         <MainHeader rightContainerRef={rightContainerRef} />
         <div className={`main ${className}`} ref={rightContainerRef}>

@@ -1,4 +1,6 @@
 import { BsArrowRight } from "react-icons/bs";
+import { useContext } from "react";
+import ThemeContext from "@/context/ThemeContext";
 
 const Button = ({
   text = "DESCARGAR CV",
@@ -7,13 +9,22 @@ const Button = ({
   onClick,
   type = "button",
 }) => {
+  const { language } = useContext(ThemeContext);
+
   const handleClick = () => {
     if (onClick) {
-      onClick();
+      // Si el texto contiene "CV" o "cv", usar la función de descarga con idioma
+      if (text.toLowerCase().includes('cv')) {
+        const { downloadPdf } = require('@/utils/downloadPdf');
+        downloadPdf(language);
+      } else {
+        onClick();
+      }
     } else {
       console.log("Button clicked from component!");
     }
   };
+  
   return (
     <button className={btnClassName} onClick={handleClick} type={type}>
       {text}

@@ -3,16 +3,18 @@ import { FreeMode, Pagination, Autoplay } from 'swiper/modules';
 import { services } from '@/staticData/home/home';
 import SecondaryButton from '../ui/SecondaryButton';
 import useThemeContext from '@/hooks/useThemeContext';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const Services = () => {
   const { mode, setMode, rtl, setRtl } = useThemeContext();
+  const { t } = useTranslation();
 
   return (
     <div className="service" data-title="Services" id="service">
       <div className="container">
         <div className="section-title">
           <h2 className="title">
-            <span>Services</span>
+            <span>{t('sections.services')}</span>
           </h2>
         </div>
 
@@ -61,8 +63,8 @@ const Services = () => {
               <SwiperSlide key={item?.id}>
                 <div className="service-item">
                   <div className="icon">{item?.Icon}</div>
-                  <h3 className="service-title">{item?.title}</h3>
-                  <p>{item?.description}</p>
+                  <h3 className="service-title">{t(item?.title)}</h3>
+                  <p>{t(item?.description)}</p>
                   <SecondaryButton />
                 </div>
               </SwiperSlide>

@@ -4,6 +4,7 @@ import Textarea from '../ui/fields/Textarea';
 import { contactInfo } from '@/staticData/home/home';
 import { BsArrowRight } from 'react-icons/bs';
 import ContactInfoItem from './ContactInfoItem';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const ContactMe = () => {
   const [formValues, setFormValues] = useState({
@@ -12,6 +13,7 @@ const ContactMe = () => {
     subject: '',
     message: '',
   });
+  const { t } = useTranslation();
 
   const { fullName, email, subject, message } = formValues;
 
@@ -49,7 +51,7 @@ const ContactMe = () => {
       <div className="container">
         <div className="section-title">
           <h2 className="title">
-            <span>Contáctame</span>
+            <span>{t('sections.contact')}</span>
           </h2>
         </div>
 
@@ -59,8 +61,8 @@ const ContactMe = () => {
               <form onSubmit={handleSubmit}>
                 <div className="form-group form-floating">
                   <Input
-                    placeholder="Nombre Completo"
-                    label="Nombre Completo"
+                    placeholder={t('form.fullName')}
+                    label={t('form.fullName')}
                     handleChange={handleChange}
                     name="fullName"
                     value={fullName}
@@ -69,8 +71,8 @@ const ContactMe = () => {
                 <div className="form-group form-floating">
                   <Input
                     type="email"
-                    placeholder="Dirección de Email"
-                    label="Dirección de Email"
+                    placeholder={t('form.emailAddress')}
+                    label={t('form.emailAddress')}
                     handleChange={handleChange}
                     name="email"
                     value={email}
@@ -78,8 +80,8 @@ const ContactMe = () => {
                 </div>
                 <div className="form-group form-floating">
                   <Input
-                    placeholder="Asunto"
-                    label="Asunto"
+                    placeholder={t('form.subject')}
+                    label={t('form.subject')}
                     handleChange={handleChange}
                     name="subject"
                     value={subject}
@@ -87,7 +89,7 @@ const ContactMe = () => {
                 </div>
                 <div className="form-group form-floating">
                   <Textarea
-                    label="Tu Mensaje"
+                    label={t('form.yourMessage')}
                     handleChange={handleChange}
                     name="message"
                     value={message}
@@ -101,7 +103,7 @@ const ContactMe = () => {
                     style={{ display: 'none' }}
                     ref={submitButtonRef}
                   >
-                    ENVIAR MENSAJE
+                    {t('form.sendMessage')}
                   </button>
                   {/* Custom submit button */}
                   <button
@@ -109,7 +111,7 @@ const ContactMe = () => {
                     className="theme-btn border-0"
                     onClick={handleCustomSubmit}
                   >
-                    ENVIAR MENSAJE <BsArrowRight className="ms-2" size={25} />
+                    {t('form.sendMessage')} <BsArrowRight className="ms-2" size={25} />
                   </button>
                 </div>
               </form>

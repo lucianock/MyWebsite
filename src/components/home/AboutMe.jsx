@@ -3,14 +3,17 @@ import { downloadPdf } from "@/utils/downloadPdf";
 import Image from "next/image";
 import Button from "../ui/Button";
 import FunFacts from "./FunFacts";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const AboutMe = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="about" data-title="About" id="about">
       <div className="container">
         <div className="section-title">
           <h2 className="title">
-            <span>About</span> Me
+            <span>{t('sections.about')}</span> {t('sections.aboutMe')}
           </h2>
         </div>
         <div className="row align-items-end">
@@ -32,20 +35,20 @@ const AboutMe = () => {
           </div>
           <div className="col-lg-6">
             <div className="details">
-              <h3 className="name">{aboutMe?.name}</h3>
+              <h3 className="name">{t(aboutMe?.name)}</h3>
               <h4 className="designation">
-                {aboutMe?.designation} <span className="line"></span>
+                {t(aboutMe?.designation)} <span className="line"></span>
               </h4>
-              <p className="bio">{aboutMe?.desc}</p>
+              <p className="bio">{t(aboutMe?.desc)}</p>
               <ul className="info">
                 {aboutMe?.aboutInfo?.map((item, i) => (
                   <li key={i}>
                     {item?.Icon}
-                    {item?.title}
+                    {t(item?.title)}
                   </li>
                 ))}
               </ul>
-              <Button arrow text={aboutMe?.btnText} onClick={downloadPdf} />
+              <Button arrow text={t(aboutMe?.btnText)} onClick={downloadPdf} />
             </div>
           </div>
         </div>
