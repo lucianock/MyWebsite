@@ -553,7 +553,7 @@ export const portfolio = [
     title: "portfolio.blackpath",
     description: "portfolio.blackpathDesc",
     category: "Security",
-    technologies: ["Laravel", "Vite", "Bitwarden", "LinkedIn API", "Security Tools"],
+    technologies: ["Laravel", "Docker", "Tailwind CSS", "Nmap", "WhatWeb", "Gobuster"],
     image: "/assets/images/portfolio/blackpath.jpg",
     link: "https://blackpath.lucianock.com/",
     github: "#"

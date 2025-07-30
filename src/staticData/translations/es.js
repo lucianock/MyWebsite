@@ -187,12 +187,12 @@ export const es = {
   // Portfolio Section
   portfolio: {
     blackpath: "BlackPath - Escáner de Seguridad",
-    blackpathDesc: "Dashboard avanzado de ciberseguridad que escanea dominios para detectar vulnerabilidades. Integra herramientas como Nmap, WhatWeb y Gobuster, presentando resultados en una interfaz fácil de usar. Incluye escaneo automatizado, reportes detallados e integración con Bitwarden auto-hospedado para gestión de credenciales.",
+    blackpathDesc: "BlackPath es una aplicación web de escaneo de vulnerabilidades que permite analizar dominios en profundidad usando herramientas como Nmap, WhatWeb y Gobuster. El usuario puede elegir entre distintos niveles de escaneo y obtener resultados detallados presentados de forma clara y accesible, incluso para quienes no tienen conocimientos técnicos. Además, permite exportar los informes generados, facilitando auditorías de seguridad o análisis posteriores.",
     nextjob: "NextJob - Portal de Empleos",
-    nextjobDesc: "Plataforma integral de búsqueda y publicación de empleos con filtrado avanzado y gestión de usuarios. Incluye perfiles de empresas, aplicaciones de trabajo, panel de administración y diseño responsivo. Construida con Laravel y Tailwind CSS para rendimiento y experiencia de usuario óptimos.",
+    nextjobDesc: "Plataforma integral de búsqueda y publicación de empleos con filtrado avanzado y gestión de usuarios. Incluye perfiles de empresas, aplicaciones de trabajo, panel de administración y diseño responsivo. Construida con Laravel y Tailwind CSS.",
     secudash: "SecuDash - Gestión de Seguridad",
-    secudashDesc: "Sistema de gestión de seguridad de nivel empresarial con monitoreo en tiempo real y detección automatizada de amenazas. Incluye escaneo de vulnerabilidades, flujos de respuesta a incidentes, reportes de cumplimiento y control de acceso basado en roles. Arquitectura escalable diseñada para equipos de seguridad.",
+    secudashDesc: "Sistema de gestión de seguridad de nivel empresarial con monitoreo en tiempo real y detección automatizada de amenazas. Incluye escaneo de vulnerabilidades, flujos de respuesta a incidentes y control de acceso basado en roles.",
     breeze: "Breeze - Aplicación Web Moderna",
-    breezeDesc: "Aplicación web moderna y responsiva construida con React y Node.js. Incluye sincronización de datos en tiempo real, autenticación de usuarios, dashboard integral e integración con MongoDB. Implementa prácticas de desarrollo modernas con arquitectura de microservicios escalable."
+    breezeDesc: "Aplicación web moderna y responsiva construida con React y Node.js. Incluye sincronización de datos en tiempo real, autenticación de usuarios, dashboard integral e integración con MongoDB. Arquitectura escalable."
   }
 };

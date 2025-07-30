@@ -187,12 +187,12 @@ export const en = {
   // Portfolio Section
   portfolio: {
     blackpath: "BlackPath - Security Scanner",
-    blackpathDesc: "Advanced cybersecurity dashboard that scans domains to detect vulnerabilities. Integrates tools like Nmap, WhatWeb and Gobuster, presenting results in a user-friendly interface. Features include automated scanning, detailed reports, and integration with self-hosted Bitwarden for credential management.",
+    blackpathDesc: "BlackPath is a web vulnerability scanning application that allows in-depth analysis of domains using tools like Nmap, WhatWeb, and Gobuster. Users can choose between different scan levels and receive detailed results presented in a clear and accessible way, even for those without technical knowledge. It also allows exporting the generated reports, making it easier to conduct security audits or further analysis.",
     nextjob: "NextJob - Job Portal",
-    nextjobDesc: "Comprehensive job search and posting platform with advanced filtering and user management. Features include company profiles, job applications, admin dashboard, and responsive design. Built with Laravel and Tailwind CSS for optimal performance and user experience.",
+    nextjobDesc: "Comprehensive job search and posting platform with advanced filtering and user management. Features include company profiles, job applications, admin dashboard, and responsive design. Built with Laravel and Tailwind CSS.",
     secudash: "SecuDash - Security Management",
-    secudashDesc: "Enterprise-grade security management system with real-time monitoring and automated threat detection. Features include vulnerability scanning, incident response workflows, compliance reporting, and role-based access control. Scalable architecture designed for security teams.",
+    secudashDesc: "Enterprise-grade security management system with real-time monitoring and automated threat detection. Features include vulnerability scanning, incident response workflows, and role-based access control. Scalable architecture.",
     breeze: "Breeze - Modern Web App",
-    breezeDesc: "Modern, responsive web application built with React and Node.js. Features real-time data synchronization, user authentication, comprehensive dashboard, and MongoDB integration. Implements modern development practices with scalable microservices architecture."
+    breezeDesc: "Modern, responsive web application built with React and Node.js. Features real-time data synchronization, user authentication, comprehensive dashboard, and MongoDB integration. Scalable architecture."
   }
 };
