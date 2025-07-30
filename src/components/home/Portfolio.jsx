@@ -193,66 +193,81 @@ const Portfolio = () => {
                         gap: '10px',
                         flexShrink: 0
                       }}>
-                        <button style={{
-                          background: 'var(--primary-color)',
-                          color: '#fff',
-                          border: 'none',
-                          borderRadius: '20px',
-                          padding: '8px 16px',
-                          fontSize: '0.8rem',
-                          cursor: 'pointer',
-                          transition: 'all 0.3s ease',
-                          flex: 1,
-                          fontWeight: '600',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          gap: '6px',
-                          textTransform: 'uppercase',
-                          letterSpacing: '0.5px'
-                        }}
-                        onMouseEnter={(e) => {
-                          e.target.style.transform = 'translateY(-2px)';
-                          e.target.style.boxShadow = '0 6px 20px rgba(215, 157, 75, 0.3)';
-                        }}
-                        onMouseLeave={(e) => {
-                          e.target.style.transform = 'translateY(0)';
-                          e.target.style.boxShadow = 'none';
-                        }}>
+                        <a 
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            background: 'var(--primary-color)',
+                            color: '#fff',
+                            border: 'none',
+                            borderRadius: '20px',
+                            padding: '8px 16px',
+                            fontSize: '0.8rem',
+                            cursor: 'pointer',
+                            transition: 'all 0.3s ease',
+                            flex: 1,
+                            fontWeight: '600',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            gap: '6px',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.5px',
+                            textDecoration: 'none'
+                          }}
+                          onMouseEnter={(e) => {
+                            e.target.style.transform = 'translateY(-2px)';
+                            e.target.style.boxShadow = '0 6px 20px rgba(215, 157, 75, 0.3)';
+                          }}
+                          onMouseLeave={(e) => {
+                            e.target.style.transform = 'translateY(0)';
+                            e.target.style.boxShadow = 'none';
+                          }}>
                           <FaExternalLinkAlt size={12} />
                           View
-                        </button>
-                        <button style={{
-                          background: 'transparent',
-                          color: 'var(--primary-color)',
-                          border: '1px solid var(--primary-color)',
-                          borderRadius: '20px',
-                          padding: '8px 16px',
-                          fontSize: '0.8rem',
-                          cursor: 'pointer',
-                          transition: 'all 0.3s ease',
-                          flex: 1,
-                          fontWeight: '600',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          gap: '6px',
-                          textTransform: 'uppercase',
-                          letterSpacing: '0.5px'
-                        }}
-                        onMouseEnter={(e) => {
-                          e.target.style.background = 'var(--primary-color)';
-                          e.target.style.color = '#fff';
-                          e.target.style.transform = 'translateY(-2px)';
-                        }}
-                        onMouseLeave={(e) => {
-                          e.target.style.background = 'transparent';
-                          e.target.style.color = 'var(--primary-color)';
-                          e.target.style.transform = 'translateY(0)';
-                        }}>
+                        </a>
+                        <a 
+                          href={item.github !== "#" ? item.github : "#"}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            background: 'transparent',
+                            color: 'var(--primary-color)',
+                            border: '1px solid var(--primary-color)',
+                            borderRadius: '20px',
+                            padding: '8px 16px',
+                            fontSize: '0.8rem',
+                            cursor: item.github !== "#" ? 'pointer' : 'not-allowed',
+                            transition: 'all 0.3s ease',
+                            flex: 1,
+                            fontWeight: '600',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            gap: '6px',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.5px',
+                            textDecoration: 'none',
+                            opacity: item.github !== "#" ? 1 : 0.5
+                          }}
+                          onMouseEnter={(e) => {
+                            if (item.github !== "#") {
+                              e.target.style.background = 'var(--primary-color)';
+                              e.target.style.color = '#fff';
+                              e.target.style.transform = 'translateY(-2px)';
+                            }
+                          }}
+                          onMouseLeave={(e) => {
+                            if (item.github !== "#") {
+                              e.target.style.background = 'transparent';
+                              e.target.style.color = 'var(--primary-color)';
+                              e.target.style.transform = 'translateY(0)';
+                            }
+                          }}>
                           <FaGithub size={12} />
                           Code
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>

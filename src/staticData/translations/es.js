@@ -191,6 +191,8 @@ export const es = {
     blackpathDesc: "Dashboard avanzado de ciberseguridad desarrollado con Laravel y Vite. Se integra con Bitwarden autohospedado para gestión de credenciales, scraping de LinkedIn para inteligencia de amenazas y proporciona visualización segmentada basada en roles de usuario. Implementa arquitectura segura con monitoreo en tiempo real.",
     secudash: "SecuDash - Gestión de Seguridad",
     secudashDesc: "Sistema de gestión de seguridad de nivel empresarial con detección automatizada de amenazas, monitoreo en tiempo real y herramientas de reportes integrales. Incluye escaneo de vulnerabilidades, flujos de respuesta a incidentes y reportes de cumplimiento. Construido con arquitectura de microservicios escalable.",
+    breeze: "Breeze - Aplicación Web Moderna",
+    breezeDesc: "Una aplicación web moderna y responsiva construida con React y Node.js. Incluye sincronización de datos en tiempo real, autenticación de usuarios y un dashboard integral. Construida con MongoDB para persistencia de datos y Express.js para la API backend, proporcionando una solución escalable y mantenible.",
     pythonMaster: "Curso Python Master",
     pythonMasterDesc: "Curso completo de programación en Python que cubre conceptos avanzados, patrones de diseño y mejores prácticas de la industria. Incluye proyectos prácticos, aplicaciones del mundo real y cubre temas desde sintaxis básica hasta frameworks avanzados como Django y FastAPI.",
     designPatterns: "Curso de Patrones de Diseño",

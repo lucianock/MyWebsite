@@ -550,7 +550,7 @@ export const portfolio = [
     category: "Web Development",
     technologies: ["Laravel", "Tailwind CSS", "PHP", "MySQL"],
     image: "/assets/images/portfolio/nextjob.jpg",
-    link: "#",
+    link: "https://nextjob.lucianock.com/",
     github: "#"
   },
   {
@@ -560,7 +560,7 @@ export const portfolio = [
     category: "Security",
     technologies: ["Laravel", "Vite", "Bitwarden", "LinkedIn API"],
     image: "/assets/images/portfolio/blackpath.jpg",
-    link: "#",
+    link: "https://blackpath.lucianock.com/",
     github: "#"
   },
   {
@@ -570,11 +570,21 @@ export const portfolio = [
     category: "Security",
     technologies: ["Laravel", "Real-time", "Monitoring", "Automation"],
     image: "/assets/images/portfolio/secudash.jpg",
-    link: "#",
+    link: "https://secudash.lucianock.com/",
     github: "#"
   },
   {
     id: 4,
+    title: "portfolio.breeze",
+    description: "portfolio.breezeDesc",
+    category: "Web Development",
+    technologies: ["React", "Node.js", "MongoDB", "Express"],
+    image: "/assets/images/portfolio/breeze.jpg",
+    link: "https://breeze.lucianock.com/",
+    github: "#"
+  },
+  {
+    id: 5,
     title: "portfolio.pythonMaster",
     description: "portfolio.pythonMasterDesc",
     category: "Education",
@@ -584,7 +594,7 @@ export const portfolio = [
     github: "#"
   },
   {
-    id: 5,
+    id: 6,
     title: "portfolio.designPatterns",
     description: "portfolio.designPatternsDesc",
     category: "Education",
