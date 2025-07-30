@@ -24,8 +24,8 @@ export const es = {
     services: "Servicios",
     education: "EDUCACIÓN",
     experience: "EXPERIENCIA",
-    portfolio: "PORTFOLIO",
-    blogs: "BLOGS"
+    portfolio: "Portafolio",
+    blogs: "Blog"
   },
 
   // Hero Section
@@ -117,7 +117,8 @@ export const es = {
   social: {
     linkedin: "LINKEDIN",
     github: "GITHUB",
-    whatsapp: "WHATSAPP"
+    whatsapp: "WHATSAPP",
+    medium: "MEDIUM"
   },
 
   // Blog

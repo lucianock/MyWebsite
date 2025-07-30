@@ -13,6 +13,9 @@ import {
   FaLinkedinIn,
   FaPinterestP,
   FaTwitter,
+  FaGithub,
+  FaWhatsapp,
+  FaMedium,
 } from "react-icons/fa";
 
 export const siteSettings = {
@@ -104,30 +107,30 @@ export const siteSettings = {
     url: "#contact",
   },
   footerItems: [
-    /* {
+    {
       id: 1,
-      Icon: <FaTwitter />,
-      url: "https://twitter.com/",
-      tooltip: "Follow us on Twitter",
+      Icon: <FaLinkedinIn />,
+      url: "https://www.linkedin.com/in/lucianocamposkriegl/",
+      tooltip: "Connect with me on LinkedIn",
     },
     {
       id: 2,
-      Icon: <FaPinterestP />,
-      url: "https://www.pinterest.com/",
-      tooltip: "Follow us on pinterest",
+      Icon: <FaGithub />,
+      url: "https://github.com/lucianocamposkriegl",
+      tooltip: "Check out my projects on GitHub",
     },
     {
       id: 3,
-      Icon: <FaFacebookF />,
-      url: "https://www.facebook.com/",
-      tooltip: "Follow us on Facebook",
+      Icon: <FaWhatsapp />,
+      url: "https://wa.me/543416589951",
+      tooltip: "Chat with me on WhatsApp",
     },
     {
       id: 4,
-      Icon: <FaLinkedinIn />,
-      url: "https://www.linkedin.com/",
-      tooltip: "Connect with us on Linkedin",
-    }, */
+      Icon: <FaMedium />,
+      url: "https://medium.com/@lucianocampos.k",
+      tooltip: "Read my articles on Medium",
+    },
   ],
   themeData: {
     mode: "light",

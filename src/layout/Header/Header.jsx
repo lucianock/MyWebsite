@@ -59,7 +59,7 @@ const Header = ({ activeMenuItem }) => {
               <Link
                 href={isHomepage ? menu?.selector : `${menu?.url}`}
                 className={
-                  activeMenuItem === menu.selector
+                  activeMenuItem === menu.selector      
                     ? "nav-link active"
                     : "nav-link"
                 }
