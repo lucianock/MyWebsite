@@ -98,6 +98,11 @@ export const socialMediaLists = [
     title: "social.whatsapp",
     url: "https://wa.me/543416589951?text=Hola%20Luciano%2C%20vi%20tu%20perfil%20y%20estoy%20interesado%20en%20hablar%20contigo.",
   },
+  {
+    id: 4,
+    title: "social.medium",
+    url: "https://medium.com/@lucianocampos.k",
+  },
 ];
 
 export const funItems = [

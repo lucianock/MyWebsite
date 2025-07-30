@@ -117,7 +117,8 @@ export const en = {
   social: {
     linkedin: "LINKEDIN",
     github: "GITHUB",
-    whatsapp: "WHATSAPP"
+    whatsapp: "WHATSAPP",
+    medium: "MEDIUM"
   },
 
   // Blog
