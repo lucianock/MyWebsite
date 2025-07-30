@@ -186,17 +186,13 @@ export const es = {
 
   // Portfolio Section
   portfolio: {
+    blackpath: "BlackPath - Escáner de Seguridad",
+    blackpathDesc: "Dashboard avanzado de ciberseguridad que escanea dominios para detectar vulnerabilidades. Integra herramientas como Nmap, WhatWeb y Gobuster, presentando resultados en una interfaz fácil de usar. Incluye escaneo automatizado, reportes detallados e integración con Bitwarden auto-hospedado para gestión de credenciales.",
     nextjob: "NextJob - Portal de Empleos",
-    nextjobDesc: "Una plataforma integral de búsqueda y publicación de empleos construida con Laravel y Tailwind CSS. Incluye autenticación de usuarios, control de acceso basado en roles, filtros de búsqueda avanzados y un panel de administración responsive. Las empresas pueden publicar ofertas mientras los usuarios pueden buscar, filtrar y postularse a posiciones.",
-    blackpath: "BlackPath - Dashboard de Seguridad",
-    blackpathDesc: "Dashboard avanzado de ciberseguridad desarrollado con Laravel y Vite. Se integra con Bitwarden autohospedado para gestión de credenciales, scraping de LinkedIn para inteligencia de amenazas y proporciona visualización segmentada basada en roles de usuario. Implementa arquitectura segura con monitoreo en tiempo real.",
+    nextjobDesc: "Plataforma integral de búsqueda y publicación de empleos con filtrado avanzado y gestión de usuarios. Incluye perfiles de empresas, aplicaciones de trabajo, panel de administración y diseño responsivo. Construida con Laravel y Tailwind CSS para rendimiento y experiencia de usuario óptimos.",
     secudash: "SecuDash - Gestión de Seguridad",
-    secudashDesc: "Sistema de gestión de seguridad de nivel empresarial con detección automatizada de amenazas, monitoreo en tiempo real y herramientas de reportes integrales. Incluye escaneo de vulnerabilidades, flujos de respuesta a incidentes y reportes de cumplimiento. Construido con arquitectura de microservicios escalable.",
+    secudashDesc: "Sistema de gestión de seguridad de nivel empresarial con monitoreo en tiempo real y detección automatizada de amenazas. Incluye escaneo de vulnerabilidades, flujos de respuesta a incidentes, reportes de cumplimiento y control de acceso basado en roles. Arquitectura escalable diseñada para equipos de seguridad.",
     breeze: "Breeze - Aplicación Web Moderna",
-    breezeDesc: "Una aplicación web moderna y responsiva construida con React y Node.js. Incluye sincronización de datos en tiempo real, autenticación de usuarios y un dashboard integral. Construida con MongoDB para persistencia de datos y Express.js para la API backend, proporcionando una solución escalable y mantenible.",
-    pythonMaster: "Curso Python Master",
-    pythonMasterDesc: "Curso completo de programación en Python que cubre conceptos avanzados, patrones de diseño y mejores prácticas de la industria. Incluye proyectos prácticos, aplicaciones del mundo real y cubre temas desde sintaxis básica hasta frameworks avanzados como Django y FastAPI.",
-    designPatterns: "Curso de Patrones de Diseño",
-    designPatternsDesc: "Curso avanzado de arquitectura de software enfocado en patrones de diseño, principios SOLID y mejores prácticas arquitectónicas. Cubre patrones creacionales, estructurales y comportamentales con ejemplos de implementación práctica y casos de estudio del mundo real."
+    breezeDesc: "Aplicación web moderna y responsiva construida con React y Node.js. Incluye sincronización de datos en tiempo real, autenticación de usuarios, dashboard integral e integración con MongoDB. Implementa prácticas de desarrollo modernas con arquitectura de microservicios escalable."
   }
 };

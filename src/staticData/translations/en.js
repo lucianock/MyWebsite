@@ -186,17 +186,13 @@ export const en = {
 
   // Portfolio Section
   portfolio: {
+    blackpath: "BlackPath - Security Scanner",
+    blackpathDesc: "Advanced cybersecurity dashboard that scans domains to detect vulnerabilities. Integrates tools like Nmap, WhatWeb and Gobuster, presenting results in a user-friendly interface. Features include automated scanning, detailed reports, and integration with self-hosted Bitwarden for credential management.",
     nextjob: "NextJob - Job Portal",
-    nextjobDesc: "A comprehensive job search and posting platform built with Laravel and Tailwind CSS. Features include user authentication, role-based access control, advanced search filters, and a responsive admin dashboard. Companies can post job offers while users can search, filter, and apply to positions.",
-    blackpath: "BlackPath - Security Dashboard",
-    blackpathDesc: "Advanced cybersecurity dashboard developed with Laravel and Vite. Integrates with self-hosted Bitwarden for credential management, LinkedIn scraping for threat intelligence, and provides segmented visualization based on user roles. Implements secure architecture with real-time monitoring.",
+    nextjobDesc: "Comprehensive job search and posting platform with advanced filtering and user management. Features include company profiles, job applications, admin dashboard, and responsive design. Built with Laravel and Tailwind CSS for optimal performance and user experience.",
     secudash: "SecuDash - Security Management",
-    secudashDesc: "Enterprise-grade security management system with automated threat detection, real-time monitoring, and comprehensive reporting tools. Features include vulnerability scanning, incident response workflows, and compliance reporting. Built with scalable microservices architecture.",
-    breeze: "Breeze - Modern Web Application",
-    breezeDesc: "A modern, responsive web application built with React and Node.js. Features include real-time data synchronization, user authentication, and a comprehensive dashboard. Built with MongoDB for data persistence and Express.js for the backend API, providing a scalable and maintainable solution.",
-    pythonMaster: "Python Master Course",
-    pythonMasterDesc: "Comprehensive Python programming course covering advanced concepts, design patterns, and industry best practices. Includes hands-on projects, real-world applications, and covers topics from basic syntax to advanced frameworks like Django and FastAPI.",
-    designPatterns: "Design Patterns Course",
-    designPatternsDesc: "Advanced software architecture course focusing on design patterns, SOLID principles, and architectural best practices. Covers creational, structural, and behavioral patterns with practical implementation examples and real-world case studies."
+    secudashDesc: "Enterprise-grade security management system with real-time monitoring and automated threat detection. Features include vulnerability scanning, incident response workflows, compliance reporting, and role-based access control. Scalable architecture designed for security teams.",
+    breeze: "Breeze - Modern Web App",
+    breezeDesc: "Modern, responsive web application built with React and Node.js. Features real-time data synchronization, user authentication, comprehensive dashboard, and MongoDB integration. Implements modern development practices with scalable microservices architecture."
   }
 };

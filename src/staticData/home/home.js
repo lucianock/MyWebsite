@@ -550,22 +550,22 @@ export const feebackUsers = [
 export const portfolio = [
   {
     id: 1,
-    title: "portfolio.nextjob",
-    description: "portfolio.nextjobDesc",
-    category: "Web Development",
-    technologies: ["Laravel", "Tailwind CSS", "PHP", "MySQL"],
-    image: "/assets/images/portfolio/nextjob.jpg",
-    link: "https://nextjob.lucianock.com/",
+    title: "portfolio.blackpath",
+    description: "portfolio.blackpathDesc",
+    category: "Security",
+    technologies: ["Laravel", "Vite", "Bitwarden", "LinkedIn API", "Security Tools"],
+    image: "/assets/images/portfolio/blackpath.jpg",
+    link: "https://blackpath.lucianock.com/",
     github: "#"
   },
   {
     id: 2,
-    title: "portfolio.blackpath",
-    description: "portfolio.blackpathDesc",
-    category: "Security",
-    technologies: ["Laravel", "Vite", "Bitwarden", "LinkedIn API"],
-    image: "/assets/images/portfolio/blackpath.jpg",
-    link: "https://blackpath.lucianock.com/",
+    title: "portfolio.nextjob",
+    description: "portfolio.nextjobDesc",
+    category: "Web Development",
+    technologies: ["Laravel", "Tailwind CSS", "PHP", "MySQL", "Admin Panel"],
+    image: "/assets/images/portfolio/nextjob.jpg",
+    link: "https://nextjob.lucianock.com/",
     github: "#"
   },
   {
@@ -573,7 +573,7 @@ export const portfolio = [
     title: "portfolio.secudash",
     description: "portfolio.secudashDesc",
     category: "Security",
-    technologies: ["Laravel", "Real-time", "Monitoring", "Automation"],
+    technologies: ["Laravel", "Real-time", "Monitoring", "Automation", "Dashboard"],
     image: "/assets/images/portfolio/secudash.jpg",
     link: "https://secudash.lucianock.com/",
     github: "#"
@@ -583,29 +583,9 @@ export const portfolio = [
     title: "portfolio.breeze",
     description: "portfolio.breezeDesc",
     category: "Web Development",
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
+    technologies: ["React", "Node.js", "MongoDB", "Express", "Modern Stack"],
     image: "/assets/images/portfolio/breeze.jpg",
     link: "https://breeze.lucianock.com/",
-    github: "#"
-  },
-  {
-    id: 5,
-    title: "portfolio.pythonMaster",
-    description: "portfolio.pythonMasterDesc",
-    category: "Education",
-    technologies: ["Python", "Design Patterns", "Best Practices"],
-    image: "/assets/images/portfolio/python-course.jpg",
-    link: "#",
-    github: "#"
-  },
-  {
-    id: 6,
-    title: "portfolio.designPatterns",
-    description: "portfolio.designPatternsDesc",
-    category: "Education",
-    technologies: ["SOLID", "Design Patterns", "Architecture"],
-    image: "/assets/images/portfolio/design-patterns.jpg",
-    link: "#",
     github: "#"
   }
 ];

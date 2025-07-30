@@ -1,28 +1,9 @@
 import { portfolio } from "@/staticData/home/home";
 import { useTranslation } from "@/hooks/useTranslation";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 const Portfolio = () => {
   const { t } = useTranslation();
-
-  // Función para generar colores de fondo basados en la categoría
-  const getCategoryColors = (category) => {
-    const colors = {
-      'Web Development': {
-        primary: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        secondary: 'linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.05))'
-      },
-      'Security': {
-        primary: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
-        secondary: 'linear-gradient(45deg, rgba(240, 147, 251, 0.1), rgba(245, 87, 108, 0.05))'
-      },
-      'Education': {
-        primary: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
-        secondary: 'linear-gradient(45deg, rgba(79, 172, 254, 0.1), rgba(0, 242, 254, 0.05))'
-      }
-    };
-    return colors[category] || colors['Web Development'];
-  };
 
   return (
     <div className="portfolio" data-title="Portfolio" id="portfolio">
@@ -33,250 +14,202 @@ const Portfolio = () => {
           </h2>
         </div>
 
-        {/* Portfolio Grid */}
-        <div className="portfolio-group">
+        <div className="portfolio-inner">
           <div className="row">
-            {portfolio.map((item) => {
-              const colors = getCategoryColors(item.category);
-              return (
-                <div key={item.id} className="col-lg-6 mb-4">
-                  <div className="portfolio-item" style={{
-                    background: 'rgba(255,255,255,0.02)',
-                    border: '1px solid rgba(255,255,255,0.08)',
-                    borderRadius: '15px',
-                    overflow: 'hidden',
-                    transition: 'all 0.3s ease',
-                    cursor: 'pointer',
-                    position: 'relative',
-                    backdropFilter: 'blur(10px)',
-                    boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
-                    height: '400px',
-                    display: 'flex',
-                    flexDirection: 'column'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.target.style.transform = 'translateY(-5px)';
-                    e.target.style.boxShadow = '0 15px 40px rgba(215, 157, 75, 0.15)';
-                    e.target.style.borderColor = 'rgba(215, 157, 75, 0.3)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.target.style.transform = 'translateY(0)';
-                    e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.1)';
-                    e.target.style.borderColor = 'rgba(255,255,255,0.08)';
-                  }}>
-                    
-                    {/* Project Image */}
-                    <div className="portfolio-image" style={{
-                      height: '200px',
-                      background: colors.primary,
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      position: 'relative',
-                      overflow: 'hidden',
-                      flexShrink: 0
-                    }}>
-                      {/* Gradient Overlay */}
-                      <div style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        right: 0,
-                        bottom: 0,
-                        background: colors.secondary,
-                        zIndex: 1
-                      }}></div>
-                      
-                      {/* Project Icon */}
-                      <div style={{
-                        fontSize: '3rem',
-                        color: 'rgba(255,255,255,0.9)',
-                        textAlign: 'center',
-                        zIndex: 2,
-                        position: 'relative'
-                      }}>
+            {portfolio.map((item) => (
+              <div key={item.id} className="col-lg-6 portfolio-item">
+                <div className="item">
+                  <div className="item-label">
+                    <p>{t(item.title)}</p>
+                  </div>
+                  
+                  <div className="project-card">
+                    <div className="project-header">
+                      <div className="project-icon">
                         {item.category === 'Web Development' && '🌐'}
                         {item.category === 'Security' && '🔒'}
                         {item.category === 'Education' && '📚'}
                       </div>
-
-                      {/* Category Badge */}
-                      <div style={{
-                        position: 'absolute',
-                        top: '10px',
-                        right: '10px',
-                        background: 'rgba(215, 157, 75, 0.9)',
-                        color: '#fff',
-                        padding: '4px 8px',
-                        borderRadius: '12px',
-                        fontSize: '0.7rem',
-                        fontWeight: '600',
-                        textTransform: 'uppercase',
-                        letterSpacing: '0.5px',
-                        zIndex: 3,
-                        backdropFilter: 'blur(10px)'
-                      }}>
-                        {item.category}
-                      </div>
+                      <div className="project-category">{item.category}</div>
                     </div>
-
-                    {/* Project Info */}
-                    <div className="portfolio-info" style={{
-                      padding: '20px',
-                      flex: 1,
-                      display: 'flex',
-                      flexDirection: 'column'
-                    }}>
-                      <h3 className="project-title" style={{
-                        fontSize: '1.2rem',
-                        fontWeight: '700',
-                        marginBottom: '10px',
-                        color: 'var(--primary-color)',
-                        lineHeight: '1.3',
-                        minHeight: '30px'
-                      }}>
-                        {t(item.title)}
-                      </h3>
+                    
+                    <div className="project-content">
+                      <h3 className="project-title">{t(item.title)}</h3>
+                      <p className="project-description">{t(item.description)}</p>
                       
-                      <p className="project-description" style={{
-                        fontSize: '0.9rem',
-                        color: '#aaa',
-                        marginBottom: '15px',
-                        lineHeight: '1.5',
-                        flex: 1,
-                        overflow: 'hidden',
-                        display: '-webkit-box',
-                        WebkitLineClamp: 3,
-                        WebkitBoxOrient: 'vertical'
-                      }}>
-                        {t(item.description)}
-                      </p>
-
-                      {/* Technologies */}
-                      <div className="technologies" style={{
-                        marginBottom: '15px',
-                        flexShrink: 0
-                      }}>
-                        {item.technologies.slice(0, 3).map((tech, index) => (
-                          <span key={index} style={{
-                            background: 'rgba(215, 157, 75, 0.15)',
-                            color: 'var(--primary-color)',
-                            padding: '4px 8px',
-                            borderRadius: '10px',
-                            fontSize: '0.7rem',
-                            marginRight: '6px',
-                            marginBottom: '6px',
-                            display: 'inline-block',
-                            fontWeight: '500',
-                            border: '1px solid rgba(215, 157, 75, 0.2)'
-                          }}>
-                            {tech}
-                          </span>
+                      <div className="project-tech">
+                        {item.technologies.slice(0, 4).map((tech, index) => (
+                          <span key={index} className="tech-badge">{tech}</span>
                         ))}
-                        {item.technologies.length > 3 && (
-                          <span style={{
-                            background: 'rgba(215, 157, 75, 0.1)',
-                            color: 'var(--primary-color)',
-                            padding: '4px 8px',
-                            borderRadius: '10px',
-                            fontSize: '0.7rem',
-                            fontWeight: '500'
-                          }}>
-                            +{item.technologies.length - 3}
-                          </span>
-                        )}
                       </div>
-
-                      {/* Action Buttons */}
-                      <div className="portfolio-actions" style={{
-                        display: 'flex',
-                        gap: '10px',
-                        flexShrink: 0
-                      }}>
+                      
+                      <div className="project-buttons">
                         <a 
                           href={item.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          style={{
-                            background: 'var(--primary-color)',
-                            color: '#fff',
-                            border: 'none',
-                            borderRadius: '20px',
-                            padding: '8px 16px',
-                            fontSize: '0.8rem',
-                            cursor: 'pointer',
-                            transition: 'all 0.3s ease',
-                            flex: 1,
-                            fontWeight: '600',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            gap: '6px',
-                            textTransform: 'uppercase',
-                            letterSpacing: '0.5px',
-                            textDecoration: 'none'
-                          }}
-                          onMouseEnter={(e) => {
-                            e.target.style.transform = 'translateY(-2px)';
-                            e.target.style.boxShadow = '0 6px 20px rgba(215, 157, 75, 0.3)';
-                          }}
-                          onMouseLeave={(e) => {
-                            e.target.style.transform = 'translateY(0)';
-                            e.target.style.boxShadow = 'none';
-                          }}>
-                          <FaExternalLinkAlt size={12} />
-                          View
+                          className="btn-primary"
+                        >
+                          <FaExternalLinkAlt size={14} />
+                          Visit Website
                         </a>
-                        <a 
-                          href={item.github !== "#" ? item.github : "#"}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          style={{
-                            background: 'transparent',
-                            color: 'var(--primary-color)',
-                            border: '1px solid var(--primary-color)',
-                            borderRadius: '20px',
-                            padding: '8px 16px',
-                            fontSize: '0.8rem',
-                            cursor: item.github !== "#" ? 'pointer' : 'not-allowed',
-                            transition: 'all 0.3s ease',
-                            flex: 1,
-                            fontWeight: '600',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            gap: '6px',
-                            textTransform: 'uppercase',
-                            letterSpacing: '0.5px',
-                            textDecoration: 'none',
-                            opacity: item.github !== "#" ? 1 : 0.5
-                          }}
-                          onMouseEnter={(e) => {
-                            if (item.github !== "#") {
-                              e.target.style.background = 'var(--primary-color)';
-                              e.target.style.color = '#fff';
-                              e.target.style.transform = 'translateY(-2px)';
-                            }
-                          }}
-                          onMouseLeave={(e) => {
-                            if (item.github !== "#") {
-                              e.target.style.background = 'transparent';
-                              e.target.style.color = 'var(--primary-color)';
-                              e.target.style.transform = 'translateY(0)';
-                            }
-                          }}>
-                          <FaGithub size={12} />
-                          Code
-                        </a>
+                        
+                        {item.github !== "#" && (
+                          <a 
+                            href={item.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-secondary"
+                          >
+                            <FaGithub size={14} />
+                            Code
+                          </a>
+                        )}
                       </div>
                     </div>
                   </div>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        .project-card {
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 12px;
+          overflow: hidden;
+          transition: all 0.3s ease;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .project-card:hover {
+          transform: translateY(-5px);
+          border-color: rgba(215, 157, 75, 0.3);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-header {
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          padding: 30px 25px;
+          text-align: center;
+          position: relative;
+        }
+
+        .project-icon {
+          font-size: 3rem;
+          margin-bottom: 10px;
+        }
+
+        .project-category {
+          color: rgba(255, 255, 255, 0.9);
+          font-size: 0.9rem;
+          font-weight: 500;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+
+        .project-content {
+          padding: 25px;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .project-title {
+          font-size: 1.3rem;
+          font-weight: 600;
+          color: #d79d4b;
+          margin-bottom: 12px;
+          line-height: 1.3;
+        }
+
+        .project-description {
+          color: #aaa;
+          font-size: 0.9rem;
+          line-height: 1.6;
+          margin-bottom: 20px;
+          flex: 1;
+        }
+
+        .project-tech {
+          margin-bottom: 20px;
+        }
+
+        .tech-badge {
+          display: inline-block;
+          background: rgba(215, 157, 75, 0.1);
+          color: #d79d4b;
+          padding: 4px 10px;
+          border-radius: 15px;
+          font-size: 0.75rem;
+          margin-right: 8px;
+          margin-bottom: 8px;
+          border: 1px solid rgba(215, 157, 75, 0.2);
+        }
+
+        .project-buttons {
+          display: flex;
+          gap: 12px;
+          margin-top: auto;
+        }
+
+        .btn-primary, .btn-secondary {
+          flex: 1;
+          padding: 10px 16px;
+          border-radius: 8px;
+          font-size: 0.85rem;
+          font-weight: 500;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          transition: all 0.3s ease;
+          border: none;
+          cursor: pointer;
+        }
+
+        .btn-primary {
+          background: #d79d4b;
+          color: #fff;
+        }
+
+        .btn-primary:hover {
+          background: #c08a3a;
+          transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+          background: transparent;
+          color: #d79d4b;
+          border: 1px solid #d79d4b;
+        }
+
+        .btn-secondary:hover {
+          background: #d79d4b;
+          color: #fff;
+          transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+          .project-content {
+            padding: 20px;
+          }
+          
+          .project-title {
+            font-size: 1.1rem;
+          }
+          
+          .project-buttons {
+            flex-direction: column;
+          }
+        }
+      `}</style>
     </div>
   );
 };
