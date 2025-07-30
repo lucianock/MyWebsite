@@ -17,7 +17,7 @@ const Blog = () => {
       <div className="container">
         <div className="section-title">
           <h2 className="title">
-            <span>{t('sections.blogs')}</span> Post
+            <span className="bottom-border">{t('sections.blogs')} Post</span>
           </h2>
         </div>
 

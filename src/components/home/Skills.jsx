@@ -136,7 +136,7 @@ const Skills = () => {
       <div className="container">
         <div className="section-title">
           <h2 className="title">
-            {t('sections.mySkills')}
+            <span className="bottom-border">{t('sections.mySkills')}</span>
           </h2>
         </div>
 

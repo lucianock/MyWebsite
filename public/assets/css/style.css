@@ -4163,7 +4163,7 @@ body.dark .service .serviceCarousel .swiper-pagination-bullet-active {
 }
 
 .portfolio {
-  background-color: #18191a;
+  /* background-color: #18191a; */
 }
 .portfolio .filter-button {
   text-align: center;
@@ -6119,6 +6119,57 @@ body.dark .hero-banner .content-inner .hero-title > span::before {
   background-color: #d79d4b;
 }
 body.dark .hero-banner .content-inner p {
+  color: #ffffff;
+}
+
+/* Estilo para bottom-border en todas las secciones */
+.section-title .title .bottom-border {
+  position: relative;
+  z-index: 1;
+}
+
+.section-title .title .bottom-border::before {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #b7b7b7;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+body.dark .section-title .title .bottom-border::before {
+  background-color: #d79d4b;
+}
+
+@media (min-width: 576px) {
+  .section-title .title .bottom-border::before {
+    bottom: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-title .title .bottom-border::before {
+    bottom: 12px;
+    height: 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section-title .title .bottom-border::before {
+    bottom: 14px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .section-title .title .bottom-border::before {
+    bottom: 18px;
+  }
+}
+
+.hero-banner .content-inner .hero-title {
   color: #ffffff;
 }
 

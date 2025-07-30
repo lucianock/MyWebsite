@@ -29,7 +29,7 @@ const Portfolio = () => {
       <div className="container">
         <div className="section-title">
           <h2 className="title">
-            <span>{t('sections.portfolio')}</span>
+            <span className="bottom-border">{t('sections.portfolio')}</span>
           </h2>
         </div>
 
