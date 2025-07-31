@@ -1,155 +1,89 @@
-import { routes } from "@/config/route";
-import Image from "next/image";
 import Link from "next/link";
-import SecondaryButton from "../ui/SecondaryButton";
+import Image from "next/image";
 import { useTranslation } from "@/hooks/useTranslation";
-import { FaMedium, FaExternalLinkAlt, FaClock } from "react-icons/fa";
+import { useRouter } from "next/router";
+import { FaClock, FaCalendarAlt } from "react-icons/fa";
 
-const SingleBlog = ({ 
-  slug, 
-  image, 
-  title, 
-  tags, 
-  date, 
-  description, 
-  type = "internal", 
-  externalUrl, 
+const SingleBlog = ({
+  slug,
+  image,
+  title,
+  tags,
+  date,
+  description,
   readTime,
-  featured = false 
+  featured = false
 }) => {
   const { t } = useTranslation();
-
-  // Función para generar colores de fondo basados en las tags
-  const getTagColors = (tag) => {
-    const colors = {
-      'blog.technology': {
-        primary: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        icon: '💻'
-      },
-      'blog.trash': {
-        primary: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
-        icon: '🔄'
-      },
-      'blog.development': {
-        primary: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
-        icon: '⚡'
-      }
-    };
-    return colors[tag] || colors['blog.technology'];
-  };
-
-  const colors = getTagColors(tags);
-  const isMediumPost = type === "medium";
+  const router = useRouter();
 
   return (
     <article className="blog-post-item">
       <div className="post-media">
-        <Link href={isMediumPost ? externalUrl : `${routes?.blog}/${slug}`} target={isMediumPost ? "_blank" : "_self"}>
-          <div style={{
-            width: '325px',
-            height: '205px',
-            background: colors.primary,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            position: 'relative',
-            overflow: 'hidden',
-            borderRadius: '10px',
-            cursor: 'pointer',
-            transition: 'all 0.3s ease'
-          }}
-          onMouseEnter={(e) => {
-            e.target.style.transform = 'scale(1.02)';
-            e.target.style.boxShadow = '0 10px 30px rgba(0,0,0,0.2)';
-          }}
-          onMouseLeave={(e) => {
-            e.target.style.transform = 'scale(1)';
-            e.target.style.boxShadow = 'none';
-          }}>
-            {/* Gradient Overlay */}
-            <div style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              background: 'linear-gradient(45deg, rgba(215, 157, 75, 0.1), rgba(215, 157, 75, 0.05))',
-              zIndex: 1
-            }}></div>
-            
-            {/* Blog Icon */}
-            <div style={{
-              fontSize: '3rem',
-              color: 'rgba(255,255,255,0.9)',
-              textAlign: 'center',
-              zIndex: 2,
-              position: 'relative'
-            }}>
-              {colors.icon}
-            </div>
-
-            {/* Medium Badge */}
-            {isMediumPost && (
+        <Link href={`/blog/${slug}`}>
+          <div className="post-image">
+            {/* Solo mostrar imagen si no es placeholder */}
+            {image?.thumbnail && image.thumbnail !== "/assets/images/placeholder.jpg" ? (
+              <Image
+                src={image.thumbnail}
+                alt={t(title)}
+                width={400}
+                height={250}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
+            ) : (
+              // Placeholder elegante cuando no hay imagen
               <div style={{
-                position: 'absolute',
-                top: '10px',
-                left: '10px',
-                background: 'rgba(0, 0, 0, 0.8)',
-                color: '#fff',
-                padding: '4px 8px',
-                borderRadius: '12px',
-                fontSize: '0.7rem',
-                fontWeight: '600',
-                textTransform: 'uppercase',
-                letterSpacing: '0.5px',
-                zIndex: 3,
-                backdropFilter: 'blur(10px)',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '4px'
+                width: "100%",
+                height: "200px",
+                background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+                borderRadius: "8px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "white",
+                fontSize: "2rem",
+                fontWeight: "bold"
               }}>
-                <FaMedium size={10} />
-                Medium
+                📝
               </div>
             )}
-
-            {/* Featured Badge */}
             {featured && (
               <div style={{
                 position: 'absolute',
-                top: '10px',
-                right: '10px',
-                background: 'linear-gradient(135deg, #ff6b6b, #ee5a24)',
-                color: '#fff',
-                padding: '4px 8px',
-                borderRadius: '12px',
-                fontSize: '0.7rem',
+                top: '15px',
+                right: '15px',
+                background: 'linear-gradient(135deg, #d79d4b, #f4a261)',
+                color: 'white',
+                padding: '4px 12px',
+                borderRadius: '20px',
+                fontSize: '11px',
                 fontWeight: '600',
                 textTransform: 'uppercase',
                 letterSpacing: '0.5px',
-                zIndex: 3,
-                backdropFilter: 'blur(10px)'
+                boxShadow: '0 2px 8px rgba(215, 157, 75, 0.3)'
               }}>
                 Featured
               </div>
             )}
-
-            {/* Tag Badge */}
             {!featured && (
               <div style={{
                 position: 'absolute',
-                top: '10px',
-                right: '10px',
-                background: 'rgba(215, 157, 75, 0.9)',
-                color: '#fff',
-                padding: '4px 8px',
-                borderRadius: '12px',
-                fontSize: '0.7rem',
+                top: '15px',
+                right: '15px',
+                background: 'rgba(0, 0, 0, 0.7)',
+                color: 'white',
+                padding: '4px 12px',
+                borderRadius: '20px',
+                fontSize: '11px',
                 fontWeight: '600',
                 textTransform: 'uppercase',
-                letterSpacing: '0.5px',
-                zIndex: 3,
-                backdropFilter: 'blur(10px)'
+                letterSpacing: '0.5px'
               }}>
                 {t(tags)}
               </div>
@@ -158,57 +92,57 @@ const SingleBlog = ({
         </Link>
       </div>
       <div className="post-details">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
-          <p className="date">
+        <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '12px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '5px', color: '#666', fontSize: '12px' }}>
+            <FaCalendarAlt size={10} />
             {date}
-            <span> - </span> 
-            <Link href="#" className="tags">
-              {t(tags)}
-            </Link>
-          </p>
+          </div>
           {readTime && (
-            <div style={{ 
-              display: 'flex', 
-              alignItems: 'center', 
-              gap: '4px',
-              fontSize: '0.8rem',
-              color: '#666'
-            }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '5px', color: '#666', fontSize: '12px' }}>
               <FaClock size={10} />
               {readTime}
             </div>
           )}
         </div>
         <h2 className="blog-title">
-          <Link href={isMediumPost ? externalUrl : `${routes?.blog}/${slug}`} target={isMediumPost ? "_blank" : "_self"}>
+          <Link href={`/blog/${slug}`}>
             {t(title)}
           </Link>
         </h2>
         <p className="desc">{t(description)}</p>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          {isMediumPost ? (
-            <SecondaryButton 
-              text={t('blog.readMore')} 
-              url={externalUrl}
-              external={true}
-              icon={<FaMedium />}
-            />
-          ) : (
-            <SecondaryButton text="Continue Read" url={`${routes?.blog}/${slug}`} />
-          )}
-          {isMediumPost && (
-            <div style={{
-              display: 'flex',
+        <div style={{ marginTop: '20px' }}>
+          <Link 
+            href={`/blog/${slug}`}
+            style={{
+              display: 'inline-flex',
               alignItems: 'center',
-              gap: '4px',
-              fontSize: '0.8rem',
-              color: '#666',
-              fontStyle: 'italic'
-            }}>
-              <FaExternalLinkAlt size={10} />
-              {t('blog.externalLink')}
-            </div>
-          )}
+              gap: '8px',
+              padding: '10px 20px',
+              background: 'linear-gradient(135deg, #d79d4b, #f4a261)',
+              color: 'white',
+              textDecoration: 'none',
+              borderRadius: '25px',
+              fontSize: '13px',
+              fontWeight: '600',
+              textTransform: 'uppercase',
+              letterSpacing: '1px',
+              transition: 'all 0.3s ease',
+              boxShadow: '0 4px 15px rgba(215, 157, 75, 0.3)'
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.transform = 'translateY(-2px)';
+              e.target.style.boxShadow = '0 6px 20px rgba(215, 157, 75, 0.4)';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.transform = 'translateY(0)';
+              e.target.style.boxShadow = '0 4px 15px rgba(215, 157, 75, 0.3)';
+            }}
+          >
+            Leer Artículo
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </Link>
         </div>
       </div>
     </article>

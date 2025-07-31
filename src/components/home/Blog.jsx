@@ -29,7 +29,7 @@ const Blog = () => {
             marginTop: '10px',
             fontSize: '0.95rem'
           }}>
-            Latest articles about web development, Laravel, and modern technologies
+            Artículos sobre desarrollo web, Laravel y tecnologías modernas
           </p>
         </div>
 
@@ -48,7 +48,7 @@ const Blog = () => {
         <div className="all-blog-button-area text-center">
           <Button
             arrow
-            text="VIEW ALL ARTICLES"
+            text="VER TODOS LOS ARTÍCULOS"
             onClick={() => handleButtonClick("/blog")}
           />
         </div>

@@ -19,7 +19,7 @@ const LanguageToggle = () => {
     <button
       onClick={toggleLanguage}
       className="language-toggle"
-      title={language === 'en' ? 'Cambiar a Español' : 'Switch to English'}
+      title={language === 'en' ? t('languageSwitch.toSpanish') : t('languageSwitch.toEnglish')}
       style={{
         position: 'fixed',
         top: '20px',

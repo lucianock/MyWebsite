@@ -13,8 +13,6 @@ import {
   FaLinkedinIn,
   FaPinterestP,
   FaTwitter,
-  FaMedium,
-  FaExternalLinkAlt,
 } from "react-icons/fa";
 
 export const blogHero = {
@@ -52,177 +50,125 @@ export const singleBlogHero = {
 export const allBlogs = [
   {
     id: 1,
-    title: "blog.laravelBestPractices",
+    title: "blog.awsEc2Gratis",
     tags: "blog.technology",
-    date: "15 DEC, 2024",
-    description: "blog.laravelBestPracticesDesc",
+    date: "30 JUL, 2025",
+    description: "blog.awsEc2GratisDesc",
     image: {
       thumbnail: "/assets/images/placeholder.jpg",
       mainImage: "/assets/images/placeholder.jpg",
     },
-    link: "https://medium.com/@lucianocampos.k/laravel-best-practices-for-scalable-apis",
-    slug: "laravel-best-practices-for-scalable-apis",
-    allTags: ["laravel", "api", "php", "development", "best-practices"],
-    type: "medium", // Indica que es un post de Medium
-    externalUrl: "https://medium.com/@lucianocampos.k/laravel-best-practices-for-scalable-apis",
-    readTime: "8 min read",
+    slug: "como-tener-sitio-web-gratis-con-ec2",
+    allTags: ["aws", "ec2", "web-hosting", "cloud", "servers"],
+    readTime: "3 min read",
     featured: true,
-  },
-  /* Comentados para prueba real
-  {
-    id: 2,
-    title: "blog.modernWebDevelopment",
-    tags: "blog.development",
-    date: "10 DEC, 2024",
-    description: "blog.modernWebDevelopmentDesc",
-    image: {
-      thumbnail: "/assets/images/placeholder.jpg",
-      mainImage: "/assets/images/placeholder.jpg",
-    },
-    link: "https://medium.com/@lucianocampos.k/modern-web-development-evolution",
-    slug: "modern-web-development-evolution",
-    allTags: ["javascript", "react", "nodejs", "web-development", "modern-stack"],
-    type: "medium",
-    externalUrl: "https://medium.com/@lucianocampos.k/modern-web-development-evolution",
-    readTime: "12 min read",
-    featured: true,
-  },
-  {
-    id: 3,
-    title: "blog.phpSecurityTips",
-    tags: "blog.technology",
-    date: "05 DEC, 2024",
-    description: "blog.phpSecurityTipsDesc",
-    image: {
-      thumbnail: "/assets/images/placeholder.jpg",
-      mainImage: "/assets/images/placeholder.jpg",
-    },
-    link: "https://medium.com/@lucianocampos.k/php-security-best-practices",
-    slug: "php-security-best-practices",
-    allTags: ["php", "security", "web-development", "best-practices"],
-    type: "medium",
-    externalUrl: "https://medium.com/@lucianocampos.k/php-security-best-practices",
-    readTime: "6 min read",
-    featured: false,
-  },
-  {
-    id: 4,
-    title: "blog.databaseOptimization",
-    tags: "blog.development",
-    date: "01 DEC, 2024",
-    description: "blog.databaseOptimizationDesc",
-    image: {
-      thumbnail: "/assets/images/placeholder.jpg",
-      mainImage: "/assets/images/placeholder.jpg",
-    },
-    link: "https://medium.com/@lucianocampos.k/mysql-optimization-techniques",
-    slug: "mysql-optimization-techniques",
-    allTags: ["mysql", "database", "optimization", "performance"],
-    type: "medium",
-    externalUrl: "https://medium.com/@lucianocampos.k/mysql-optimization-techniques",
-    readTime: "10 min read",
-    featured: false,
-  },
-  {
-    id: 5,
-    title: "blog.tailwindCssGuide",
-    tags: "blog.development",
-    date: "25 NOV, 2024",
-    description: "blog.tailwindCssGuideDesc",
-    image: {
-      thumbnail: "/assets/images/placeholder.jpg",
-      mainImage: "/assets/images/placeholder.jpg",
-    },
-    link: "https://medium.com/@lucianocampos.k/tailwind-css-complete-guide",
-    slug: "tailwind-css-complete-guide",
-    allTags: ["tailwind", "css", "frontend", "design"],
-    type: "medium",
-    externalUrl: "https://medium.com/@lucianocampos.k/tailwind-css-complete-guide",
-    readTime: "15 min read",
-    featured: false,
-  },
-  {
-    id: 6,
-    title: "blog.deploymentStrategies",
-    tags: "blog.technology",
-    date: "20 NOV, 2024",
-    description: "blog.deploymentStrategiesDesc",
-    image: {
-      thumbnail: "/assets/images/placeholder.jpg",
-      mainImage: "/assets/images/placeholder.jpg",
-    },
-    link: "https://medium.com/@lucianocampos.k/laravel-deployment-strategies",
-    slug: "laravel-deployment-strategies",
-    allTags: ["laravel", "deployment", "devops", "server"],
-    type: "medium",
-    externalUrl: "https://medium.com/@lucianocampos.k/laravel-deployment-strategies",
-    readTime: "9 min read",
-    featured: false,
-  },
-  */
+    content: `
+      <h3>✋ Antes de empezar: ¿qué es EC2?</h3>
+      <p>EC2 (Elastic Compute Cloud) es un servicio de Amazon Web Services (AWS) que te permite levantar una máquina virtual (como si fuera una PC remota) y usarla como servidor. Ideal para alojar tu web, hacer pruebas, levantar APIs o jugar con proyectos personales.</p>
+      
+      <p>AWS te da <strong>un año gratis</strong> del plan Free Tier. ¡Aprovechalo!</p>
+      
+      <h3>🚀 Paso 1 – Crear tu cuenta en AWS</h3>
+      <ol>
+        <li>Andá a <a href="https://aws.amazon.com/" target="_blank">aws.amazon.com</a> y registrate.</li>
+        <li>Vas a necesitar una tarjeta de crédito. Tranca, no te cobran mientras estés en el plan gratuito.</li>
+        <li>Activás tu cuenta y listo, entrás al dashboard.</li>
+      </ol>
+      
+      <h3>🖥️ Paso 2 – Lanzar tu instancia EC2</h3>
+      <ol>
+        <li>En el buscador poné "EC2" y hacé clic.</li>
+        <li>Elegí "Launch instance".</li>
+        <li>Elegí una imagen de sistema (te recomiendo Ubuntu Server 22.04).</li>
+        <li>En "Instance type" seleccioná <code>t2.micro</code> (es la gratuita).</li>
+        <li>Elegí o creá un nuevo par de llaves (guardalo bien, sin esto no accedés).</li>
+        <li>Hacé clic en "Launch instance".</li>
+      </ol>
+      
+      <p>¡Ya tenés tu servidor online!</p>
+      
+      <h3>🔐 Paso 3 – Acceder por SSH</h3>
+      <p>Si estás en Linux o Mac:</p>
+      <pre><code>chmod 400 tu-archivo.pem
+ssh -i "tu-archivo.pem" ubuntu@tu-ip-publica</code></pre>
+      
+      <p>En Windows podés usar PuTTY o el nuevo terminal de Windows con OpenSSH.</p>
+      
+      <h3>🌐 Paso 4 – Instalar tu web</h3>
+      <p>Un ejemplo rápido con Apache:</p>
+      <pre><code>sudo apt update && sudo apt install apache2 -y</code></pre>
+      
+      <p>Luego, copiá tus archivos al directorio <code>/var/www/html/</code>.</p>
+      
+      <p>Podés subir tu portfolio, un proyecto Laravel, una landing… lo que sea.</p>
+      
+      <h3>📡 Paso 5 – Abrir el puerto 80</h3>
+      <p>Tenés que permitir el tráfico HTTP:</p>
+      <ol>
+        <li>En el panel de EC2, andá a tu instancia.</li>
+        <li>En "Security groups" editá las reglas de ingreso.</li>
+        <li>Agregá una nueva:
+          <ul>
+            <li>Type: HTTP</li>
+            <li>Port: 80</li>
+            <li>Source: Anywhere</li>
+          </ul>
+        </li>
+      </ol>
+      
+      <p>Listo. Abrí tu IP en el navegador… ¡y magia! 🪄</p>
+      
+      <h3>💡 Tips finales</h3>
+      <ul>
+        <li>Usá un dominio gratis de <a href="https://www.freenom.com/" target="_blank">Freenom</a> y apuntalo a tu IP.</li>
+        <li>Podés levantar un servidor PHP o incluso Node.js si querés.</li>
+        <li>Hacé backups: EC2 puede reiniciarse y perder cambios si no usás volumenes persistentes.</li>
+      </ul>
+      
+      <h3>Mi experiencia personal</h3>
+      <p>Descubrí esto casi de casualidad, y me voló la cabeza. Poder tener un servidor <em>gratis</em>, sin depender de plataformas externas y con control total, es una joyita para cualquier developer o curioso. Lo estoy usando para montar mis proyectos personales y probar herramientas nuevas de forma segura.</p>
+    `
+  }
 ];
 
 export const blogComments = [
   {
-    author: "ALBERT FLORES",
-    // imageSrc: commentor1Image?.src,
-    date: "02 JUN, 2021",
-    content:
-      "Rst erat. Sed ut elit fringilla, dapibus augue et, tempus lorem. Ut blandit auctor sapiengravidatristique turpis hendrerit",
+    id: 1,
+    name: "John Doe",
+    date: "30 JUL, 2025",
+    comment: "Excelente artículo. Muy útil para mi proyecto.",
+    image: "/assets/images/comment-thumb.png",
     replies: [
       {
-        author: "ALBERT FLORE",
-        // imageSrc: commentor1ReplyImage?.src,
-        date: "02 JUN, 2021",
-        content:
-          "Rst erat. Sed ut elit fringilla, dapibus augue et, tempus lorem. Ut blandit auctor sapiengravidatristique turpis hendrerit",
+        id: 1,
+        name: "Luciano Campos",
+        date: "31 JUL, 2025",
+        comment: "¡Gracias! Me alegra que te haya sido útil.",
+        image: "/assets/images/comment-thumb2.png",
       },
     ],
-  },
-  {
-    author: "JENNY WILSON",
-    // imageSrc: commentor2Image?.src,
-    date: "02 JUN, 2021",
-    content:
-      "Rst erat. Sed ut elit fringilla, dapibus augue et, tempus lorem. Ut blandit auctor sapiengravidatristique turpis hendrerit",
-    replies: [],
   },
 ];
 
 export const blogSocialIcons = [
   {
     id: 1,
-    title: "Twitter",
-    url: "https://twitter.com/",
-    tooltip: "Share on Twitter",
-    Icon: <FaTwitter />,
+    icon: <FaFacebookF />,
+    url: "https://facebook.com",
   },
   {
     id: 2,
-    title: "Pinterest",
-    url: "https://www.pinterest.com/",
-    tooltip: "Share on Pinterest",
-    Icon: <FaPinterestP />,
+    icon: <FaTwitter />,
+    url: "https://twitter.com",
   },
   {
     id: 3,
-    title: "Facebook",
-    url: "https://www.facebook.com/",
-    tooltip: "Share on Facebook",
-    Icon: <FaFacebookF />,
+    icon: <FaLinkedinIn />,
+    url: "https://linkedin.com",
   },
   {
     id: 4,
-    title: "Linkedin",
-    url: "https://www.linkedin.com/",
-    tooltip: "Share on Linkedin",
-    Icon: <FaLinkedinIn />,
-  },
-  {
-    id: 5,
-    title: "Medium",
-    url: "https://medium.com/@lucianocampos.k",
-    tooltip: "Read on Medium",
-    Icon: <FaMedium />,
+    icon: <FaPinterestP />,
+    url: "https://pinterest.com",
   },
 ];

@@ -123,55 +123,92 @@ export const en = {
 
   // Blog
   blog: {
-    technology: "Technology",
-    development: "Development",
-    trash: "Development",
-    laravelBestPractices: "Laravel Best Practices for Scalable APIs",
-    laravelBestPracticesDesc: "Learn how to design and implement robust REST APIs using Laravel. This comprehensive guide covers authentication, validation, error handling, testing, and deployment strategies for production-ready APIs that can handle high traffic and complex business logic.",
-    /* Comentados para prueba real
-    modernWebDevelopment: "Modern Web Development: From PHP to Full-Stack JavaScript",
-    modernWebDevelopmentDesc: "Explore the evolution of web development from traditional PHP applications to modern JavaScript frameworks. Discover how to build responsive, performant web applications using React, Node.js, and modern development tools and practices.",
-    phpSecurityTips: "PHP Security Best Practices for Web Applications",
-    phpSecurityTipsDesc: "Essential security practices for PHP web applications. Learn about input validation, SQL injection prevention, XSS protection, and secure authentication methods to build robust and secure applications.",
-    databaseOptimization: "MySQL Optimization Techniques for Better Performance",
-    databaseOptimizationDesc: "Master MySQL optimization strategies to improve your application performance. Learn about indexing, query optimization, caching strategies, and database design best practices.",
-    tailwindCssGuide: "Complete Guide to Tailwind CSS: From Basics to Advanced",
-    tailwindCssGuideDesc: "Comprehensive guide to Tailwind CSS framework. Learn utility-first CSS approach, responsive design, custom configurations, and advanced techniques for modern web development.",
-    deploymentStrategies: "Laravel Deployment Strategies: From Development to Production",
-    deploymentStrategiesDesc: "Complete guide to deploying Laravel applications. Learn about server configuration, CI/CD pipelines, environment management, and production optimization techniques.",
-    */
+    awsEc2Gratis: "How to Have Your Own Free Website with EC2 (Without Going Crazy)",
+    awsEc2GratisDesc: "Yes, you read that right: free. Or almost. In this post I tell you how to put your website online using Amazon EC2 without paying a penny (at least for a good while).",
+    // Complete article content in English
+    awsEc2GratisContent: `
+      <h3>✋ Before starting: what is EC2?</h3>
+      <p>EC2 (Elastic Compute Cloud) is an Amazon Web Services (AWS) service that allows you to launch a virtual machine (like a remote PC) and use it as a server. Ideal for hosting your website, running tests, setting up APIs, or working on personal projects.</p>
+      
+      <p>AWS gives you <strong>one year free</strong> under the Free Tier plan. Take advantage of it!</p>
+      
+      <h3>🚀 Step 1 – Create your AWS account</h3>
+      <ol>
+        <li>Go to <a href="https://aws.amazon.com/" target="_blank">aws.amazon.com</a> and register.</li>
+        <li>You'll need a credit card. Don't worry, they won't charge you while you're on the free plan.</li>
+        <li>Activate your account and that's it, you enter the dashboard.</li>
+      </ol>
+      
+      <h3>🖥️ Step 2 – Launch your EC2 instance</h3>
+      <ol>
+        <li>In the search bar, type "EC2" and click.</li>
+        <li>Choose "Launch instance".</li>
+        <li>Choose a system image (I recommend Ubuntu Server 22.04).</li>
+        <li>In "Instance type" select <code>t2.micro</code> (it's the free one).</li>
+        <li>Choose or create a new key pair (save it well, without this you won't be able to access).</li>
+        <li>Click "Launch instance".</li>
+      </ol>
+      
+      <p>You already have your server online!</p>
+      
+      <h3>🔐 Step 3 – Access via SSH</h3>
+      <p>If you're on Linux or Mac:</p>
+      <pre><code>chmod 400 your-file.pem
+ssh -i "your-file.pem" ubuntu@your-public-ip</code></pre>
+      
+      <p>On Windows you can use PuTTY or the new Windows terminal with OpenSSH.</p>
+      
+      <h3>🌐 Step 4 – Install your web</h3>
+      <p>A quick example with Apache:</p>
+      <pre><code>sudo apt update && sudo apt install apache2 -y</code></pre>
+      
+      <p>Then, copy your files to the <code>/var/www/html/</code> directory.</p>
+      
+      <p>You can upload your portfolio, a Laravel project, a landing page... whatever you want.</p>
+      
+      <h3>📡 Step 5 – Open port 80</h3>
+      <p>You need to allow HTTP traffic:</p>
+      <ol>
+        <li>In the EC2 panel, go to your instance.</li>
+        <li>In "Security groups" edit the inbound rules.</li>
+        <li>Add a new one:
+          <ul>
+            <li>Type: HTTP</li>
+            <li>Port: 80</li>
+            <li>Source: Anywhere</li>
+          </ul>
+        </li>
+      </ol>
+      
+      <p>Done. Open your IP in the browser... and magic! 🪄</p>
+      
+      <h3>💡 Final tips</h3>
+      <ul>
+        <li>Use a free domain from <a href="https://www.freenom.com/" target="_blank">Freenom</a> and point it to your IP.</li>
+        <li>You can set up a PHP server or even Node.js if you want.</li>
+        <li>Make backups: EC2 can restart and lose changes if you don't use persistent volumes.</li>
+      </ul>
+      
+      <h3>My personal experience</h3>
+      <p>I discovered this almost by chance, and it blew my mind. Being able to have a <em>free</em> server, without depending on external platforms and with total control, is a gem for any developer or curious person. I'm using it to set up my personal projects and test new tools safely.</p>
+    `,
     // Blog page translations
     hero: {
-      heading: "Blog Post",
-      lastBreadcrumb: "BLOG POST"
+      heading: "Blog",
+      lastBreadcrumb: "BLOG"
     },
     singleHero: {
-      heading: "Single Post",
-      lastBreadcrumb: "BLOG POST"
+      heading: "Article",
+      lastBreadcrumb: "ARTICLE"
     },
-    // Blog individual content
-    category: "CATEGORY",
-    tags: "Tags",
-    share: "Share",
-    comments: "02 COMMENT",
-    leaveComment: "LEAVE A COMMENT",
-    reply: "REPLY",
-    readMore: "READ ON MEDIUM",
-    externalLink: "External Link",
-    // Blog content paragraphs
-    paragraph1: "When building scalable APIs with Laravel, it's essential to follow industry best practices from the ground up. This includes implementing proper authentication mechanisms, comprehensive validation, and robust error handling that provides meaningful feedback to API consumers.",
-    paragraph2: "The architecture should be designed with scalability in mind, utilizing Laravel's built-in features like queues, caching, and database optimization. Proper testing strategies ensure reliability, while deployment considerations focus on performance and security.",
-    paragraph3: "Modern web development has evolved significantly from traditional PHP applications to sophisticated JavaScript frameworks. This transition represents a fundamental shift in how we approach building web applications, focusing on user experience, performance, and maintainability.",
-    paragraph4: "The integration of React, Node.js, and modern development tools has revolutionized the development process, enabling developers to create more responsive and interactive applications while maintaining code quality and scalability.",
-    // Blog content list items
-    listItem1: "Authentication and authorization systems",
-    listItem2: "API validation and error handling",
-    listItem3: "Testing strategies and deployment",
-    listItem4: "Performance optimization techniques",
-    listItem5: "Security best practices",
-    listItem6: "Scalability considerations",
-    // Blog quote
-    quote: "Good API design is not just about functionality—it's about creating an intuitive, secure, and scalable interface that developers love to work with."
+    technology: "Technology",
+    development: "Development"
+  },
+
+  // Language switch translations
+  languageSwitch: {
+    toSpanish: "Switch to Spanish",
+    toEnglish: "Switch to English"
   },
 
   // Form labels

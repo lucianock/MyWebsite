@@ -123,55 +123,92 @@ export const es = {
 
   // Blog
   blog: {
-    technology: "Tecnología",
-    development: "Desarrollo",
-    trash: "Desarrollo",
-    laravelBestPractices: "Mejores Prácticas de Laravel para APIs Escalables",
-    laravelBestPracticesDesc: "Aprende cómo diseñar e implementar APIs REST robustas usando Laravel. Esta guía integral cubre autenticación, validación, manejo de errores, testing y estrategias de despliegue para APIs listas para producción que pueden manejar alto tráfico y lógica de negocio compleja.",
-    /* Comentados para prueba real
-    modernWebDevelopment: "Desarrollo Web Moderno: De PHP a JavaScript Full-Stack",
-    modernWebDevelopmentDesc: "Explora la evolución del desarrollo web desde aplicaciones PHP tradicionales hasta frameworks JavaScript modernos. Descubre cómo construir aplicaciones web responsivas y performantes usando React, Node.js y herramientas y prácticas de desarrollo modernas.",
-    phpSecurityTips: "Mejores Prácticas de Seguridad en PHP para Aplicaciones Web",
-    phpSecurityTipsDesc: "Prácticas esenciales de seguridad para aplicaciones web en PHP. Aprende sobre validación de entrada, prevención de inyección SQL, protección XSS y métodos de autenticación segura para construir aplicaciones robustas y seguras.",
-    databaseOptimization: "Técnicas de Optimización MySQL para Mejor Rendimiento",
-    databaseOptimizationDesc: "Domina las estrategias de optimización MySQL para mejorar el rendimiento de tu aplicación. Aprende sobre indexación, optimización de consultas, estrategias de caché y mejores prácticas de diseño de bases de datos.",
-    tailwindCssGuide: "Guía Completa de Tailwind CSS: Desde Básico hasta Avanzado",
-    tailwindCssGuideDesc: "Guía integral del framework Tailwind CSS. Aprende el enfoque CSS utility-first, diseño responsivo, configuraciones personalizadas y técnicas avanzadas para desarrollo web moderno.",
-    deploymentStrategies: "Estrategias de Despliegue Laravel: De Desarrollo a Producción",
-    deploymentStrategiesDesc: "Guía completa para desplegar aplicaciones Laravel. Aprende sobre configuración de servidores, pipelines CI/CD, gestión de entornos y técnicas de optimización para producción.",
-    */
+    awsEc2Gratis: "Cómo tener tu propio sitio web gratis con EC2 (y sin volverte loco)",
+    awsEc2GratisDesc: "Sí, leíste bien: gratis. O casi. En este post te cuento cómo poner tu sitio web online usando Amazon EC2 sin pagar un peso (al menos por un buen tiempo).",
+    // Complete article content in Spanish
+    awsEc2GratisContent: `
+      <h3>✋ Antes de empezar: ¿qué es EC2?</h3>
+      <p>EC2 (Elastic Compute Cloud) es un servicio de Amazon Web Services (AWS) que te permite levantar una máquina virtual (como si fuera una PC remota) y usarla como servidor. Ideal para alojar tu web, hacer pruebas, levantar APIs o jugar con proyectos personales.</p>
+      
+      <p>AWS te da <strong>un año gratis</strong> del plan Free Tier. ¡Aprovechalo!</p>
+      
+      <h3>🚀 Paso 1 – Crear tu cuenta en AWS</h3>
+      <ol>
+        <li>Andá a <a href="https://aws.amazon.com/" target="_blank">aws.amazon.com</a> y registrate.</li>
+        <li>Vas a necesitar una tarjeta de crédito. Tranca, no te cobran mientras estés en el plan gratuito.</li>
+        <li>Activás tu cuenta y listo, entrás al dashboard.</li>
+      </ol>
+      
+      <h3>🖥️ Paso 2 – Lanzar tu instancia EC2</h3>
+      <ol>
+        <li>En el buscador poné "EC2" y hacé clic.</li>
+        <li>Elegí "Launch instance".</li>
+        <li>Elegí una imagen de sistema (te recomiendo Ubuntu Server 22.04).</li>
+        <li>En "Instance type" seleccioná <code>t2.micro</code> (es la gratuita).</li>
+        <li>Elegí o creá un nuevo par de llaves (guardalo bien, sin esto no accedés).</li>
+        <li>Hacé clic en "Launch instance".</li>
+      </ol>
+      
+      <p>¡Ya tenés tu servidor online!</p>
+      
+      <h3>🔐 Paso 3 – Acceder por SSH</h3>
+      <p>Si estás en Linux o Mac:</p>
+      <pre><code>chmod 400 tu-archivo.pem
+ssh -i "tu-archivo.pem" ubuntu@tu-ip-publica</code></pre>
+      
+      <p>En Windows podés usar PuTTY o el nuevo terminal de Windows con OpenSSH.</p>
+      
+      <h3>🌐 Paso 4 – Instalar tu web</h3>
+      <p>Un ejemplo rápido con Apache:</p>
+      <pre><code>sudo apt update && sudo apt install apache2 -y</code></pre>
+      
+      <p>Luego, copiá tus archivos al directorio <code>/var/www/html/</code>.</p>
+      
+      <p>Podés subir tu portfolio, un proyecto Laravel, una landing… lo que sea.</p>
+      
+      <h3>📡 Paso 5 – Abrir el puerto 80</h3>
+      <p>Tenés que permitir el tráfico HTTP:</p>
+      <ol>
+        <li>En el panel de EC2, andá a tu instancia.</li>
+        <li>En "Security groups" editá las reglas de ingreso.</li>
+        <li>Agregá una nueva:
+          <ul>
+            <li>Type: HTTP</li>
+            <li>Port: 80</li>
+            <li>Source: Anywhere</li>
+          </ul>
+        </li>
+      </ol>
+      
+      <p>Listo. Abrí tu IP en el navegador… ¡y magia! 🪄</p>
+      
+      <h3>💡 Tips finales</h3>
+      <ul>
+        <li>Usá un dominio gratis de <a href="https://www.freenom.com/" target="_blank">Freenom</a> y apuntalo a tu IP.</li>
+        <li>Podés levantar un servidor PHP o incluso Node.js si querés.</li>
+        <li>Hacé backups: EC2 puede reiniciarse y perder cambios si no usás volumenes persistentes.</li>
+      </ul>
+      
+      <h3>Mi experiencia personal</h3>
+      <p>Descubrí esto casi de casualidad, y me voló la cabeza. Poder tener un servidor <em>gratis</em>, sin depender de plataformas externas y con control total, es una joyita para cualquier developer o curioso. Lo estoy usando para montar mis proyectos personales y probar herramientas nuevas de forma segura.</p>
+    `,
     // Blog page translations
     hero: {
-      heading: "Blog Post",
-      lastBreadcrumb: "BLOG POST"
+      heading: "Blog",
+      lastBreadcrumb: "BLOG"
     },
     singleHero: {
-      heading: "Post Individual",
-      lastBreadcrumb: "BLOG POST"
+      heading: "Artículo",
+      lastBreadcrumb: "ARTÍCULO"
     },
-    // Blog individual content
-    category: "CATEGORÍA",
-    tags: "Etiquetas",
-    share: "Compartir",
-    comments: "02 COMENTARIOS",
-    leaveComment: "DEJAR UN COMENTARIO",
-    reply: "RESPONDER",
-    readMore: "LEER EN MEDIUM",
-    externalLink: "Enlace Externo",
-    // Blog content paragraphs
-    paragraph1: "Al construir APIs escalables con Laravel, es esencial seguir las mejores prácticas de la industria desde el principio. Esto incluye implementar mecanismos de autenticación apropiados, validación integral y manejo robusto de errores que proporcione retroalimentación significativa a los consumidores de la API.",
-    paragraph2: "La arquitectura debe diseñarse pensando en la escalabilidad, utilizando las características integradas de Laravel como colas, caché y optimización de bases de datos. Las estrategias de testing apropiadas aseguran confiabilidad, mientras que las consideraciones de despliegue se enfocan en rendimiento y seguridad.",
-    paragraph3: "El desarrollo web moderno ha evolucionado significativamente desde las aplicaciones PHP tradicionales hasta frameworks JavaScript sofisticados. Esta transición representa un cambio fundamental en cómo abordamos la construcción de aplicaciones web, enfocándonos en la experiencia del usuario, rendimiento y mantenibilidad.",
-    paragraph4: "La integración de React, Node.js y herramientas de desarrollo modernas ha revolucionado el proceso de desarrollo, permitiendo a los desarrolladores crear aplicaciones más responsivas e interactivas mientras mantienen la calidad del código y escalabilidad.",
-    // Blog content list items
-    listItem1: "Sistemas de autenticación y autorización",
-    listItem2: "Validación de API y manejo de errores",
-    listItem3: "Estrategias de testing y despliegue",
-    listItem4: "Técnicas de optimización de rendimiento",
-    listItem5: "Mejores prácticas de seguridad",
-    listItem6: "Consideraciones de escalabilidad",
-    // Blog quote
-    quote: "El buen diseño de API no se trata solo de funcionalidad—se trata de crear una interfaz intuitiva, segura y escalable que los desarrolladores amen trabajar."
+    technology: "Tecnología",
+    development: "Desarrollo"
+  },
+
+  // Language switch translations
+  languageSwitch: {
+    toSpanish: "Cambiar a Español",
+    toEnglish: "Cambiar a Inglés"
   },
 
   // Form labels
