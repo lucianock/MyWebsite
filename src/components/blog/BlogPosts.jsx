@@ -25,7 +25,7 @@ const BlogPosts = () => {
 
             {allBlogs?.length !== blogCount && (
               <div className="load-more-btn text-center">
-                <Button text="LOAD MORE" onClick={() => handleButtonClick()} />
+                <Button text={t('blog.loadMore')} onClick={() => handleButtonClick()} />
               </div>
             )}
           </div>
