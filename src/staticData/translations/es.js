@@ -202,7 +202,8 @@ ssh -i "tu-archivo.pem" ubuntu@tu-ip-publica</code></pre>
       lastBreadcrumb: "ARTÍCULO"
     },
     technology: "Tecnología",
-    development: "Desarrollo"
+    development: "Desarrollo",
+    loadMore: "CARGAR MÁS"
   },
 
   // Language switch translations

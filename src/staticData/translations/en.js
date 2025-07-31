@@ -202,7 +202,8 @@ ssh -i "your-file.pem" ubuntu@your-public-ip</code></pre>
       lastBreadcrumb: "ARTICLE"
     },
     technology: "Technology",
-    development: "Development"
+    development: "Development",
+    loadMore: "LOAD MORE"
   },
 
   // Language switch translations
