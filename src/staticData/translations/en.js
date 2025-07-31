@@ -118,7 +118,6 @@ export const en = {
     linkedin: "LINKEDIN",
     github: "GITHUB",
     whatsapp: "WHATSAPP",
-    medium: "MEDIUM"
   },
 
   // Blog

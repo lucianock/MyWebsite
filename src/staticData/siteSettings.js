@@ -15,7 +15,6 @@ import {
   FaTwitter,
   FaGithub,
   FaWhatsapp,
-  FaMedium,
 } from "react-icons/fa";
 
 export const siteSettings = {
@@ -124,12 +123,6 @@ export const siteSettings = {
       Icon: <FaWhatsapp />,
       url: "https://wa.me/543416589951",
       tooltip: "Chat with me on WhatsApp",
-    },
-    {
-      id: 4,
-      Icon: <FaMedium />,
-      url: "https://medium.com/@lucianocampos.k",
-      tooltip: "Read my articles on Medium",
     },
   ],
   themeData: {
