@@ -13,7 +13,7 @@ const AboutMe = () => {
       <div className="container">
         <div className="section-title">
           <h2 className="title">
-            <span>{t('sections.about')}</span> {t('sections.aboutMe')}
+            <span className="bottom-border">{t('sections.about')} {t('sections.aboutMe')}</span>
           </h2>
         </div>
         <div className="row align-items-end">

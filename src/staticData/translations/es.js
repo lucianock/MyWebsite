@@ -24,8 +24,8 @@ export const es = {
     services: "Servicios",
     education: "EDUCACIÓN",
     experience: "EXPERIENCIA",
-    portfolio: "PORTFOLIO",
-    blogs: "BLOGS"
+    portfolio: "Portafolio",
+    blogs: "Blog"
   },
 
   // Hero Section
@@ -75,8 +75,8 @@ export const es = {
     blackpathDesc: "Aplicación web desarrollada con Laravel que permite escanear dominios para detectar vulnerabilidades. Integra herramientas como Nmap, WhatWeb y Gobuster, presentando los resultados en una interfaz sencilla y amigable, pensada para usuarios sin conocimientos técnicos avanzados. Permite exportar reportes claros y organizados, facilitando la identificación rápida de riesgos de seguridad.",
     secudash: "SECUDASH",
     secudashDesc: "Dashboard de ciberseguridad desarrollado con Laravel y Vite para gestionar accesos, credenciales y publicaciones relevantes. Integración con Bitwarden autohospedado, scraping de LinkedIn por palabras clave y visualización segmentada según roles. Arquitectura escalable, segura y orientada a automatización de tareas.",
-    nextjob: "NEXTJOB",
-    nextjobDesc: "Portal de búsqueda y publicación de empleos construido con Laravel y Tailwind CSS. Permite a empresas publicar ofertas y usuarios buscar y filtrar posiciones. Incluye gestión de usuarios con roles, panel de administración y interfaz responsive.",
+    nextjob: "NextJob - Portal de Empleos",
+    nextjobDesc: "Plataforma integral de búsqueda y publicación de empleos con filtrado avanzado y gestión de usuarios. Incluye perfiles de empresas, aplicaciones de trabajo, panel de administración y diseño responsivo. Construida con Laravel y Tailwind CSS.",
     idealsur: "Idealsur.com – Remoto (CABA)",
     idealsurDesc: "Desarrollo de CRMs orientados a la industria farmacéutica, principalmente con PHP, JavaScript y MySQL. Participación en todo el ciclo: análisis de requerimientos, diseño, desarrollo, testing y soporte. Integración de APIs externas y generación de reportes personalizados para clientes. Configuración y soporte de servidores, despliegues desde entorno local a producción, y gestión de bases de datos. Colaboración técnica en entornos ágiles, revisión de código y promoción de buenas prácticas."
   },
@@ -117,48 +117,98 @@ export const es = {
   social: {
     linkedin: "LINKEDIN",
     github: "GITHUB",
-    whatsapp: "WHATSAPP"
+    whatsapp: "WHATSAPP",
+    medium: "MEDIUM"
   },
 
   // Blog
   blog: {
-    technology: "Tecnología",
-    development: "Desarrollo",
-    trash: "Desarrollo",
-    publishingSoftware: "Construyendo APIs Escalables con Laravel: Mejores Prácticas",
-    publishingSoftwareDesc: "Aprende cómo diseñar e implementar APIs REST robustas usando Laravel. Esta guía integral cubre autenticación, validación, manejo de errores, testing y estrategias de despliegue para APIs listas para producción que pueden manejar alto tráfico y lógica de negocio compleja.",
-    wordpressWebsite: "Desarrollo Web Moderno: De PHP a JavaScript Full-Stack",
-    wordpressWebsiteDesc: "Explora la evolución del desarrollo web desde aplicaciones PHP tradicionales hasta frameworks JavaScript modernos. Descubre cómo construir aplicaciones web responsivas y performantes usando React, Node.js y herramientas y prácticas de desarrollo modernas.",
+    awsEc2Gratis: "Cómo tener tu propio sitio web gratis con EC2 (y sin volverte loco)",
+    awsEc2GratisDesc: "Sí, leíste bien: gratis. O casi. En este post te cuento cómo poner tu sitio web online usando Amazon EC2 sin pagar un peso (al menos por un buen tiempo).",
+    // Complete article content in Spanish
+    awsEc2GratisContent: `
+      <h3>✋ Antes de empezar: ¿qué es EC2?</h3>
+      <p>EC2 (Elastic Compute Cloud) es un servicio de Amazon Web Services (AWS) que te permite levantar una máquina virtual (como si fuera una PC remota) y usarla como servidor. Ideal para alojar tu web, hacer pruebas, levantar APIs o jugar con proyectos personales.</p>
+      
+      <p>AWS te da <strong>un año gratis</strong> del plan Free Tier. ¡Aprovechalo!</p>
+      
+      <h3>🚀 Paso 1 – Crear tu cuenta en AWS</h3>
+      <ol>
+        <li>Andá a <a href="https://aws.amazon.com/" target="_blank">aws.amazon.com</a> y registrate.</li>
+        <li>Vas a necesitar una tarjeta de crédito. Tranca, no te cobran mientras estés en el plan gratuito.</li>
+        <li>Activás tu cuenta y listo, entrás al dashboard.</li>
+      </ol>
+      
+      <h3>🖥️ Paso 2 – Lanzar tu instancia EC2</h3>
+      <ol>
+        <li>En el buscador poné "EC2" y hacé clic.</li>
+        <li>Elegí "Launch instance".</li>
+        <li>Elegí una imagen de sistema (te recomiendo Ubuntu Server 22.04).</li>
+        <li>En "Instance type" seleccioná <code>t2.micro</code> (es la gratuita).</li>
+        <li>Elegí o creá un nuevo par de llaves (guardalo bien, sin esto no accedés).</li>
+        <li>Hacé clic en "Launch instance".</li>
+      </ol>
+      
+      <p>¡Ya tenés tu servidor online!</p>
+      
+      <h3>🔐 Paso 3 – Acceder por SSH</h3>
+      <p>Si estás en Linux o Mac:</p>
+      <pre><code>chmod 400 tu-archivo.pem
+ssh -i "tu-archivo.pem" ubuntu@tu-ip-publica</code></pre>
+      
+      <p>En Windows podés usar PuTTY o el nuevo terminal de Windows con OpenSSH.</p>
+      
+      <h3>🌐 Paso 4 – Instalar tu web</h3>
+      <p>Un ejemplo rápido con Apache:</p>
+      <pre><code>sudo apt update && sudo apt install apache2 -y</code></pre>
+      
+      <p>Luego, copiá tus archivos al directorio <code>/var/www/html/</code>.</p>
+      
+      <p>Podés subir tu portfolio, un proyecto Laravel, una landing… lo que sea.</p>
+      
+      <h3>📡 Paso 5 – Abrir el puerto 80</h3>
+      <p>Tenés que permitir el tráfico HTTP:</p>
+      <ol>
+        <li>En el panel de EC2, andá a tu instancia.</li>
+        <li>En "Security groups" editá las reglas de ingreso.</li>
+        <li>Agregá una nueva:
+          <ul>
+            <li>Type: HTTP</li>
+            <li>Port: 80</li>
+            <li>Source: Anywhere</li>
+          </ul>
+        </li>
+      </ol>
+      
+      <p>Listo. Abrí tu IP en el navegador… ¡y magia! 🪄</p>
+      
+      <h3>💡 Tips finales</h3>
+      <ul>
+        <li>Usá un dominio gratis de <a href="https://www.freenom.com/" target="_blank">Freenom</a> y apuntalo a tu IP.</li>
+        <li>Podés levantar un servidor PHP o incluso Node.js si querés.</li>
+        <li>Hacé backups: EC2 puede reiniciarse y perder cambios si no usás volumenes persistentes.</li>
+      </ul>
+      
+      <h3>Mi experiencia personal</h3>
+      <p>Descubrí esto casi de casualidad, y me voló la cabeza. Poder tener un servidor <em>gratis</em>, sin depender de plataformas externas y con control total, es una joyita para cualquier developer o curioso. Lo estoy usando para montar mis proyectos personales y probar herramientas nuevas de forma segura.</p>
+    `,
     // Blog page translations
     hero: {
-      heading: "Blog Post",
-      lastBreadcrumb: "BLOG POST"
+      heading: "Blog",
+      lastBreadcrumb: "BLOG"
     },
     singleHero: {
-      heading: "Post Individual",
-      lastBreadcrumb: "BLOG POST"
+      heading: "Artículo",
+      lastBreadcrumb: "ARTÍCULO"
     },
-    // Blog individual content
-    category: "CATEGORÍA",
-    tags: "Etiquetas",
-    share: "Compartir",
-    comments: "02 COMENTARIOS",
-    leaveComment: "DEJAR UN COMENTARIO",
-    reply: "RESPONDER",
-    // Blog content paragraphs
-    paragraph1: "Al construir APIs escalables con Laravel, es esencial seguir las mejores prácticas de la industria desde el principio. Esto incluye implementar mecanismos de autenticación apropiados, validación integral y manejo robusto de errores que proporcione retroalimentación significativa a los consumidores de la API.",
-    paragraph2: "La arquitectura debe diseñarse pensando en la escalabilidad, utilizando las características integradas de Laravel como colas, caché y optimización de bases de datos. Las estrategias de testing apropiadas aseguran confiabilidad, mientras que las consideraciones de despliegue se enfocan en rendimiento y seguridad.",
-    paragraph3: "El desarrollo web moderno ha evolucionado significativamente desde las aplicaciones PHP tradicionales hasta frameworks JavaScript sofisticados. Esta transición representa un cambio fundamental en cómo abordamos la construcción de aplicaciones web, enfocándonos en la experiencia del usuario, rendimiento y mantenibilidad.",
-    paragraph4: "La integración de React, Node.js y herramientas de desarrollo modernas ha revolucionado el proceso de desarrollo, permitiendo a los desarrolladores crear aplicaciones más responsivas e interactivas mientras mantienen la calidad del código y escalabilidad.",
-    // Blog content list items
-    listItem1: "Sistemas de autenticación y autorización",
-    listItem2: "Validación de API y manejo de errores",
-    listItem3: "Estrategias de testing y despliegue",
-    listItem4: "Técnicas de optimización de rendimiento",
-    listItem5: "Mejores prácticas de seguridad",
-    listItem6: "Consideraciones de escalabilidad",
-    // Blog quote
-    quote: "El buen diseño de API no se trata solo de funcionalidad—se trata de crear una interfaz intuitiva, segura y escalable que los desarrolladores amen trabajar."
+    technology: "Tecnología",
+    development: "Desarrollo"
+  },
+
+  // Language switch translations
+  languageSwitch: {
+    toSpanish: "Cambiar a Español",
+    toEnglish: "Cambiar a Inglés"
   },
 
   // Form labels
@@ -185,17 +235,13 @@ export const es = {
 
   // Portfolio Section
   portfolio: {
+    blackpath: "BlackPath - Escáner de Seguridad",
+    blackpathDesc: "Aplicación web de escaneo de vulnerabilidades para análisis de dominios usando Nmap, WhatWeb y Gobuster. Incluye múltiples niveles de escaneo con resultados detallados e informes exportables para auditorías de seguridad.",
     nextjob: "NextJob - Portal de Empleos",
-    nextjobDesc: "Una plataforma integral de búsqueda y publicación de empleos construida con Laravel y Tailwind CSS. Incluye autenticación de usuarios, control de acceso basado en roles, filtros de búsqueda avanzados y un panel de administración responsive. Las empresas pueden publicar ofertas mientras los usuarios pueden buscar, filtrar y postularse a posiciones.",
-    blackpath: "BlackPath - Dashboard de Seguridad",
-    blackpathDesc: "Dashboard avanzado de ciberseguridad desarrollado con Laravel y Vite. Se integra con Bitwarden autohospedado para gestión de credenciales, scraping de LinkedIn para inteligencia de amenazas y proporciona visualización segmentada basada en roles de usuario. Implementa arquitectura segura con monitoreo en tiempo real.",
+    nextjobDesc: "Plataforma integral de búsqueda y publicación de empleos con filtrado avanzado, perfiles de empresas y gestión de usuarios. Incluye panel de administración y diseño responsivo para una experiencia de usuario fluida.",
     secudash: "SecuDash - Gestión de Seguridad",
-    secudashDesc: "Sistema de gestión de seguridad de nivel empresarial con detección automatizada de amenazas, monitoreo en tiempo real y herramientas de reportes integrales. Incluye escaneo de vulnerabilidades, flujos de respuesta a incidentes y reportes de cumplimiento. Construido con arquitectura de microservicios escalable.",
-    breeze: "Breeze - Aplicación Web Moderna",
-    breezeDesc: "Una aplicación web moderna y responsiva construida con React y Node.js. Incluye sincronización de datos en tiempo real, autenticación de usuarios y un dashboard integral. Construida con MongoDB para persistencia de datos y Express.js para la API backend, proporcionando una solución escalable y mantenible.",
-    pythonMaster: "Curso Python Master",
-    pythonMasterDesc: "Curso completo de programación en Python que cubre conceptos avanzados, patrones de diseño y mejores prácticas de la industria. Incluye proyectos prácticos, aplicaciones del mundo real y cubre temas desde sintaxis básica hasta frameworks avanzados como Django y FastAPI.",
-    designPatterns: "Curso de Patrones de Diseño",
-    designPatternsDesc: "Curso avanzado de arquitectura de software enfocado en patrones de diseño, principios SOLID y mejores prácticas arquitectónicas. Cubre patrones creacionales, estructurales y comportamentales con ejemplos de implementación práctica y casos de estudio del mundo real."
+    secudashDesc: "Dashboard de seguridad empresarial con monitoreo en tiempo real y detección automatizada de amenazas. Incluye escaneo de vulnerabilidades, flujos de respuesta a incidentes y control de acceso basado en roles.",
+    breeze: "BrandFlow - Gestor de Productos en Laravel",
+    breezeDesc: "Aplicación para gestión de marcas y productos construida con Laravel y Vite. Incluye autenticación completa, Eloquent ORM, plantillas Blade y operaciones CRUD avanzadas con validación de formularios."
   }
 };

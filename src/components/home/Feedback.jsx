@@ -45,7 +45,7 @@ const Feedback = () => {
       <div className="container">
         <div className="section-title">
           <h2 className="title">
-            <span>Feedback</span>
+            <span className="bottom-border">Feedback</span>
           </h2>
         </div>
         <div className="feedbackNav">

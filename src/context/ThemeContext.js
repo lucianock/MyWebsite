@@ -8,7 +8,7 @@ export const ThemeProvider = ({ children }) => {
   const [rtl, setRtl] = useState(
     siteSettings?.themeData?.dir === "rtl" ? true : false
   );
-  const [language, setLanguage] = useState("en"); // Default to English
+  const [language, setLanguage] = useState("es"); // Default to Spanish
 
   return (
     <ThemeContext.Provider value={{ mode, setMode, rtl, setRtl, language, setLanguage }}>

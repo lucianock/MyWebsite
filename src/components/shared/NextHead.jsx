@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 const NextHead = ({
-  title = "Luciano Portfolio",
+  title = "Luciano - Full Stack Developer",
 }) => {
   return (
     <Head>

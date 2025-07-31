@@ -252,7 +252,7 @@ h4 a:hover {
   }
 }
 body.dark .section-title::after {
-  background-color: #d79d4b;
+  background-color: #ffffff;
 }
 .section-title .title {
   font-size: 30px;
@@ -336,7 +336,7 @@ body.dark .section-title .subtitle {
   z-index: -1;
 }
 body.dark .section-title span::before {
-  background-color: #d79d4b;
+  background-color: #ffffff;
 }
 @media (min-width: 480px) {
   .section-title span::before {
@@ -888,20 +888,25 @@ body.dark .btn-link-rounded:hover {
   height: 3.125rem;
   text-align: center;
   line-height: 3.125rem;
-  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.4);
+  box-shadow: 10px 0px rgba(255, 255, 255, 0.4);
   opacity: 0;
   visibility: hidden;
   scroll-behavior: smooth;
+  display: none;
+  cursor: pointer;
 }
 .back-to-top:hover, .back-to-top:focus {
   color: rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
 }
 body.dark .back-to-top {
   color: #000000;
   background-color: #d79d4b;
+  box-shadow: 0 4px 12px rgba(215, 157, 75, 0.3);
 }
 body.dark .back-to-top:hover, body.dark .back-to-top:focus {
   color: #292929;
+  background-color: #e8b366;
 }
 html[dir=rtl] .back-to-top {
   right: inherit;
@@ -917,6 +922,7 @@ html[dir=rtl] .back-to-top {
   bottom: 30px;
   opacity: 1;
   visibility: visible;
+  display: block;
 }
 @media only screen and (min-width: 992px) {
   .back-to-top.btn-show {
@@ -4157,7 +4163,7 @@ body.dark .service .serviceCarousel .swiper-pagination-bullet-active {
 }
 
 .portfolio {
-  background-color: #1e1e1f;
+  /* background-color: #18191a; */
 }
 .portfolio .filter-button {
   text-align: center;
@@ -6115,3 +6121,58 @@ body.dark .hero-banner .content-inner .hero-title > span::before {
 body.dark .hero-banner .content-inner p {
   color: #ffffff;
 }
+
+/* Estilo para bottom-border en todas las secciones */
+.section-title .title .bottom-border {
+  position: relative;
+  z-index: 1;
+}
+
+.section-title .title .bottom-border::before {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #b7b7b7;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+body.dark .section-title .title .bottom-border::before {
+  background-color: #d79d4b;
+}
+
+@media (min-width: 576px) {
+  .section-title .title .bottom-border::before {
+    bottom: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-title .title .bottom-border::before {
+    bottom: 12px;
+    height: 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section-title .title .bottom-border::before {
+    bottom: 14px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .section-title .title .bottom-border::before {
+    bottom: 18px;
+  }
+}
+
+
+
+.hero-banner .content-inner .hero-title {
+  color: #ffffff;
+}
+
+

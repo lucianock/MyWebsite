@@ -4,7 +4,8 @@ import { GoMoveToTop } from "react-icons/go";
 
 function BackToTop({ className }) {
   useEffect(() => {
-    TopToBottom(".back-to-top");
+    const cleanup = TopToBottom(".back-to-top");
+    return cleanup;
   }, []);
 
   const scrollToTop = () => {

@@ -24,8 +24,8 @@ export const en = {
     services: "Services",
     education: "EDUCATION",
     experience: "EXPERIENCE",
-    portfolio: "PORTFOLIO",
-    blogs: "BLOGS"
+    portfolio: "Portfolio",
+    blogs: "Blog"
   },
 
   // Hero Section
@@ -75,8 +75,8 @@ export const en = {
     blackpathDesc: "Web application developed with Laravel that allows scanning domains to detect vulnerabilities. Integrates tools like Nmap, WhatWeb and Gobuster, presenting results in a simple and user-friendly interface, designed for users without advanced technical knowledge. Allows exporting clear and organized reports, facilitating quick identification of security risks.",
     secudash: "SECUDASH",
     secudashDesc: "Cybersecurity dashboard developed with Laravel and Vite to manage access, credentials and relevant publications. Integration with self-hosted Bitwarden, LinkedIn scraping by keywords and segmented visualization according to roles. Scalable, secure architecture oriented to task automation.",
-    nextjob: "NEXTJOB",
-    nextjobDesc: "Job search and posting portal built with Laravel and Tailwind CSS. Allows companies to post offers and users to search and filter positions. Includes user management with roles, admin panel and responsive interface.",
+    nextjob: "NextJob - Job Portal",
+    nextjobDesc: "Comprehensive job search and posting platform with advanced filtering and user management. Features include company profiles, job applications, admin dashboard, and responsive design. Built with Laravel and Tailwind CSS.",
     idealsur: "Idealsur.com – Remote (CABA)",
     idealsurDesc: "Development of CRMs oriented to the pharmaceutical industry, mainly with PHP, JavaScript and MySQL. Participation in the entire cycle: requirements analysis, design, development, testing and support. Integration of external APIs and generation of custom reports for clients. Server configuration and support, deployments from local to production environment, and database management. Technical collaboration in agile environments, code review and promotion of best practices."
   },
@@ -117,48 +117,98 @@ export const en = {
   social: {
     linkedin: "LINKEDIN",
     github: "GITHUB",
-    whatsapp: "WHATSAPP"
+    whatsapp: "WHATSAPP",
+    medium: "MEDIUM"
   },
 
   // Blog
   blog: {
-    technology: "Technology",
-    development: "Development",
-    trash: "Development",
-    publishingSoftware: "Building Scalable APIs with Laravel: Best Practices",
-    publishingSoftwareDesc: "Learn how to design and implement robust REST APIs using Laravel. This comprehensive guide covers authentication, validation, error handling, testing, and deployment strategies for production-ready APIs that can handle high traffic and complex business logic.",
-    wordpressWebsite: "Modern Web Development: From PHP to Full-Stack JavaScript",
-    wordpressWebsiteDesc: "Explore the evolution of web development from traditional PHP applications to modern JavaScript frameworks. Discover how to build responsive, performant web applications using React, Node.js, and modern development tools and practices.",
+    awsEc2Gratis: "How to Have Your Own Free Website with EC2 (Without Going Crazy)",
+    awsEc2GratisDesc: "Yes, you read that right: free. Or almost. In this post I tell you how to put your website online using Amazon EC2 without paying a penny (at least for a good while).",
+    // Complete article content in English
+    awsEc2GratisContent: `
+      <h3>✋ Before starting: what is EC2?</h3>
+      <p>EC2 (Elastic Compute Cloud) is an Amazon Web Services (AWS) service that allows you to launch a virtual machine (like a remote PC) and use it as a server. Ideal for hosting your website, running tests, setting up APIs, or working on personal projects.</p>
+      
+      <p>AWS gives you <strong>one year free</strong> under the Free Tier plan. Take advantage of it!</p>
+      
+      <h3>🚀 Step 1 – Create your AWS account</h3>
+      <ol>
+        <li>Go to <a href="https://aws.amazon.com/" target="_blank">aws.amazon.com</a> and register.</li>
+        <li>You'll need a credit card. Don't worry, they won't charge you while you're on the free plan.</li>
+        <li>Activate your account and that's it, you enter the dashboard.</li>
+      </ol>
+      
+      <h3>🖥️ Step 2 – Launch your EC2 instance</h3>
+      <ol>
+        <li>In the search bar, type "EC2" and click.</li>
+        <li>Choose "Launch instance".</li>
+        <li>Choose a system image (I recommend Ubuntu Server 22.04).</li>
+        <li>In "Instance type" select <code>t2.micro</code> (it's the free one).</li>
+        <li>Choose or create a new key pair (save it well, without this you won't be able to access).</li>
+        <li>Click "Launch instance".</li>
+      </ol>
+      
+      <p>You already have your server online!</p>
+      
+      <h3>🔐 Step 3 – Access via SSH</h3>
+      <p>If you're on Linux or Mac:</p>
+      <pre><code>chmod 400 your-file.pem
+ssh -i "your-file.pem" ubuntu@your-public-ip</code></pre>
+      
+      <p>On Windows you can use PuTTY or the new Windows terminal with OpenSSH.</p>
+      
+      <h3>🌐 Step 4 – Install your web</h3>
+      <p>A quick example with Apache:</p>
+      <pre><code>sudo apt update && sudo apt install apache2 -y</code></pre>
+      
+      <p>Then, copy your files to the <code>/var/www/html/</code> directory.</p>
+      
+      <p>You can upload your portfolio, a Laravel project, a landing page... whatever you want.</p>
+      
+      <h3>📡 Step 5 – Open port 80</h3>
+      <p>You need to allow HTTP traffic:</p>
+      <ol>
+        <li>In the EC2 panel, go to your instance.</li>
+        <li>In "Security groups" edit the inbound rules.</li>
+        <li>Add a new one:
+          <ul>
+            <li>Type: HTTP</li>
+            <li>Port: 80</li>
+            <li>Source: Anywhere</li>
+          </ul>
+        </li>
+      </ol>
+      
+      <p>Done. Open your IP in the browser... and magic! 🪄</p>
+      
+      <h3>💡 Final tips</h3>
+      <ul>
+        <li>Use a free domain from <a href="https://www.freenom.com/" target="_blank">Freenom</a> and point it to your IP.</li>
+        <li>You can set up a PHP server or even Node.js if you want.</li>
+        <li>Make backups: EC2 can restart and lose changes if you don't use persistent volumes.</li>
+      </ul>
+      
+      <h3>My personal experience</h3>
+      <p>I discovered this almost by chance, and it blew my mind. Being able to have a <em>free</em> server, without depending on external platforms and with total control, is a gem for any developer or curious person. I'm using it to set up my personal projects and test new tools safely.</p>
+    `,
     // Blog page translations
     hero: {
-      heading: "Blog Post",
-      lastBreadcrumb: "BLOG POST"
+      heading: "Blog",
+      lastBreadcrumb: "BLOG"
     },
     singleHero: {
-      heading: "Single Post",
-      lastBreadcrumb: "BLOG POST"
+      heading: "Article",
+      lastBreadcrumb: "ARTICLE"
     },
-    // Blog individual content
-    category: "CATEGORY",
-    tags: "Tags",
-    share: "Share",
-    comments: "02 COMMENT",
-    leaveComment: "LEAVE A COMMENT",
-    reply: "REPLY",
-    // Blog content paragraphs
-    paragraph1: "When building scalable APIs with Laravel, it's essential to follow industry best practices from the ground up. This includes implementing proper authentication mechanisms, comprehensive validation, and robust error handling that provides meaningful feedback to API consumers.",
-    paragraph2: "The architecture should be designed with scalability in mind, utilizing Laravel's built-in features like queues, caching, and database optimization. Proper testing strategies ensure reliability, while deployment considerations focus on performance and security.",
-    paragraph3: "Modern web development has evolved significantly from traditional PHP applications to sophisticated JavaScript frameworks. This transition represents a fundamental shift in how we approach building web applications, focusing on user experience, performance, and maintainability.",
-    paragraph4: "The integration of React, Node.js, and modern development tools has revolutionized the development process, enabling developers to create more responsive and interactive applications while maintaining code quality and scalability.",
-    // Blog content list items
-    listItem1: "Authentication and authorization systems",
-    listItem2: "API validation and error handling",
-    listItem3: "Testing strategies and deployment",
-    listItem4: "Performance optimization techniques",
-    listItem5: "Security best practices",
-    listItem6: "Scalability considerations",
-    // Blog quote
-    quote: "Good API design is not just about functionality—it's about creating an intuitive, secure, and scalable interface that developers love to work with."
+    technology: "Technology",
+    development: "Development"
+  },
+
+  // Language switch translations
+  languageSwitch: {
+    toSpanish: "Switch to Spanish",
+    toEnglish: "Switch to English"
   },
 
   // Form labels
@@ -185,17 +235,13 @@ export const en = {
 
   // Portfolio Section
   portfolio: {
+    blackpath: "BlackPath - Security Scanner",
+    blackpathDesc: "Web vulnerability scanning application for domain analysis using Nmap, WhatWeb, and Gobuster. Features multiple scan levels with detailed results and exportable reports for security audits.",
     nextjob: "NextJob - Job Portal",
-    nextjobDesc: "A comprehensive job search and posting platform built with Laravel and Tailwind CSS. Features include user authentication, role-based access control, advanced search filters, and a responsive admin dashboard. Companies can post job offers while users can search, filter, and apply to positions.",
-    blackpath: "BlackPath - Security Dashboard",
-    blackpathDesc: "Advanced cybersecurity dashboard developed with Laravel and Vite. Integrates with self-hosted Bitwarden for credential management, LinkedIn scraping for threat intelligence, and provides segmented visualization based on user roles. Implements secure architecture with real-time monitoring.",
+    nextjobDesc: "Comprehensive job search and posting platform with advanced filtering, company profiles, and user management. Includes admin dashboard and responsive design for seamless user experience.",
     secudash: "SecuDash - Security Management",
-    secudashDesc: "Enterprise-grade security management system with automated threat detection, real-time monitoring, and comprehensive reporting tools. Features include vulnerability scanning, incident response workflows, and compliance reporting. Built with scalable microservices architecture.",
-    breeze: "Breeze - Modern Web Application",
-    breezeDesc: "A modern, responsive web application built with React and Node.js. Features include real-time data synchronization, user authentication, and a comprehensive dashboard. Built with MongoDB for data persistence and Express.js for the backend API, providing a scalable and maintainable solution.",
-    pythonMaster: "Python Master Course",
-    pythonMasterDesc: "Comprehensive Python programming course covering advanced concepts, design patterns, and industry best practices. Includes hands-on projects, real-world applications, and covers topics from basic syntax to advanced frameworks like Django and FastAPI.",
-    designPatterns: "Design Patterns Course",
-    designPatternsDesc: "Advanced software architecture course focusing on design patterns, SOLID principles, and architectural best practices. Covers creational, structural, and behavioral patterns with practical implementation examples and real-world case studies."
+    secudashDesc: "Enterprise security dashboard with real-time monitoring and automated threat detection. Features vulnerability scanning, incident response workflows, and role-based access control.",
+    breeze: "BrandFlow - Laravel Product Manager",
+    breezeDesc: "Brand and product management application built with Laravel and Vite. Features complete authentication system, Eloquent ORM, Blade templates, and advanced CRUD operations with form validation."
   }
 };

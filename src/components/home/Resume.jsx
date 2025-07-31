@@ -23,7 +23,7 @@ const Resume = () => {
       <div className="container">
         <div className="section-title">
           <h2 className="title">
-            <span>{t('sections.resume')}</span>
+            <span className="bottom-border">{t('sections.resume')}</span>
           </h2>
         </div>
         <div className="row resume-content-area">

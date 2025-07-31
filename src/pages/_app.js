@@ -1,4 +1,5 @@
 import BackToTop from '@/components/shared/BackToTop';
+import ErrorBoundary from '@/components/shared/ErrorBoundary';
 //external libraries
 import '../../public/assets/css/bootstrap.min.css';
 import '../../public/assets/css/bootstrap.rtl.min.css';
@@ -18,9 +19,11 @@ import { ThemeProvider } from '@/context/ThemeContext';
 
 export default function App({ Component, pageProps }) {
   return (
-    <ThemeProvider>
-      <Component {...pageProps} />
-      <BackToTop />
-    </ThemeProvider>
+    <ErrorBoundary>
+      <ThemeProvider>
+        <Component {...pageProps} />
+        <BackToTop />
+      </ThemeProvider>
+    </ErrorBoundary>
   );
 }

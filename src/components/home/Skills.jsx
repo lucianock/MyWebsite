@@ -15,12 +15,12 @@ const Skills = () => {
       icon: "🔥",
       category: "Framework"
     },
-    {
+    /* {
       name: "Laravel Breeze",
       color: "#FF2D20",
       icon: "💨",
       category: "Framework"
-    },
+    }, */
     {
       name: "PHP 8",
       color: "#777BB4",
@@ -136,7 +136,7 @@ const Skills = () => {
       <div className="container">
         <div className="section-title">
           <h2 className="title">
-            {t('sections.mySkills')}
+            <span className="bottom-border">{t('sections.mySkills')}</span>
           </h2>
         </div>
 
