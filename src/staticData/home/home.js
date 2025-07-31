@@ -553,7 +553,7 @@ export const portfolio = [
     title: "portfolio.blackpath",
     description: "portfolio.blackpathDesc",
     category: "Security",
-    technologies: ["Laravel", "Docker", "Tailwind CSS", "Nmap", "WhatWeb", "Gobuster"],
+    technologies: ["Laravel", "Docker", "Tailwind CSS", "Nmap", "WhatWeb", "Gobuster", "Security Scanning"],
     image: "/assets/images/portfolio/blackpath.jpg",
     link: "https://blackpath.lucianock.com/",
     github: "#"
@@ -563,7 +563,7 @@ export const portfolio = [
     title: "portfolio.nextjob",
     description: "portfolio.nextjobDesc",
     category: "Web Development",
-    technologies: ["Laravel", "Tailwind CSS", "PHP", "MySQL", "Admin Panel"],
+    technologies: ["Laravel", "Tailwind CSS", "PHP", "MySQL", "Admin Panel", "User Management"],
     image: "/assets/images/portfolio/nextjob.jpg",
     link: "https://nextjob.lucianock.com/",
     github: "#"
@@ -573,7 +573,7 @@ export const portfolio = [
     title: "portfolio.secudash",
     description: "portfolio.secudashDesc",
     category: "Security",
-    technologies: ["Laravel", "Real-time", "Monitoring", "Automation", "Dashboard"],
+    technologies: ["Laravel", "Real-time Monitoring", "Automation", "Dashboard", "Vulnerability Scanning"],
     image: "/assets/images/portfolio/secudash.jpg",
     link: "https://secudash.lucianock.com/",
     github: "#"
@@ -583,7 +583,7 @@ export const portfolio = [
     title: "portfolio.breeze",
     description: "portfolio.breezeDesc",
     category: "Web Development",
-    technologies: ["React", "Node.js", "MongoDB", "Express", "Modern Stack"],
+    technologies: ["Laravel", "Eloquent ORM", "Laravel Breeze", "Vite", "Tailwind CSS", "PHP 8", "MySQL", "Blade Templates", "CRUD Operations"],
     image: "/assets/images/portfolio/breeze.jpg",
     link: "https://breeze.lucianock.com/",
     github: "#"

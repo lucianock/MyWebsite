@@ -15,12 +15,12 @@ const Skills = () => {
       icon: "🔥",
       category: "Framework"
     },
-    {
+    /* {
       name: "Laravel Breeze",
       color: "#FF2D20",
       icon: "💨",
       category: "Framework"
-    },
+    }, */
     {
       name: "PHP 8",
       color: "#777BB4",

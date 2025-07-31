@@ -75,8 +75,8 @@ export const es = {
     blackpathDesc: "Aplicación web desarrollada con Laravel que permite escanear dominios para detectar vulnerabilidades. Integra herramientas como Nmap, WhatWeb y Gobuster, presentando los resultados en una interfaz sencilla y amigable, pensada para usuarios sin conocimientos técnicos avanzados. Permite exportar reportes claros y organizados, facilitando la identificación rápida de riesgos de seguridad.",
     secudash: "SECUDASH",
     secudashDesc: "Dashboard de ciberseguridad desarrollado con Laravel y Vite para gestionar accesos, credenciales y publicaciones relevantes. Integración con Bitwarden autohospedado, scraping de LinkedIn por palabras clave y visualización segmentada según roles. Arquitectura escalable, segura y orientada a automatización de tareas.",
-    nextjob: "NEXTJOB",
-    nextjobDesc: "Portal de búsqueda y publicación de empleos construido con Laravel y Tailwind CSS. Permite a empresas publicar ofertas y usuarios buscar y filtrar posiciones. Incluye gestión de usuarios con roles, panel de administración y interfaz responsive.",
+    nextjob: "NextJob - Portal de Empleos",
+    nextjobDesc: "Plataforma integral de búsqueda y publicación de empleos con filtrado avanzado y gestión de usuarios. Incluye perfiles de empresas, aplicaciones de trabajo, panel de administración y diseño responsivo. Construida con Laravel y Tailwind CSS.",
     idealsur: "Idealsur.com – Remoto (CABA)",
     idealsurDesc: "Desarrollo de CRMs orientados a la industria farmacéutica, principalmente con PHP, JavaScript y MySQL. Participación en todo el ciclo: análisis de requerimientos, diseño, desarrollo, testing y soporte. Integración de APIs externas y generación de reportes personalizados para clientes. Configuración y soporte de servidores, despliegues desde entorno local a producción, y gestión de bases de datos. Colaboración técnica en entornos ágiles, revisión de código y promoción de buenas prácticas."
   },
@@ -187,12 +187,12 @@ export const es = {
   // Portfolio Section
   portfolio: {
     blackpath: "BlackPath - Escáner de Seguridad",
-    blackpathDesc: "BlackPath es una aplicación web de escaneo de vulnerabilidades que permite analizar dominios en profundidad usando herramientas como Nmap, WhatWeb y Gobuster. El usuario puede elegir entre distintos niveles de escaneo y obtener resultados detallados presentados de forma clara y accesible, incluso para quienes no tienen conocimientos técnicos. Además, permite exportar los informes generados, facilitando auditorías de seguridad o análisis posteriores.",
+    blackpathDesc: "Aplicación web de escaneo de vulnerabilidades para análisis de dominios usando Nmap, WhatWeb y Gobuster. Incluye múltiples niveles de escaneo con resultados detallados e informes exportables para auditorías de seguridad.",
     nextjob: "NextJob - Portal de Empleos",
-    nextjobDesc: "Plataforma integral de búsqueda y publicación de empleos con filtrado avanzado y gestión de usuarios. Incluye perfiles de empresas, aplicaciones de trabajo, panel de administración y diseño responsivo. Construida con Laravel y Tailwind CSS.",
+    nextjobDesc: "Plataforma integral de búsqueda y publicación de empleos con filtrado avanzado, perfiles de empresas y gestión de usuarios. Incluye panel de administración y diseño responsivo para una experiencia de usuario fluida.",
     secudash: "SecuDash - Gestión de Seguridad",
-    secudashDesc: "Sistema de gestión de seguridad de nivel empresarial con monitoreo en tiempo real y detección automatizada de amenazas. Incluye escaneo de vulnerabilidades, flujos de respuesta a incidentes y control de acceso basado en roles.",
-    breeze: "Breeze - Aplicación Web Moderna",
-    breezeDesc: "Aplicación web moderna y responsiva construida con React y Node.js. Incluye sincronización de datos en tiempo real, autenticación de usuarios, dashboard integral e integración con MongoDB. Arquitectura escalable."
+    secudashDesc: "Dashboard de seguridad empresarial con monitoreo en tiempo real y detección automatizada de amenazas. Incluye escaneo de vulnerabilidades, flujos de respuesta a incidentes y control de acceso basado en roles.",
+    breeze: "BrandFlow - Gestor de Productos en Laravel",
+    breezeDesc: "Aplicación para gestión de marcas y productos construida con Laravel y Vite. Incluye autenticación completa, Eloquent ORM, plantillas Blade y operaciones CRUD avanzadas con validación de formularios."
   }
 };

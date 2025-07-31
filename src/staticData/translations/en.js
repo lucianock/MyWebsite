@@ -75,8 +75,8 @@ export const en = {
     blackpathDesc: "Web application developed with Laravel that allows scanning domains to detect vulnerabilities. Integrates tools like Nmap, WhatWeb and Gobuster, presenting results in a simple and user-friendly interface, designed for users without advanced technical knowledge. Allows exporting clear and organized reports, facilitating quick identification of security risks.",
     secudash: "SECUDASH",
     secudashDesc: "Cybersecurity dashboard developed with Laravel and Vite to manage access, credentials and relevant publications. Integration with self-hosted Bitwarden, LinkedIn scraping by keywords and segmented visualization according to roles. Scalable, secure architecture oriented to task automation.",
-    nextjob: "NEXTJOB",
-    nextjobDesc: "Job search and posting portal built with Laravel and Tailwind CSS. Allows companies to post offers and users to search and filter positions. Includes user management with roles, admin panel and responsive interface.",
+    nextjob: "NextJob - Job Portal",
+    nextjobDesc: "Comprehensive job search and posting platform with advanced filtering and user management. Features include company profiles, job applications, admin dashboard, and responsive design. Built with Laravel and Tailwind CSS.",
     idealsur: "Idealsur.com – Remote (CABA)",
     idealsurDesc: "Development of CRMs oriented to the pharmaceutical industry, mainly with PHP, JavaScript and MySQL. Participation in the entire cycle: requirements analysis, design, development, testing and support. Integration of external APIs and generation of custom reports for clients. Server configuration and support, deployments from local to production environment, and database management. Technical collaboration in agile environments, code review and promotion of best practices."
   },
@@ -187,12 +187,12 @@ export const en = {
   // Portfolio Section
   portfolio: {
     blackpath: "BlackPath - Security Scanner",
-    blackpathDesc: "BlackPath is a web vulnerability scanning application that allows in-depth analysis of domains using tools like Nmap, WhatWeb, and Gobuster. Users can choose between different scan levels and receive detailed results presented in a clear and accessible way, even for those without technical knowledge. It also allows exporting the generated reports, making it easier to conduct security audits or further analysis.",
+    blackpathDesc: "Web vulnerability scanning application for domain analysis using Nmap, WhatWeb, and Gobuster. Features multiple scan levels with detailed results and exportable reports for security audits.",
     nextjob: "NextJob - Job Portal",
-    nextjobDesc: "Comprehensive job search and posting platform with advanced filtering and user management. Features include company profiles, job applications, admin dashboard, and responsive design. Built with Laravel and Tailwind CSS.",
+    nextjobDesc: "Comprehensive job search and posting platform with advanced filtering, company profiles, and user management. Includes admin dashboard and responsive design for seamless user experience.",
     secudash: "SecuDash - Security Management",
-    secudashDesc: "Enterprise-grade security management system with real-time monitoring and automated threat detection. Features include vulnerability scanning, incident response workflows, and role-based access control. Scalable architecture.",
-    breeze: "Breeze - Modern Web App",
-    breezeDesc: "Modern, responsive web application built with React and Node.js. Features real-time data synchronization, user authentication, comprehensive dashboard, and MongoDB integration. Scalable architecture."
+    secudashDesc: "Enterprise security dashboard with real-time monitoring and automated threat detection. Features vulnerability scanning, incident response workflows, and role-based access control.",
+    breeze: "BrandFlow - Laravel Product Manager",
+    breezeDesc: "Brand and product management application built with Laravel and Vite. Features complete authentication system, Eloquent ORM, Blade templates, and advanced CRUD operations with form validation."
   }
 };

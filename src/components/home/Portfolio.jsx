@@ -156,7 +156,7 @@ const Portfolio = () => {
           flex: 1;
           overflow: hidden;
           display: -webkit-box;
-          -webkit-line-clamp: 5; /* Más líneas de descripción */
+          -webkit-line-clamp: 8; /* Aumenté a 8 líneas para mostrar más texto */
           -webkit-box-orient: vertical;
         }
 
