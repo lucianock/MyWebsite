@@ -3,8 +3,20 @@ import Image from "next/image";
 import Link from "next/link";
 import SecondaryButton from "../ui/SecondaryButton";
 import { useTranslation } from "@/hooks/useTranslation";
+import { FaMedium, FaExternalLinkAlt, FaClock } from "react-icons/fa";
 
-const SingleBlog = ({ slug, image, title, tags, date, description }) => {
+const SingleBlog = ({ 
+  slug, 
+  image, 
+  title, 
+  tags, 
+  date, 
+  description, 
+  type = "internal", 
+  externalUrl, 
+  readTime,
+  featured = false 
+}) => {
   const { t } = useTranslation();
 
   // Función para generar colores de fondo basados en las tags
@@ -27,11 +39,12 @@ const SingleBlog = ({ slug, image, title, tags, date, description }) => {
   };
 
   const colors = getTagColors(tags);
+  const isMediumPost = type === "medium";
 
   return (
     <article className="blog-post-item">
       <div className="post-media">
-        <Link href={`${routes?.blog}/${slug}`}>
+        <Link href={isMediumPost ? externalUrl : `${routes?.blog}/${slug}`} target={isMediumPost ? "_blank" : "_self"}>
           <div style={{
             width: '325px',
             height: '205px',
@@ -75,40 +88,128 @@ const SingleBlog = ({ slug, image, title, tags, date, description }) => {
               {colors.icon}
             </div>
 
+            {/* Medium Badge */}
+            {isMediumPost && (
+              <div style={{
+                position: 'absolute',
+                top: '10px',
+                left: '10px',
+                background: 'rgba(0, 0, 0, 0.8)',
+                color: '#fff',
+                padding: '4px 8px',
+                borderRadius: '12px',
+                fontSize: '0.7rem',
+                fontWeight: '600',
+                textTransform: 'uppercase',
+                letterSpacing: '0.5px',
+                zIndex: 3,
+                backdropFilter: 'blur(10px)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '4px'
+              }}>
+                <FaMedium size={10} />
+                Medium
+              </div>
+            )}
+
+            {/* Featured Badge */}
+            {featured && (
+              <div style={{
+                position: 'absolute',
+                top: '10px',
+                right: '10px',
+                background: 'linear-gradient(135deg, #ff6b6b, #ee5a24)',
+                color: '#fff',
+                padding: '4px 8px',
+                borderRadius: '12px',
+                fontSize: '0.7rem',
+                fontWeight: '600',
+                textTransform: 'uppercase',
+                letterSpacing: '0.5px',
+                zIndex: 3,
+                backdropFilter: 'blur(10px)'
+              }}>
+                Featured
+              </div>
+            )}
+
             {/* Tag Badge */}
-            <div style={{
-              position: 'absolute',
-              top: '10px',
-              right: '10px',
-              background: 'rgba(215, 157, 75, 0.9)',
-              color: '#fff',
-              padding: '4px 8px',
-              borderRadius: '12px',
-              fontSize: '0.7rem',
-              fontWeight: '600',
-              textTransform: 'uppercase',
-              letterSpacing: '0.5px',
-              zIndex: 3,
-              backdropFilter: 'blur(10px)'
-            }}>
-              {t(tags)}
-            </div>
+            {!featured && (
+              <div style={{
+                position: 'absolute',
+                top: '10px',
+                right: '10px',
+                background: 'rgba(215, 157, 75, 0.9)',
+                color: '#fff',
+                padding: '4px 8px',
+                borderRadius: '12px',
+                fontSize: '0.7rem',
+                fontWeight: '600',
+                textTransform: 'uppercase',
+                letterSpacing: '0.5px',
+                zIndex: 3,
+                backdropFilter: 'blur(10px)'
+              }}>
+                {t(tags)}
+              </div>
+            )}
           </div>
         </Link>
       </div>
       <div className="post-details">
-        <p className="date">
-          {date}
-          <span> - </span> 
-          <Link href="#" className="tags">
-            {t(tags)}
-          </Link>
-        </p>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
+          <p className="date">
+            {date}
+            <span> - </span> 
+            <Link href="#" className="tags">
+              {t(tags)}
+            </Link>
+          </p>
+          {readTime && (
+            <div style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: '4px',
+              fontSize: '0.8rem',
+              color: '#666'
+            }}>
+              <FaClock size={10} />
+              {readTime}
+            </div>
+          )}
+        </div>
         <h2 className="blog-title">
-          <Link href={`${routes?.blog}/${slug}`}>{t(title)}</Link>
+          <Link href={isMediumPost ? externalUrl : `${routes?.blog}/${slug}`} target={isMediumPost ? "_blank" : "_self"}>
+            {t(title)}
+          </Link>
         </h2>
         <p className="desc">{t(description)}</p>
-        <SecondaryButton text="Continue Read" url={`${routes?.blog}/${slug}`} />
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          {isMediumPost ? (
+            <SecondaryButton 
+              text={t('blog.readMore')} 
+              url={externalUrl}
+              external={true}
+              icon={<FaMedium />}
+            />
+          ) : (
+            <SecondaryButton text="Continue Read" url={`${routes?.blog}/${slug}`} />
+          )}
+          {isMediumPost && (
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px',
+              fontSize: '0.8rem',
+              color: '#666',
+              fontStyle: 'italic'
+            }}>
+              <FaExternalLinkAlt size={10} />
+              {t('blog.externalLink')}
+            </div>
+          )}
+        </div>
       </div>
     </article>
   );

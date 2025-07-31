@@ -12,6 +12,10 @@ const Blog = () => {
     router.push(link);
   };
 
+  // Filtrar posts destacados para mostrar en la página principal
+  const featuredPosts = allBlogs?.filter(blog => blog.featured).slice(0, 2);
+  const regularPosts = allBlogs?.filter(blog => !blog.featured).slice(0, 2);
+
   return (
     <div className="blog-post" data-title="Blog" id="blog">
       <div className="container">
@@ -19,19 +23,32 @@ const Blog = () => {
           <h2 className="title">
             <span className="bottom-border">{t('sections.blogs')} Post</span>
           </h2>
+          <p style={{ 
+            textAlign: 'center', 
+            color: '#666', 
+            marginTop: '10px',
+            fontSize: '0.95rem'
+          }}>
+            Latest articles about web development, Laravel, and modern technologies
+          </p>
         </div>
 
         <div className="blog-post-group">
-          {allBlogs
-            ?.map((blog) => <SingleBlog key={blog?.id} {...blog} />)
-            .reverse()
-            .splice(0, 2)}
+          {/* Mostrar posts destacados primero */}
+          {featuredPosts?.map((blog) => (
+            <SingleBlog key={blog?.id} {...blog} />
+          ))}
+          
+          {/* Mostrar posts regulares */}
+          {regularPosts?.map((blog) => (
+            <SingleBlog key={blog?.id} {...blog} />
+          ))}
         </div>
 
         <div className="all-blog-button-area text-center">
           <Button
             arrow
-            text="MORE BLOGS"
+            text="VIEW ALL ARTICLES"
             onClick={() => handleButtonClick("/blog")}
           />
         </div>

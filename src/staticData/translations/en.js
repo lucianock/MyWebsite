@@ -126,10 +126,20 @@ export const en = {
     technology: "Technology",
     development: "Development",
     trash: "Development",
-    publishingSoftware: "Building Scalable APIs with Laravel: Best Practices",
-    publishingSoftwareDesc: "Learn how to design and implement robust REST APIs using Laravel. This comprehensive guide covers authentication, validation, error handling, testing, and deployment strategies for production-ready APIs that can handle high traffic and complex business logic.",
-    wordpressWebsite: "Modern Web Development: From PHP to Full-Stack JavaScript",
-    wordpressWebsiteDesc: "Explore the evolution of web development from traditional PHP applications to modern JavaScript frameworks. Discover how to build responsive, performant web applications using React, Node.js, and modern development tools and practices.",
+    laravelBestPractices: "Laravel Best Practices for Scalable APIs",
+    laravelBestPracticesDesc: "Learn how to design and implement robust REST APIs using Laravel. This comprehensive guide covers authentication, validation, error handling, testing, and deployment strategies for production-ready APIs that can handle high traffic and complex business logic.",
+    /* Comentados para prueba real
+    modernWebDevelopment: "Modern Web Development: From PHP to Full-Stack JavaScript",
+    modernWebDevelopmentDesc: "Explore the evolution of web development from traditional PHP applications to modern JavaScript frameworks. Discover how to build responsive, performant web applications using React, Node.js, and modern development tools and practices.",
+    phpSecurityTips: "PHP Security Best Practices for Web Applications",
+    phpSecurityTipsDesc: "Essential security practices for PHP web applications. Learn about input validation, SQL injection prevention, XSS protection, and secure authentication methods to build robust and secure applications.",
+    databaseOptimization: "MySQL Optimization Techniques for Better Performance",
+    databaseOptimizationDesc: "Master MySQL optimization strategies to improve your application performance. Learn about indexing, query optimization, caching strategies, and database design best practices.",
+    tailwindCssGuide: "Complete Guide to Tailwind CSS: From Basics to Advanced",
+    tailwindCssGuideDesc: "Comprehensive guide to Tailwind CSS framework. Learn utility-first CSS approach, responsive design, custom configurations, and advanced techniques for modern web development.",
+    deploymentStrategies: "Laravel Deployment Strategies: From Development to Production",
+    deploymentStrategiesDesc: "Complete guide to deploying Laravel applications. Learn about server configuration, CI/CD pipelines, environment management, and production optimization techniques.",
+    */
     // Blog page translations
     hero: {
       heading: "Blog Post",
@@ -146,6 +156,8 @@ export const en = {
     comments: "02 COMMENT",
     leaveComment: "LEAVE A COMMENT",
     reply: "REPLY",
+    readMore: "READ ON MEDIUM",
+    externalLink: "External Link",
     // Blog content paragraphs
     paragraph1: "When building scalable APIs with Laravel, it's essential to follow industry best practices from the ground up. This includes implementing proper authentication mechanisms, comprehensive validation, and robust error handling that provides meaningful feedback to API consumers.",
     paragraph2: "The architecture should be designed with scalability in mind, utilizing Laravel's built-in features like queues, caching, and database optimization. Proper testing strategies ensure reliability, while deployment considerations focus on performance and security.",
