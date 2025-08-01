@@ -277,7 +277,7 @@ const SingleBlogDetails = ({ slug }) => {
                 fontWeight: '600',
                 transition: 'all 0.3s ease'
               }}>
-                ← Volver al Blog
+                {t('blog.backToBlog')}
               </Link>
             </div>
           </div>

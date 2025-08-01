@@ -61,7 +61,7 @@ export const allBlogs = [
     slug: "como-tener-sitio-web-gratis-con-ec2",
     allTags: ["aws", "ec2", "web-hosting", "cloud", "servers"],
     readTime: "3 min read",
-    featured: true,
+    featured: false,
     content: `
       <h3>✋ Antes de empezar: ¿qué es EC2?</h3>
       <p>EC2 (Elastic Compute Cloud) es un servicio de Amazon Web Services (AWS) que te permite levantar una máquina virtual (como si fuera una PC remota) y usarla como servidor. Ideal para alojar tu web, hacer pruebas, levantar APIs o jugar con proyectos personales.</p>

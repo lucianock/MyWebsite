@@ -48,7 +48,7 @@ const Blog = () => {
         <div className="all-blog-button-area text-center">
           <Button
             arrow
-            text="VER TODOS LOS ARTÍCULOS"
+            text={t('blog.viewAllArticles')}
             onClick={() => handleButtonClick("/blog")}
           />
         </div>

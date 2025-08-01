@@ -194,6 +194,7 @@ ssh -i "tu-archivo.pem" ubuntu@tu-ip-publica</code></pre>
     // Blog page translations
     hero: {
       heading: "Blog",
+      subtitle: "Artículos sobre desarrollo web, Laravel y tecnologías modernas",
       lastBreadcrumb: "BLOG"
     },
     singleHero: {
@@ -202,7 +203,10 @@ ssh -i "tu-archivo.pem" ubuntu@tu-ip-publica</code></pre>
     },
     technology: "Tecnología",
     development: "Desarrollo",
-    loadMore: "CARGAR MÁS"
+    loadMore: "CARGAR MÁS",
+    readArticle: "Leer Artículo",
+    viewAllArticles: "VER TODOS LOS ARTÍCULOS",
+    backToBlog: "← Volver al Blog"
   },
 
   // Language switch translations
