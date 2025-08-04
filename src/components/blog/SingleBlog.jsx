@@ -138,7 +138,7 @@ const SingleBlog = ({
               e.target.style.boxShadow = '0 4px 15px rgba(215, 157, 75, 0.3)';
             }}
           >
-            Leer Artículo
+            {t('blog.readArticle')}
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>

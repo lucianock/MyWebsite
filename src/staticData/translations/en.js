@@ -194,6 +194,7 @@ ssh -i "your-file.pem" ubuntu@your-public-ip</code></pre>
     // Blog page translations
     hero: {
       heading: "Blog",
+      subtitle: "Articles about web development, Laravel and modern technologies",
       lastBreadcrumb: "BLOG"
     },
     singleHero: {
@@ -202,7 +203,10 @@ ssh -i "your-file.pem" ubuntu@your-public-ip</code></pre>
     },
     technology: "Technology",
     development: "Development",
-    loadMore: "LOAD MORE"
+    loadMore: "LOAD MORE",
+    readArticle: "Continue Read",
+    viewAllArticles: "MORE BLOGS",
+    backToBlog: "← Back to Blog"
   },
 
   // Language switch translations
