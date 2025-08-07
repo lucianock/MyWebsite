@@ -202,23 +202,7 @@ const SingleBlogDetails = ({ slug }) => {
               </p>
             </div>
 
-            {/* Imagen principal - Solo mostrar si existe y no es placeholder */}
-            {singlePost.image?.mainImage && singlePost.image.mainImage !== "/assets/images/placeholder.jpg" && (
-              <div style={{ marginBottom: '40px' }}>
-                <Image
-                  src={singlePost.image.mainImage}
-                  alt={t(singlePost.title)}
-                  width={800}
-                  height={400}
-                  style={{
-                    width: '100%',
-                    height: 'auto',
-                    borderRadius: '12px',
-                    boxShadow: '0 8px 25px rgba(0,0,0,0.1)'
-                  }}
-                />
-              </div>
-            )}
+
 
             {/* Contenido del artículo */}
             <div className="blog-content">

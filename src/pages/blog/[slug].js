@@ -7,25 +7,8 @@ import { useRouter } from "next/router";
 const SingleBlog = ({ blog }) => {
   const router = useRouter();
 
-  // Si la página está cargando, mostrar un loading
-  if (router.isFallback) {
-    return (
-      <Layout>
-        <div id="blog">
-          <BreadcrumbHero heroData={singleBlogHero} />
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-lg-8">
-                <div className="text-center py-5">
-                  <h3>Cargando...</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Layout>
-    );
-  }
+  // Con fallback: false, no necesitamos manejar el estado de carga
+  // ya que todas las páginas se generan en build time
 
   return (
     <Layout>
@@ -45,7 +28,7 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: 'blocking', // Permite generar páginas dinámicamente en desarrollo
+    fallback: false, // No compatible con output: export, debe ser false
   };
 }
 

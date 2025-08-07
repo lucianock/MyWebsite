@@ -55,8 +55,8 @@ export const allBlogs = [
     date: "30 JUL, 2025",
     description: "blog.awsEc2GratisDesc",
     image: {
-      thumbnail: "/assets/images/placeholder.jpg",
-      mainImage: "/assets/images/placeholder.jpg",
+      thumbnail: "/assets/images/wp13498907.webp",
+      mainImage: "/assets/images/wp13498907.webp",
     },
     slug: "como-tener-sitio-web-gratis-con-ec2",
     allTags: ["aws", "ec2", "web-hosting", "cloud", "servers"],
