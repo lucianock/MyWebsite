@@ -62,20 +62,18 @@ const Portfolio = () => {
                           className="btn-primary"
                         >
                           <FaExternalLinkAlt size={14} />
-                          Visit Website
+                          {t('portfolio.viewDemo')}
                         </a>
                         
-                        {item.github !== "#" && (
-                          <a 
-                            href={item.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn-secondary"
-                          >
-                            <FaGithub size={14} />
-                            Code
-                          </a>
-                        )}
+                        <a 
+                          href={item.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn-secondary"
+                        >
+                          <FaGithub size={14} />
+                          {t('portfolio.viewCode')}
+                        </a>
                       </div>
                     </div>
                   </div>

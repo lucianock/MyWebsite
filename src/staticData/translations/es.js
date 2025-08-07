@@ -246,6 +246,8 @@ ssh -i "tu-archivo.pem" ubuntu@tu-ip-publica</code></pre>
     secudash: "SecuDash - Gestión de Seguridad",
     secudashDesc: "Dashboard de seguridad empresarial con monitoreo en tiempo real y detección automatizada de amenazas. Incluye escaneo de vulnerabilidades, flujos de respuesta a incidentes y control de acceso basado en roles.",
     breeze: "BrandFlow - Gestor de Productos en Laravel",
-    breezeDesc: "Aplicación para gestión de marcas y productos construida con Laravel y Vite. Incluye autenticación completa, Eloquent ORM, plantillas Blade y operaciones CRUD avanzadas con validación de formularios."
+    breezeDesc: "Aplicación para gestión de marcas y productos construida con Laravel y Vite. Incluye autenticación completa, Eloquent ORM, plantillas Blade y operaciones CRUD avanzadas con validación de formularios.",
+    viewDemo: "Ver Demo",
+    viewCode: "Ver Código"
   }
 };

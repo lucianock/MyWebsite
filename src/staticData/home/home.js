@@ -550,8 +550,8 @@ export const portfolio = [
     category: "Security",
     technologies: ["Laravel", "Docker", "Tailwind CSS", "Nmap", "WhatWeb", "Gobuster", "Security Scanning"],
     image: "/assets/images/portfolio/blackpath.jpg",
-    link: "https://blackpath.lucianock.com/",
-    github: "#"
+    link: "https://youtu.be/MlAqX6G6Rqc?si=bUo50PZaNAY-Kla6",
+    github: "https://github.com/lucianock/BlackPath"
   },
   {
     id: 2,
@@ -560,8 +560,8 @@ export const portfolio = [
     category: "Web Development",
     technologies: ["Laravel", "Tailwind CSS", "PHP", "MySQL", "Admin Panel", "User Management"],
     image: "/assets/images/portfolio/nextjob.jpg",
-    link: "https://nextjob.lucianock.com/",
-    github: "#"
+    link: "https://lucianock.com/",
+    github: "https://github.com/lucianock/NextJob"
   },
   {
     id: 3,
@@ -570,8 +570,8 @@ export const portfolio = [
     category: "Security",
     technologies: ["Laravel", "Real-time Monitoring", "Automation", "Dashboard", "Vulnerability Scanning"],
     image: "/assets/images/portfolio/secudash.jpg",
-    link: "https://secudash.lucianock.com/",
-    github: "#"
+    link: "https://lucianock.com/",
+    github: "https://github.com/lucianock/SecuDash"
   },
   {
     id: 4,
@@ -580,7 +580,7 @@ export const portfolio = [
     category: "Web Development",
     technologies: ["Laravel", "Eloquent ORM", "Laravel Breeze", "Vite", "Tailwind CSS", "PHP 8", "MySQL", "Blade Templates", "CRUD Operations"],
     image: "/assets/images/portfolio/breeze.jpg",
-    link: "https://breeze.lucianock.com/",
-    github: "#"
+    link: "https://lucianock.com/",
+    github: "https://github.com/lucianock/BrandFlow"
   }
 ];
