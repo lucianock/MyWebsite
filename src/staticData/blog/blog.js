@@ -55,8 +55,8 @@ export const allBlogs = [
     date: "30 JUL, 2025",
     description: "blog.awsEc2GratisDesc",
     image: {
-      thumbnail: "/assets/images/wp13498907.webp",
-      mainImage: "/assets/images/wp13498907.webp",
+      thumbnail: "/assets/images/aws.jpg",
+      mainImage: "/assets/images/aws.jpg",
     },
     slug: "como-tener-sitio-web-gratis-con-ec2",
     allTags: ["aws", "ec2", "web-hosting", "cloud", "servers"],
@@ -127,6 +127,146 @@ ssh -i "tu-archivo.pem" ubuntu@tu-ip-publica</code></pre>
       
       <h3>Mi experiencia personal</h3>
       <p>Descubrí esto casi de casualidad, y me voló la cabeza. Poder tener un servidor <em>gratis</em>, sin depender de plataformas externas y con control total, es una joyita para cualquier developer o curioso. Lo estoy usando para montar mis proyectos personales y probar herramientas nuevas de forma segura.</p>
+    `
+  },
+  {
+    id: 2,
+    title: "blog.dockerPrincipiantes",
+    tags: "blog.technology",
+    date: "08 AUG, 2025",
+    description: "blog.dockerPrincipiantesDesc",
+    image: {
+      thumbnail: "/assets/images/docker.webp",
+      mainImage: "/assets/images/docker.webp",
+    },
+    slug: "docker-para-principiantes-guia-practica",
+    allTags: ["docker", "containers", "devops", "deployment", "development"],
+    readTime: "4 min read",
+    featured: true,
+    content: `
+      <h3>🐳 ¿Qué es Docker y por qué debería importarte?</h3>
+      <p>Docker es como tener una "caja mágica" donde podés meter tu aplicación con todo lo que necesita para funcionar. Imaginate que tu app es como una receta de cocina: Docker te permite empaquetar todos los ingredientes (librerías, configuraciones, dependencias) en un contenedor que funciona igual en cualquier lado.</p>
+      
+      <p>La magia está en que <strong>funciona en mi PC, en tu PC, en el servidor, en la nube</strong>... siempre igual. No más "en mi máquina funciona" 😅</p>
+      
+      <h3>🚀 Paso 1 – Instalar Docker</h3>
+      <ol>
+        <li>Andá a <a href="https://docker.com/" target="_blank">docker.com</a> y descargá Docker Desktop.</li>
+        <li>Instalalo (es súper fácil, solo "siguiente, siguiente, siguiente").</li>
+        <li>Reiniciá tu PC y listo.</li>
+      </ol>
+      
+      <p>Para verificar que funcionó, abrí una terminal y escribí:</p>
+      <pre><code>docker --version</code></pre>
+      
+      <h3>📦 Paso 2 – Tu primer contenedor</h3>
+      <p>Vamos a probar que todo funciona con un contenedor simple:</p>
+      <pre><code>docker run hello-world</code></pre>
+      
+      <p>Si ves un mensaje de bienvenida, ¡todo está funcionando perfecto!</p>
+      
+      <h3>🌐 Paso 3 – Levantar un servidor web</h3>
+      <p>Ahora vamos a levantar un servidor web real. Probá esto:</p>
+      <pre><code>docker run -d -p 8080:80 nginx</code></pre>
+      
+      <p>Explicación rápida:
+      <ul>
+        <li><code>-d</code>: ejecuta en segundo plano</li>
+        <li><code>-p 8080:80</code>: conecta el puerto 8080 de tu PC con el puerto 80 del contenedor</li>
+        <li><code>nginx</code>: es el servidor web</li>
+      </ul>
+      </p>
+      
+      <p>Ahora abrí tu navegador y andá a <code>http://localhost:8080</code>. ¡Deberías ver la página de bienvenida de nginx!</p>
+      
+      <h3>📝 Paso 4 – Crear tu propio Dockerfile</h3>
+      <p>Ahora vamos a crear tu primera aplicación con Docker. Creá una carpeta nueva y dentro poné estos archivos:</p>
+      
+      <p><strong>index.html:</strong></p>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Mi primera app con Docker&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;¡Hola desde Docker! 🐳&lt;/h1&gt;
+    &lt;p&gt;Mi primera aplicación containerizada&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      
+      <p><strong>Dockerfile:</strong></p>
+      <pre><code>FROM nginx:alpine
+COPY index.html /usr/share/nginx/html/
+EXPOSE 80</code></pre>
+      
+      <h3>🔨 Paso 5 – Construir y ejecutar</h3>
+      <p>En la terminal, desde tu carpeta:</p>
+      <pre><code>docker build -t mi-primera-app .
+docker run -d -p 3000:80 mi-primera-app</code></pre>
+      
+      <p>Ahora andá a <code>http://localhost:3000</code> y ¡voilà! Tenés tu app corriendo en Docker.</p>
+      
+      <h3>📋 Comandos útiles para principiantes</h3>
+      <ul>
+        <li><code>docker ps</code> - ver contenedores corriendo</li>
+        <li><code>docker ps -a</code> - ver todos los contenedores (incluso los parados)</li>
+        <li><code>docker stop [id]</code> - parar un contenedor</li>
+        <li><code>docker rm [id]</code> - eliminar un contenedor</li>
+        <li><code>docker images</code> - ver las imágenes que tenés</li>
+        <li><code>docker rmi [nombre]</code> - eliminar una imagen</li>
+      </ul>
+      
+      <h3>💡 Tips para no volverte loco</h3>
+      <ul>
+        <li><strong>Nombres descriptivos:</strong> Usá nombres claros para tus contenedores: <code>docker run --name mi-app-node mi-app</code></li>
+        <li><strong>Puertos diferentes:</strong> Si tenés varios contenedores, usá puertos distintos: 3000, 3001, 3002...</li>
+        <li><strong>Limpieza regular:</strong> <code>docker system prune</code> para limpiar contenedores e imágenes que no usás</li>
+        <li><strong>Volúmenes para datos:</strong> Si tu app guarda datos, usá volúmenes para que no se pierdan</li>
+      </ul>
+      
+      <h3>🚀 Caso práctico: Node.js con Docker</h3>
+      <p>¿Querés probar algo más real? Creá una app Node.js simple:</p>
+      
+      <p><strong>app.js:</strong></p>
+      <pre><code>const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+  res.send('¡Hola desde Node.js en Docker! 🐳');
+});
+
+app.listen(port, () => {
+  console.log(\`App corriendo en puerto \${port}\`);
+});</code></pre>
+      
+      <p><strong>package.json:</strong></p>
+      <pre><code>{
+  "name": "mi-app-node",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}</code></pre>
+      
+      <p><strong>Dockerfile:</strong></p>
+      <pre><code>FROM node:18-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD ["node", "app.js"]</code></pre>
+      
+      <p>Construí y ejecutá:</p>
+      <pre><code>docker build -t mi-app-node .
+docker run -d -p 3001:3000 mi-app-node</code></pre>
+      
+      <h3>Mi experiencia personal</h3>
+      <p>Docker me cambió la vida como developer. Antes pasaba horas configurando entornos, instalando dependencias, peleándome con versiones... Ahora es como tener un "botón mágico" que hace que todo funcione igual en cualquier lado. Es especialmente útil cuando trabajás en equipo o cuando tenés que desplegar en diferentes servidores.</p>
+      
+      <p>Lo mejor es que <em>no necesitás ser un experto</em> para empezar. Con estos comandos básicos ya podés hacer mucho. ¡Y una vez que le agarrás la mano, no hay vuelta atrás!</p>
     `
   }
 ];

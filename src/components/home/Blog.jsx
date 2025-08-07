@@ -29,7 +29,6 @@ const Blog = () => {
             marginTop: '10px',
             fontSize: '0.95rem'
           }}>
-            Artículos sobre desarrollo web, Laravel y tecnologías modernas
           </p>
         </div>
 
