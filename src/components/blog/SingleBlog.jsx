@@ -54,27 +54,6 @@ const SingleBlog = ({
                 📝
               </div>
                          )}
-             
-             {/* Mostrar "Featured" solo en el primer artículo (más reciente) */}
-             {id === 2 && (
-               <div style={{
-                 position: 'absolute',
-                 top: '15px',
-                 right: '15px',
-                 background: 'linear-gradient(135deg, #d79d4b, #f4a261)',
-                 color: 'white',
-                 padding: '6px 14px',
-                 borderRadius: '20px',
-                 fontSize: '11px',
-                 fontWeight: '600',
-                 textTransform: 'uppercase',
-                 letterSpacing: '0.5px',
-                 boxShadow: '0 2px 8px rgba(215, 157, 75, 0.3)',
-                 zIndex: 10
-               }}>
-                 Featured
-               </div>
-             )}
 
            </div>
         </Link>
