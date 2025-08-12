@@ -544,43 +544,54 @@ export const feebackUsers = [
 
 export const portfolio = [
   {
-    id: 1,
+    id: 3,
+    title: "portfolio.toolvibe",
+    //description: "ToolVibe es un SaaS de herramientas web interactivas, desarrollado con Laravel 10 y Vue 3, orientado a brindar utilidades prácticas como generador de códigos QR, calculadoras y conversores, todo optimizado para SEO y rendimiento.",
+    description: "portfolio.toolvibeDesc",
+    category: "Utilities",
+    technologies: ["Laravel 10", "Vue 3", "Tailwind CSS", "Vite", "Google Analytics", "SEO Optimization"],
+    image: "/assets/images/portfolio/toolvibe.png",
+    link: "https://toolvibe.net",
+    github: "https://github.com/lucianock/ToolVibe"
+  },
+  {
+    id: 2,
     title: "portfolio.blackpath",
     description: "portfolio.blackpathDesc",
     category: "Security",
     technologies: ["Laravel", "Docker", "Tailwind CSS", "Nmap", "WhatWeb", "Gobuster", "Security Scanning"],
     image: "/assets/images/portfolio/blackpath.jpg",
-    link: "https://youtu.be/MlAqX6G6Rqc?si=bUo50PZaNAY-Kla6",
+    link: "https://youtu.be/MlAqX6G6Rqc",
     github: "https://github.com/lucianock/BlackPath"
   },
   {
-    id: 2,
+    id: 3,
     title: "portfolio.nextjob",
     description: "portfolio.nextjobDesc",
     category: "Web Development",
     technologies: ["Laravel", "Tailwind CSS", "PHP", "MySQL", "Admin Panel", "User Management"],
     image: "/assets/images/portfolio/nextjob.jpg",
-    link: "https://lucianock.com/",
+    link: "https://youtu.be/mgDGsFjKXbI",
     github: "https://github.com/lucianock/NextJob"
   },
   {
-    id: 3,
+    id: 4,
     title: "portfolio.secudash",
     description: "portfolio.secudashDesc",
     category: "Security",
     technologies: ["Laravel", "Real-time Monitoring", "Automation", "Dashboard", "Vulnerability Scanning"],
     image: "/assets/images/portfolio/secudash.jpg",
-    link: "https://lucianock.com/",
+    link: "https://youtu.be/CQ_nl3LccHM",
     github: "https://github.com/lucianock/SecuDash"
   },
   {
-    id: 4,
+    id: 5,
     title: "portfolio.breeze",
     description: "portfolio.breezeDesc",
     category: "Web Development",
     technologies: ["Laravel", "Eloquent ORM", "Laravel Breeze", "Vite", "Tailwind CSS", "PHP 8", "MySQL", "Blade Templates", "CRUD Operations"],
     image: "/assets/images/portfolio/breeze.jpg",
-    link: "https://lucianock.com/",
+    link: "https://www.youtube.com/watch?v=mgDGsFjKXbI&ab_channel=Luciano",
     github: "https://github.com/lucianock/BrandFlow"
   }
 ];

@@ -241,6 +241,8 @@ ssh -i "your-file.pem" ubuntu@your-public-ip</code></pre>
 
   // Portfolio Section
   portfolio: {
+    toolvibe: "ToolVibe - Useful Tools",
+    toolvibeDesc: "Interactive web tools platform with QR code generator, calculators, and converters. Optimized for SEO and performance, built with Laravel 10 and Vue 3.",
     blackpath: "BlackPath - Security Scanner",
     blackpathDesc: "Web vulnerability scanning application for domain analysis using Nmap, WhatWeb, and Gobuster. Features multiple scan levels with detailed results and exportable reports for security audits.",
     nextjob: "NextJob - Job Portal",
