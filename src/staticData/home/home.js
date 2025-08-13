@@ -571,7 +571,7 @@ export const portfolio = [
     category: "Web Development",
     technologies: ["Laravel", "Tailwind CSS", "PHP", "MySQL", "Admin Panel", "User Management"],
     image: "/assets/images/portfolio/nextjob.jpg",
-    link: "https://youtu.be/mgDGsFjKXbI",
+    link: "https://youtu.be/vqwGaGuPp7A",
     github: "https://github.com/lucianock/NextJob"
   },
   {
@@ -591,7 +591,7 @@ export const portfolio = [
     category: "Web Development",
     technologies: ["Laravel", "Eloquent ORM", "Laravel Breeze", "Vite", "Tailwind CSS", "PHP 8", "MySQL", "Blade Templates", "CRUD Operations"],
     image: "/assets/images/portfolio/breeze.jpg",
-    link: "https://www.youtube.com/watch?v=mgDGsFjKXbI&ab_channel=Luciano",
+    link: "https://youtu.be/VfM6GzgM_wg",
     github: "https://github.com/lucianock/BrandFlow"
   }
 ];
