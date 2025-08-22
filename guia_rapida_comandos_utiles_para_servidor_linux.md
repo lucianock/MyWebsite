@@ -1,4 +1,4 @@
-# 🖥️ Guía rápida — Comandos esenciales para tu servidor Linux (lista mejorada y lista para LinkedIn)
+# 🖥️ Guía rápida — Comandos esenciales para tu servidor Linux
 
 Tener un servidor en la nube (AWS, DigitalOcean, Hetzner...) es fantástico — hasta que necesitás un comando y no lo recordás. Esta guía compacta combina **comandos listos para copiar**, **ejemplos prácticos**, **mejores prácticas** y una versión corta pensada para publicar en LinkedIn.
 
@@ -197,17 +197,3 @@ esac
 > Tener un servidor en la nube es una responsabilidad: conocer 10 comandos puede salvarte horas. Aquí la versión corta para usar ahora: `uname -a`, `htop`, `df -h`, `ss -lntp`, `journalctl -u nginx -f`, `ufw status`. Guardá un `~/cheatsheet.sh` y automatizá backups con `rsync` / `mysqldump`. ¿Querés que lo deje listo para publicar y con imagen? 🚀
 
 **Hashtags sugeridos:** `#Linux #DevOps #Sysadmin #Cloud #Tips`
-
----
-
-## ✅ ¿Querés que lo adapte más? Opciones:
-- Post largo para blog (SEO, 800–1.200 palabras).
-- Post para LinkedIn (texto + imagen + 3 hashtags + CTA).
-- PDF/cheatsheet listo para descargar (formato A4).
-
-Si querés, lo dejo listo en formato *post de LinkedIn* y en un *archivo markdown* para que lo subas al blog.
-
----
-
-¡Listo! Si querés que lo recorte, que cambie el tono (más técnico, más coloquial) o que lo transforme en un PDF/imagen para LinkedIn, decime cuál opción preferís y lo adapto.
-
