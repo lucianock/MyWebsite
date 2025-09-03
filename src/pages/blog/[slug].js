@@ -3,6 +3,7 @@ import BreadcrumbHero from "@/components/shared/BreadcrumbHero";
 import Layout from "@/layout/Layout";
 import { singleBlogHero, allBlogs } from "@/staticData/blog/blog";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 const SingleBlog = ({ blog }) => {
   const router = useRouter();
@@ -14,10 +15,25 @@ const SingleBlog = ({ blog }) => {
     <Layout>
       <div id="blog">
         <BreadcrumbHero heroData={singleBlogHero} />
+        <div id="article-start" />
         <SingleBlogDetails slug={router.query.slug} />
       </div>
     </Layout>
   );
+};
+
+// Scroll suave al inicio del artículo para evitar que el banner cubra la vista
+// Ejecuta en el cliente al montar la página
+SingleBlog.__scrollHack = true;
+export const __ClientEffects = () => {
+  useEffect(() => {
+    const target = document.getElementById('article-start');
+    if (target) {
+      const top = target.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  }, []);
+  return null;
 };
 
 // Generar las rutas estáticas

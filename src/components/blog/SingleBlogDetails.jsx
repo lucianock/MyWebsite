@@ -19,6 +19,16 @@ const SingleBlogDetails = ({ slug }) => {
     setSinglePost(allBlogs?.find((blog) => blog?.slug == slug));
   }, [slug]);
 
+  // Scroll al inicio del artículo para evitar que el banner tape el contenido
+  useEffect(() => {
+    if (!singlePost || !singlePost.slug) return;
+    const el = document.getElementById('post-start');
+    if (el) {
+      const y = el.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  }, [singlePost]);
+
   // Agregar estilos CSS para el contenido del blog
   useEffect(() => {
     const style = document.createElement('style');
@@ -157,8 +167,27 @@ const SingleBlogDetails = ({ slug }) => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-8">
+            <div id="post-start" />
             {/* Header del artículo */}
             <div className="blog-header" style={{ marginBottom: '40px' }}>
+              {/* Imagen principal del artículo */}
+              {singlePost?.image?.mainImage && (
+                <div style={{ marginBottom: '24px' }}>
+                  <Image 
+                    src={singlePost.image.mainImage} 
+                    alt={t(singlePost.title)}
+                    width={1200}
+                    height={630}
+                    style={{
+                      width: '100%',
+                      height: '320px',
+                      objectFit: 'cover',
+                      borderRadius: '10px',
+                      border: '1px solid #4a5568'
+                    }}
+                  />
+                </div>
+              )}
               <div style={{ 
                 display: 'flex', 
                 alignItems: 'center', 
