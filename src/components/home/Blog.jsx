@@ -12,9 +12,24 @@ const Blog = () => {
     router.push(link);
   };
 
-  // Filtrar posts destacados para mostrar en la página principal
-  const featuredPosts = allBlogs?.filter(blog => blog.featured).slice(0, 2);
-  const regularPosts = allBlogs?.filter(blog => !blog.featured).slice(0, 2);
+  // Filtrar y ordenar por fecha (más reciente primero) para la página principal
+  const sortByDateDesc = (a, b) => {
+    const aTime = a.isoDate ? Date.parse(a.isoDate) : Date.parse(a.date);
+    const bTime = b.isoDate ? Date.parse(b.isoDate) : Date.parse(b.date);
+    return (bTime || 0) - (aTime || 0);
+  };
+
+  const featuredPosts = allBlogs
+    ?.filter((blog) => blog.featured)
+    .slice()
+    .sort(sortByDateDesc)
+    .slice(0, 2);
+
+  const regularPosts = allBlogs
+    ?.filter((blog) => !blog.featured)
+    .slice()
+    .sort(sortByDateDesc)
+    .slice(0, 2);
 
   return (
     <div className="blog-post" data-title="Blog" id="blog">

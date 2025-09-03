@@ -53,6 +53,7 @@ export const allBlogs = [
     title: "blog.awsEc2Gratis",
     tags: "blog.technology",
     date: "30 JUL, 2025",
+    isoDate: "2025-07-30",
     description: "blog.awsEc2GratisDesc",
     image: {
       thumbnail: "/assets/images/aws.jpg",
@@ -134,6 +135,7 @@ ssh -i "tu-archivo.pem" ubuntu@tu-ip-publica</code></pre>
     title: "blog.dockerPrincipiantes",
     tags: "blog.technology",
     date: "08 AUG, 2025",
+    isoDate: "2025-08-08",
     description: "blog.dockerPrincipiantesDesc",
     image: {
       thumbnail: "/assets/images/docker.webp",
@@ -267,6 +269,137 @@ docker run -d -p 3001:3000 mi-app-node</code></pre>
       <p>Docker me cambió la vida como developer. Antes pasaba horas configurando entornos, instalando dependencias, peleándome con versiones... Ahora es como tener un "botón mágico" que hace que todo funcione igual en cualquier lado. Es especialmente útil cuando trabajás en equipo o cuando tenés que desplegar en diferentes servidores.</p>
       
       <p>Lo mejor es que <em>no necesitás ser un experto</em> para empezar. Con estos comandos básicos ya podés hacer mucho. ¡Y una vez que le agarrás la mano, no hay vuelta atrás!</p>
+    `
+  },
+  {
+    id: 3,
+    title: "blog.linuxCheatsheet",
+    tags: "blog.technology",
+    date: "02 SEP, 2025",
+    isoDate: "2025-09-02",
+    description: "blog.linuxCheatsheetDesc",
+    image: {
+      thumbnail: "/assets/images/wp13498907.png",
+      mainImage: "/assets/images/wp13498907.png",
+    },
+    slug: "guia-rapida-comandos-utiles-para-servidor-linux",
+    allTags: ["linux", "sysadmin", "devops", "servers", "security"],
+    readTime: "5 min read",
+    featured: true,
+    content: `
+      <h2>🖥️ Guía rápida — Comandos esenciales para tu servidor Linux</h2>
+      <p>Tener un servidor en la nube (AWS, DigitalOcean, Hetzner...) es fantástico — hasta que necesitás un comando y no lo recordás. Esta guía compacta combina <strong>comandos listos para copiar</strong>, <strong>ejemplos prácticos</strong>, <strong>mejores prácticas</strong> y una versión corta para publicar.</p>
+
+      <hr />
+
+      <h3>🔍 Información del sistema (rápido)</h3>
+      <pre><code>uname -a
+lsb_release -a
+uptime
+htop
+df -h
+du -sh *
+free -h</code></pre>
+      <p><strong>Tip:</strong> <code>watch -n 2 df -h</code> refresca cada 2s.</p>
+
+      <h3>📂 Manejo de archivos y búsquedas</h3>
+      <pre><code>ls -lh
+cp -r origen/ destino/
+mv archivo1 archivo2
+rm -rf carpeta/
+find / -name "archivo*" 2&gt;/dev/null
+locate archivo</code></pre>
+      <p><strong>Ejemplo útil:</strong> borrar .log viejos:</p>
+      <pre><code>find /var/log -type f -name '*.log' -mtime +30 -exec rm -f {} \\;</code></pre>
+
+      <h3>👥 Usuarios, sudo y permisos</h3>
+      <pre><code>adduser usuario
+passwd usuario
+usermod -aG sudo usuario
+chown -R user:group carpeta/
+chmod 750 archivo.sh
+getent passwd usuario</code></pre>
+      <p><strong>Mejor práctica:</strong> evitá <code>chmod 777</code> en producción.</p>
+
+      <h3>🌐 Redes y conectividad</h3>
+      <pre><code>ip a
+curl -s ifconfig.me
+ping 8.8.8.8 -c 4
+ss -lntup
+iptables -L -n --line-numbers</code></pre>
+      <p><strong>SSH:</strong> endurecé <code>/etc/ssh/sshd_config</code> (sin root login, solo llaves).</p>
+
+      <h3>⚙️ Servicios y procesos</h3>
+      <pre><code>systemctl status nginx
+systemctl restart nginx
+journalctl -u nginx -f
+ps aux | grep nombre_proceso
+kill PID</code></pre>
+      <p><strong>Tip:</strong> si un restart falla, mirá <code>journalctl -xe</code>.</p>
+
+      <h3>🔐 Seguridad y firewall</h3>
+      <pre><code>ufw status
+ufw allow 22/tcp
+ufw allow 80,443/tcp
+ufw enable
+fail2ban-client status</code></pre>
+      <ul>
+        <li><code>PermitRootLogin no</code></li>
+        <li><code>PasswordAuthentication no</code></li>
+        <li><code>AllowUsers tu_usuario</code></li>
+      </ul>
+
+      <h3>🛠️ Paquetes y actualizaciones</h3>
+      <pre><code>apt update && apt upgrade -y
+apt install htop git curl unzip
+dpkg -l | grep paquete</code></pre>
+      <p>En CentOS/RHEL usá <code>yum</code> o <code>dnf</code>.</p>
+
+      <h3>🗂️ Logs y diagnóstico</h3>
+      <pre><code>tail -n 200 /var/log/syslog
+tail -f /var/log/nginx/error.log
+dmesg | less
+journalctl -b --no-pager</code></pre>
+
+      <h3>📈 Monitorización y alertas (básico)</h3>
+      <ul>
+        <li>Instalá <code>netdata</code> o <code>prometheus + grafana</code>.</li>
+        <li>Alertas con <code>alertmanager</code> o <code>healthchecks</code>.</li>
+      </ul>
+      <p><strong>Chequeo rápido:</strong> <code>curl -I http://localhost:80</code>.</p>
+
+      <h3>💾 Backup y recuperación</h3>
+      <p><strong>Backup simple con rsync:</strong></p>
+      <pre><code>rsync -avz --delete /var/www/ backup@backup.example:/backups/www/</code></pre>
+      <p><strong>Dump de MySQL:</strong></p>
+      <pre><code>mysqldump -u root -pBDPASS dbname | gzip > /backups/dbname-$(date +%F).sql.gz</code></pre>
+
+      <h3>🧰 Script útil: ~/cheatsheet.sh</h3>
+      <pre><code>#!/usr/bin/env bash
+case "$1" in
+  disk) df -h ;;
+  mem) free -h ;;
+  top) htop ;;
+  ip) ip a ;;
+  logs) tail -n 200 /var/log/syslog ;;
+  *) echo "Usage: $0 {disk|mem|top|ip|logs}" ;;
+esac</code></pre>
+
+      <h3>🧾 Tips rápidos</h3>
+      <ul>
+        <li>Documentá cambios en <code>CHANGELOG.md</code> o <code>/var/log/custom_changes.log</code>.</li>
+        <li>Usá <code>ssh-agent</code> y passphrase en llaves.</li>
+        <li>Automatizá con <code>cron</code> o <code>systemd timers</code>.</li>
+        <li>Alertas por disco/memoria baja.</li>
+        <li>Probá primero en staging.</li>
+      </ul>
+
+      <h3>⚠️ Advertencias</h3>
+      <ul>
+        <li>No ejecutes <code>rm -rf /</code> ni comandos dudosos.</li>
+        <li>Tené backups antes de cambios críticos.</li>
+        <li>Evitá exponer puertos innecesarios.</li>
+      </ul>
     `
   }
 ];

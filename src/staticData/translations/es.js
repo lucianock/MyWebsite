@@ -126,6 +126,8 @@ export const es = {
     awsEc2GratisDesc: "Sí, leíste bien: gratis. O casi. En este post te cuento cómo poner tu sitio web online usando Amazon EC2 sin pagar un peso (al menos por un buen tiempo).",
     dockerPrincipiantes: "Docker para Principiantes: Guía Práctica (Sin Complicaciones)",
     dockerPrincipiantesDesc: "¿Te da miedo Docker? No te preocupes, en este post te explico de la forma más simple posible cómo empezar a usar contenedores sin volverte loco. ¡Es más fácil de lo que pensás!",
+    linuxCheatsheet: "Guía rápida — Comandos esenciales para tu servidor Linux",
+    linuxCheatsheetDesc: "Comandos listos para copiar, buenas prácticas y script útil para tu día a día en servidores Linux.",
     // Complete article content in Spanish
     awsEc2GratisContent: `
       <h3>✋ Antes de empezar: ¿qué es EC2?</h3>

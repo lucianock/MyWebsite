@@ -32,7 +32,7 @@ const SingleBlog = ({
                 height={250}
                 style={{
                   width: "100%",
-                  height: "auto",
+                  height: "200px",
                   objectFit: "cover",
                   borderRadius: "8px",
                 }}

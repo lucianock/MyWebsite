@@ -12,12 +12,14 @@ const BlogPosts = () => {
     setBlogCount((prev) => prev + 2);
   };
 
-  // Ordenar blogs por fecha (más reciente primero)
-  const sortedBlogs = allBlogs?.sort((a, b) => {
-    const dateA = new Date(a.date);
-    const dateB = new Date(b.date);
-    return dateB - dateA; // Orden descendente (más reciente primero)
-  });
+  // Ordenar estrictamente por fecha (más reciente primero) usando isoDate si existe
+  const sortedBlogs = allBlogs
+    ?.slice()
+    .sort((a, b) => {
+      const aTime = a.isoDate ? Date.parse(a.isoDate) : Date.parse(a.date);
+      const bTime = b.isoDate ? Date.parse(b.isoDate) : Date.parse(b.date);
+      return (bTime || 0) - (aTime || 0);
+    });
 
   return (
     <div className="blog-post all-blogs">

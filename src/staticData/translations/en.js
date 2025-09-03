@@ -126,6 +126,8 @@ export const en = {
     awsEc2GratisDesc: "Yes, you read that right: free. Or almost. In this post I tell you how to put your website online using Amazon EC2 without paying a penny (at least for a good while).",
     dockerPrincipiantes: "Docker for Beginners: Practical Guide (No Complications)",
     dockerPrincipiantesDesc: "Are you afraid of Docker? Don't worry, in this post I explain in the simplest way possible how to start using containers without going crazy. It's easier than you think!",
+    linuxCheatsheet: "Quick guide — Essential commands for your Linux server",
+    linuxCheatsheetDesc: "Copy-ready commands, best practices, and a handy script for daily Linux server work.",
     // Complete article content in English
     awsEc2GratisContent: `
       <h3>✋ Before starting: what is EC2?</h3>
