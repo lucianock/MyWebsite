@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import ThemeContext from '@/context/ThemeContext';
 import { useTranslation } from '@/hooks/useTranslation';
 import { trackLanguageChange } from '@/components/shared/AnalyticsEvents';
@@ -14,6 +14,32 @@ const LanguageToggle = () => {
     // Trackear el cambio de idioma
     trackLanguageChange(language, newLanguage);
   };
+
+  // Ajustes responsivos para evitar superposición con el menú hamburguesa
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      @media (max-width: 768px) {
+        .language-toggle {
+          left: 50% !important;
+          right: auto !important;
+          top: 20px !important;
+          transform: translateX(-50%) !important;
+        }
+      }
+      @media (max-width: 480px) {
+        .language-toggle {
+          left: 50% !important;
+          right: auto !important;
+          top: 20px !important;
+          bottom: auto !important;
+          transform: translateX(-50%) !important;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+    return () => document.head.removeChild(style);
+  }, []);
 
   return (
     <button
