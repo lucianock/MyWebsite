@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 const NextHead = ({
-  title = "Luciano - Full Stack Developer",
+  title = "Luciano Campos Kriegl — Full Stack Developer",
 }) => {
   return (
     <Head>
@@ -9,8 +9,12 @@ const NextHead = ({
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta
         name="description"
-        content="A modern design and high-speed performance Nextjs template that can be used for Personal Portfolio Landing."
+        content="Portfolio of Luciano Campos Kriegl. Full‑stack web development with PHP (Laravel), MySQL and JavaScript."
       />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content="Portfolio of Luciano Campos Kriegl. Full‑stack web development with PHP (Laravel), MySQL and JavaScript." />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary_large_image" />
       <link rel="icon" href="/favicon.ico" />
       
       {/* Google Analytics */}
