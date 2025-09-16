@@ -20,7 +20,7 @@ const Blog = () => {
   };
 
   const featuredPosts = allBlogs
-    ?.filter((blog) => blog.featured)
+    ?.filter((blog) => blog.featured && !blog.hidden)
     .slice()
     .sort((a, b) => {
       const cmp = sortByDateDesc(a, b);
@@ -30,7 +30,7 @@ const Blog = () => {
     .slice(0, 2);
 
   const regularPosts = allBlogs
-    ?.filter((blog) => !blog.featured)
+    ?.filter((blog) => !blog.featured && !blog.hidden)
     .slice()
     .sort((a, b) => {
       const cmp = sortByDateDesc(a, b);

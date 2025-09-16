@@ -419,6 +419,7 @@ esac</code></pre>
     allTags: ["api", "tiendanube", "postman", "oauth", "partners"],
     readTime: "4 min read",
     featured: true,
+    hidden: true,
     // When language is EN, we will use this content key for translated HTML
     contentKey: "blog.tiendanubeApiPostmanContent",
     content: `

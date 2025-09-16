@@ -30,7 +30,8 @@ const BlogPosts = () => {
           <div className="col-xl-10">
             <div className="blog-post-group">
               {sortedBlogs
-                ?.map((blog) => <SingleBlog key={blog?.id} {...blog} />)
+                ?.filter((blog) => !blog.hidden)
+                .map((blog) => <SingleBlog key={blog?.id} {...blog} />)
                 .splice(0, blogCount)}
             </div>
 

@@ -32,9 +32,9 @@ const SingleBlog = ({
                 height={533}
                 style={{
                   width: "100%",
-                  aspectRatio: "16 / 9",
-                  height: "auto",
+                  height: "200px",
                   objectFit: "cover",
+                  objectPosition: "center center",
                   borderRadius: "8px",
                 }}
               />
