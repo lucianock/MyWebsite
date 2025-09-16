@@ -18,7 +18,9 @@ const BlogPosts = () => {
     .sort((a, b) => {
       const aTime = a.isoDate ? Date.parse(a.isoDate) : Date.parse(a.date);
       const bTime = b.isoDate ? Date.parse(b.isoDate) : Date.parse(b.date);
-      return (bTime || 0) - (aTime || 0);
+      if ((bTime || 0) !== (aTime || 0)) return (bTime || 0) - (aTime || 0);
+      // Tiebreaker: higher id first
+      return (b.id || 0) - (a.id || 0);
     });
 
   return (

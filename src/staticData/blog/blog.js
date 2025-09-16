@@ -63,6 +63,7 @@ export const allBlogs = [
     allTags: ["aws", "ec2", "web-hosting", "cloud", "servers"],
     readTime: "3 min read",
     featured: false,
+    contentKey: "blog.awsEc2GratisContent",
     content: `
       <h3>✋ Antes de empezar: ¿qué es EC2?</h3>
       <p>EC2 (Elastic Compute Cloud) es un servicio de Amazon Web Services (AWS) que te permite levantar una máquina virtual (como si fuera una PC remota) y usarla como servidor. Ideal para alojar tu web, hacer pruebas, levantar APIs o jugar con proyectos personales.</p>
@@ -400,6 +401,233 @@ esac</code></pre>
         <li>Tené backups antes de cambios críticos.</li>
         <li>Evitá exponer puertos innecesarios.</li>
       </ul>
+    `
+  }
+  ,
+  {
+    id: 4,
+    title: "blog.tiendanubeApiPostman",
+    tags: "blog.technology",
+    date: "16 SEP, 2025",
+    isoDate: "2025-09-16",
+    description: "blog.tiendanubeApiPostmanDesc",
+    image: {
+      thumbnail: "/assets/images/mitiendanube.png",
+      mainImage: "/assets/images/mitiendanube.png",
+    },
+    slug: "guia-api-tiendanube-postman",
+    allTags: ["api", "tiendanube", "postman", "oauth", "partners"],
+    readTime: "4 min read",
+    featured: true,
+    // When language is EN, we will use this content key for translated HTML
+    contentKey: "blog.tiendanubeApiPostmanContent",
+    content: `
+      <h3>🚀 Paso 1 – Crear tu aplicación en Tiendanube Partners</h3>
+      <ol>
+        <li>Dirígete al <a href="https://partners.tiendanube.com/" target="_blank">Portal de Socios de Tiendanube</a> y regístrate o inicia sesión.</li>
+        <li>En el panel de administración, ve a la sección <strong>"Mis aplicaciones"</strong> y haz clic en <strong>"Crear nueva aplicación"</strong>.</li>
+        <li>Completa los campos requeridos:
+          <ul>
+            <li><strong>Nombre de la aplicación</strong>: Elige un nombre representativo.</li>
+            <li><strong>URL de redirección</strong>: La URL a la que se redirigirá al usuario después de autorizar la aplicación.</li>
+            <li><strong>Scopes</strong>: Selecciona los permisos necesarios, por ejemplo, <code>read_products</code>, <code>write_products</code>, etc.</li>
+          </ul>
+        </li>
+        <li>Una vez creada, toma nota del <strong>ID de la aplicación</strong> y el <strong>Secreto de cliente</strong>.</li>
+      </ol>
+
+      <hr />
+
+      <h3>🔐 Paso 2 – Obtener el token de acceso</h3>
+      <ol>
+        <li><strong>Redirige al usuario a la URL de autorización</strong>:</li>
+      </ol>
+      <pre><code>https://www.tiendanube.com/apps/{app_id}/authorize?scope=read_products,write_products&state=csrf-token</code></pre>
+      <p>Reemplaza <code>{app_id}</code> por el ID de tu aplicación. <code>state</code> es opcional pero recomendado para prevenir ataques CSRF.</p>
+
+      <p><strong>El usuario será redirigido</strong> a tu URL de redirección con un código de autorización:</p>
+      <pre><code>https://tu-dominio.com/callback?code=authorization_code&state=csrf-token</code></pre>
+
+      <p><strong>Intercambia el código por un token de acceso</strong>:</p>
+      <p>POST a:</p>
+      <pre><code>https://www.tiendanube.com/apps/authorize/token</code></pre>
+      <p>Body JSON:</p>
+      <pre><code>{
+  "client_id": "tu_client_id",
+  "client_secret": "tu_client_secret",
+  "code": "authorization_code",
+  "grant_type": "authorization_code"
+}</code></pre>
+      <p>La respuesta contiene el <code>access_token</code>.</p>
+
+      <hr />
+
+      <h3>🛒 Paso 3 – Consultar productos</h3>
+      <ol>
+        <li>Configura un request GET en POSTMAN:</li>
+      </ol>
+      <ul>
+        <li>URL: <code>https://api.tiendanube.com/v1/{store_id}/products.json</code></li>
+        <li>Header: <code>Authorization: Bearer token_de_acceso</code></li>
+      </ul>
+      <p>Ejecuta y recibirás un JSON con los productos.</p>
+
+      <hr />
+
+      <h3>📝 Paso 4 – Crear un nuevo producto</h3>
+      <p>Configura un request POST:</p>
+      <ul>
+        <li>URL: <code>https://api.tiendanube.com/v1/{store_id}/products.json</code></li>
+        <li>Headers:
+          <ul>
+            <li><code>Authorization: Bearer token_de_acceso</code></li>
+            <li><code>Content-Type: application/json</code></li>
+          </ul>
+        </li>
+      </ul>
+      <p>Body JSON:</p>
+      <pre><code>{
+  "product": {
+    "title": "Nombre del producto",
+    "price": 1000,
+    "description": "Descripción del producto",
+    "available_on": "2025-09-16",
+    "tags": ["etiqueta1", "etiqueta2"]
+  }
+}</code></pre>
+
+      <hr />
+
+      <h3>💡 Tips finales</h3>
+      <ul>
+        <li>Usa variables de entorno en POSTMAN para manejar el <code>access_token</code> y URLs.</li>
+        <li>Maneja errores y respuestas de la API para integraciones robustas.</li>
+        <li>Consulta la <a href="https://tiendanube.github.io/api-documentation/" target="_blank">documentación oficial</a> para explorar más endpoints.</li>
+      </ul>
+
+      <h3>🧪 Mi experiencia personal</h3>
+      <p>Probar la API de Tiendanube me permitió entender cómo autenticar, leer y modificar datos de una tienda real sin riesgos. Postman se vuelve indispensable para probar endpoints y automatizar requests, sobre todo en integraciones con Laravel o Node.</p>
+    `
+  }
+  ,
+  {
+    id: 5,
+    title: "blog.postmanApiGuide",
+    tags: "blog.technology",
+    date: "16 SEP, 2025",
+    isoDate: "2025-09-16",
+    description: "blog.postmanApiGuideDesc",
+    image: {
+      thumbnail: "/assets/images/postman.png",
+      mainImage: "/assets/images/postman.png",
+    },
+    slug: "guia-postman-apis-reqres",
+    allTags: ["postman", "api", "rest", "reqres", "testing"],
+    readTime: "4 min read",
+    featured: true,
+    contentKey: "blog.postmanApiGuideContent",
+    content: `
+      <h3>🚀 Paso 1 – Descargar e instalar POSTMAN</h3>
+      <ol>
+        <li>Andá a <a href="https://www.postman.com/downloads/" target="_blank">postman.com/downloads</a> y descargá la versión para tu sistema.</li>
+        <li>Instalalo y abrilo.</li>
+        <li>Creá una cuenta para guardar tus colecciones en la nube (opcional).</li>
+      </ol>
+
+      <hr />
+
+      <h3>🖥️ Paso 2 – Crear tu colección</h3>
+      <ol>
+        <li>En la barra lateral izquierda hacé clic en "Collections".</li>
+        <li>Presioná "+ New Collection" y poné nombre: <code>PruebaReqRes</code>.</li>
+        <li>Ahí vamos a guardar todos nuestros requests.</li>
+      </ol>
+
+      <hr />
+
+      <h3>🔗 Paso 3 – Probar un GET (obtener usuarios)</h3>
+      <ol>
+        <li>Agregá un nuevo request a la colección y nombralo <strong>Obtener usuarios</strong>.</li>
+        <li>Método: <code>GET</code></li>
+        <li>URL:</li>
+      </ol>
+      <pre><code>https://reqres.in/api/users?page=2</code></pre>
+      <p>Hacé clic en "Send" y vas a recibir un JSON con usuarios reales de prueba.</p>
+
+      <hr />
+
+      <h3>✏️ Paso 4 – Probar un POST (crear usuario)</h3>
+      <ol>
+        <li>Nuevo request: <strong>Crear usuario</strong></li>
+        <li>URL:</li>
+      </ol>
+      <pre><code>https://reqres.in/api/users</code></pre>
+      <p>Método: <code>POST</code>. En "Body" → <code>raw</code> → <code>JSON</code>:</p>
+      <pre><code>{
+  "name": "Luciano",
+  "job": "Developer"
+}</code></pre>
+      <p>"Send" y vas a ver la respuesta con el <code>id</code> y <code>createdAt</code>.</p>
+
+      <hr />
+
+      <h3>🔄 Paso 5 – Probar PUT (actualizar usuario)</h3>
+      <ol>
+        <li>Nuevo request: <strong>Actualizar usuario</strong></li>
+        <li>URL:</li>
+      </ol>
+      <pre><code>https://reqres.in/api/users/2</code></pre>
+      <p>Método: <code>PUT</code>. Body → <code>raw</code> → <code>JSON</code>:</p>
+      <pre><code>{
+  "name": "Luciano",
+  "job": "Senior Developer"
+}</code></pre>
+      <p>Send → verás la fecha de actualización <code>updatedAt</code>.</p>
+
+      <hr />
+
+      <h3>🗑️ Paso 6 – Probar DELETE (borrar usuario)</h3>
+      <ol>
+        <li>Nuevo request: <strong>Eliminar usuario</strong></li>
+        <li>URL:</li>
+      </ol>
+      <pre><code>https://reqres.in/api/users/2</code></pre>
+      <p>Método: <code>DELETE</code>. La API devuelve <code>204 No Content</code> si se borró correctamente.</p>
+
+      <hr />
+
+      <h3>🛠️ Paso 7 – Usar variables de entorno</h3>
+      <ol>
+        <li>En Postman → "Environments" → "Add".</li>
+        <li>Variable: <code>{{base_url}}</code> = <code>https://reqres.in/api</code>.</li>
+        <li>Usá <code>{{base_url}}/users/2</code> en lugar de escribir la URL completa.</li>
+      </ol>
+
+      <hr />
+
+      <h3>✅ Paso 8 – Agregar tests automáticos</h3>
+      <p>En la pestaña "Tests" del request GET:</p>
+      <pre><code>pm.test("Status code is 200", function () {
+  pm.response.to.have.status(200);
+});
+
+pm.test("Response tiene datos de usuarios", function () {
+  var jsonData = pm.response.json();
+  pm.expect(jsonData.data.length).to.be.above(0);
+});</code></pre>
+      <p>Postman correrá estas pruebas cada vez que ejecutes el request.</p>
+
+      <hr />
+
+      <h3>💡 Tips finales</h3>
+      <ul>
+        <li>Guardá siempre tus requests en colecciones.</li>
+        <li>Usá variables de entorno para no editar URLs constantemente.</li>
+        <li>Agregá tests automáticos para validar APIs sin escribir código extra.</li>
+      </ul>
+
+      <h3>🧪 Mi experiencia personal</h3>
+      <p>Al probar APIs reales, todo cambia. No solo entendés cómo funciona GET y POST, sino que aprendés a manejar errores, validar respuestas y automatizar pruebas. Postman se volvió mi compañero para cualquier proyecto Laravel o Node, y me ahorra tiempo y dolores de cabeza.</p>
     `
   }
 ];

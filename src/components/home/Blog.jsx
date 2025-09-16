@@ -22,13 +22,21 @@ const Blog = () => {
   const featuredPosts = allBlogs
     ?.filter((blog) => blog.featured)
     .slice()
-    .sort(sortByDateDesc)
+    .sort((a, b) => {
+      const cmp = sortByDateDesc(a, b);
+      if (cmp !== 0) return cmp;
+      return (b.id || 0) - (a.id || 0);
+    })
     .slice(0, 2);
 
   const regularPosts = allBlogs
     ?.filter((blog) => !blog.featured)
     .slice()
-    .sort(sortByDateDesc)
+    .sort((a, b) => {
+      const cmp = sortByDateDesc(a, b);
+      if (cmp !== 0) return cmp;
+      return (b.id || 0) - (a.id || 0);
+    })
     .slice(0, 2);
 
   return (

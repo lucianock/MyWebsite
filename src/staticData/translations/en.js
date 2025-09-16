@@ -128,6 +128,10 @@ export const en = {
     dockerPrincipiantesDesc: "Are you afraid of Docker? Don't worry, in this post I explain in the simplest way possible how to start using containers without going crazy. It's easier than you think!",
     linuxCheatsheet: "Quick guide — Essential commands for your Linux server",
     linuxCheatsheetDesc: "Copy-ready commands, best practices, and a handy script for daily Linux server work.",
+    tiendanubeApiPostman: "Practical guide: testing Tiendanube Partners API with Postman",
+    tiendanubeApiPostmanDesc: "OAuth auth, token retrieval and product requests in minutes.",
+    postmanApiGuide: "Practical guide: testing RESTful APIs with Postman (using ReqRes)",
+    postmanApiGuideDesc: "GET, POST, PUT and DELETE with environment variables and tests.",
     // Complete article content in English
     awsEc2GratisContent: `
       <h3>✋ Before starting: what is EC2?</h3>
@@ -194,6 +198,167 @@ ssh -i "your-file.pem" ubuntu@your-public-ip</code></pre>
       
       <h3>My personal experience</h3>
       <p>I discovered this almost by chance, and it blew my mind. Being able to have a <em>free</em> server, without depending on external platforms and with total control, is a gem for any developer or curious person. I'm using it to set up my personal projects and test new tools safely.</p>
+    `,
+    tiendanubeApiPostmanContent: `
+      <h3>🚀 Step 1 – Create your app in Tiendanube Partners</h3>
+      <ol>
+        <li>Go to the <a href="https://partners.tiendanube.com/" target="_blank">Tiendanube Partners Portal</a> and sign up or log in.</li>
+        <li>In the admin panel, go to <strong>"My apps"</strong> and click <strong>"Create new app"</strong>.</li>
+        <li>Complete the required fields:
+          <ul>
+            <li><strong>App name</strong>: Choose a representative name.</li>
+            <li><strong>Redirect URL</strong>: Where the user will be redirected after authorizing.</li>
+            <li><strong>Scopes</strong>: Select the needed permissions, e.g. <code>read_products</code>, <code>write_products</code>, etc.</li>
+          </ul>
+        </li>
+        <li>Once created, note your <strong>App ID</strong> and <strong>Client secret</strong>.</li>
+      </ol>
+
+      <hr />
+
+      <h3>🔐 Step 2 – Get the access token</h3>
+      <ol>
+        <li><strong>Redirect the user to the authorization URL</strong>:</li>
+      </ol>
+      <pre><code>https://www.tiendanube.com/apps/{app_id}/authorize?scope=read_products,write_products&state=csrf-token</code></pre>
+      <p>Replace <code>{app_id}</code> with your app ID. <code>state</code> is optional but recommended to prevent CSRF.</p>
+
+      <p><strong>The user will be redirected</strong> to your redirect URL with an authorization code:</p>
+      <pre><code>https://your-domain.com/callback?code=authorization_code&state=csrf-token</code></pre>
+
+      <p><strong>Exchange the code for an access token</strong>:</p>
+      <p>POST to:</p>
+      <pre><code>https://www.tiendanube.com/apps/authorize/token</code></pre>
+      <p>Body JSON:</p>
+      <pre><code>{
+  "client_id": "your_client_id",
+  "client_secret": "your_client_secret",
+  "code": "authorization_code",
+  "grant_type": "authorization_code"
+}</code></pre>
+      <p>The response contains the <code>access_token</code>.</p>
+
+      <hr />
+
+      <h3>🛒 Step 3 – Fetch products</h3>
+      <ol>
+        <li>Configure a GET request in POSTMAN:</li>
+      </ol>
+      <ul>
+        <li>URL: <code>https://api.tiendanube.com/v1/{store_id}/products.json</code></li>
+        <li>Header: <code>Authorization: Bearer access_token</code></li>
+      </ul>
+      <p>Send and you'll receive a JSON with the products.</p>
+
+      <hr />
+
+      <h3>📝 Step 4 – Create a new product</h3>
+      <p>Configure a POST request:</p>
+      <ul>
+        <li>URL: <code>https://api.tiendanube.com/v1/{store_id}/products.json</code></li>
+        <li>Headers:
+          <ul>
+            <li><code>Authorization: Bearer access_token</code></li>
+            <li><code>Content-Type: application/json</code></li>
+          </ul>
+        </li>
+      </ul>
+      <p>Body JSON:</p>
+      <pre><code>{
+  "product": {
+    "title": "Product name",
+    "price": 1000,
+    "description": "Product description",
+    "available_on": "2025-09-16",
+    "tags": ["tag1", "tag2"]
+  }
+}</code></pre>
+
+      <hr />
+
+      <h3>💡 Final tips</h3>
+      <ul>
+        <li>Use environment variables in POSTMAN to manage <code>access_token</code> and URLs.</li>
+        <li>Handle API errors and responses for robust integrations.</li>
+        <li>Check the <a href="https://tiendanube.github.io/api-documentation/" target="_blank">official documentation</a> to explore more endpoints.</li>
+      </ul>
+
+      <h3>🧪 My personal experience</h3>
+      <p>Testing the Tiendanube API helped me understand how to authenticate, read and modify data from a real store safely. Postman is essential to test endpoints and automate requests, especially when integrating with Laravel or Node.</p>
+    `,
+    postmanApiGuideContent: `
+      <h3>🚀 Step 1 – Download and install POSTMAN</h3>
+      <ol>
+        <li>Go to <a href="https://www.postman.com/downloads/" target="_blank">postman.com/downloads</a> and download your OS version.</li>
+        <li>Install and open it.</li>
+        <li>Create an account to save collections in the cloud (optional).</li>
+      </ol>
+
+      <hr />
+
+      <h3>🖥️ Step 2 – Create your collection</h3>
+      <ol>
+        <li>In the left sidebar click "Collections".</li>
+        <li>Press "+ New Collection" and name it: <code>PruebaReqRes</code>.</li>
+        <li>We will store all our requests there.</li>
+      </ol>
+
+      <hr />
+
+      <h3>🔗 Step 3 – Test a GET (list users)</h3>
+      <ol>
+        <li>Add a new request and name it <strong>Get users</strong>.</li>
+        <li>Method: <code>GET</code></li>
+      </ol>
+      <pre><code>https://reqres.in/api/users?page=2</code></pre>
+      <p>Click "Send" and you'll get a JSON with sample users.</p>
+
+      <hr />
+
+      <h3>✏️ Step 4 – Test a POST (create user)</h3>
+      <pre><code>https://reqres.in/api/users</code></pre>
+      <p>Method: <code>POST</code>. Body → <code>raw</code> → <code>JSON</code>:</p>
+      <pre><code>{
+  "name": "Luciano",
+  "job": "Developer"
+}</code></pre>
+      <p>Send and you'll see <code>id</code> and <code>createdAt</code> in the response.</p>
+
+      <hr />
+
+      <h3>🔄 Step 5 – Test PUT (update user)</h3>
+      <pre><code>https://reqres.in/api/users/2</code></pre>
+      <p>Method: <code>PUT</code>. Body → <code>raw</code> → <code>JSON</code>:</p>
+      <pre><code>{
+  "name": "Luciano",
+  "job": "Senior Developer"
+}</code></pre>
+
+      <hr />
+
+      <h3>🗑️ Step 6 – Test DELETE (remove user)</h3>
+      <pre><code>https://reqres.in/api/users/2</code></pre>
+      <p>Method: <code>DELETE</code>. API returns <code>204 No Content</code> when successful.</p>
+
+      <hr />
+
+      <h3>🛠️ Step 7 – Use environment variables</h3>
+      <p>Variable: <code>{{base_url}}</code> = <code>https://reqres.in/api</code></p>
+
+      <hr />
+
+      <h3>✅ Step 8 – Add automated tests</h3>
+      <pre><code>pm.test("Status code is 200", function () {
+  pm.response.to.have.status(200);
+});
+
+pm.test("Response has user data", function () {
+  var jsonData = pm.response.json();
+  pm.expect(jsonData.data.length).to.be.above(0);
+});</code></pre>
+
+      <h3>🧪 My personal experience</h3>
+      <p>Working with real APIs changes everything. You learn to handle errors, validate responses, and automate tests. Postman is essential for Laravel or Node projects and saves tons of time.</p>
     `,
     // Blog page translations
     hero: {

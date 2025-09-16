@@ -126,7 +126,13 @@ const SingleBlogDetails = ({ slug }) => {
   // Get translated content based on language
   const getTranslatedContent = () => {
     if (language === 'en') {
-      return t('blog.awsEc2GratisContent') || singlePost.content;
+      const key = singlePost?.contentKey;
+      if (key) {
+        const translated = t(key);
+        if (translated) return translated;
+      }
+      // Fallback to default content if no specific EN translation
+      return singlePost.content;
     }
     return singlePost.content;
   };

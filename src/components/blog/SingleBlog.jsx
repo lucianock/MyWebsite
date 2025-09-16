@@ -24,15 +24,16 @@ const SingleBlog = ({
         <Link href={`/blog/${slug}`}>
           <div className="post-image">
             {/* Solo mostrar imagen si no es placeholder */}
-            {image?.thumbnail && image.thumbnail !== "/assets/images/placeholder.jpg" ? (
+            {image?.thumbnail ? (
               <Image
                 src={image.thumbnail}
                 alt={t(title)}
-                width={400}
-                height={250}
+                width={800}
+                height={533}
                 style={{
                   width: "100%",
-                  height: "200px",
+                  aspectRatio: "16 / 9",
+                  height: "auto",
                   objectFit: "cover",
                   borderRadius: "8px",
                 }}
